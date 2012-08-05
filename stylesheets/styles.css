@@ -288,7 +288,7 @@ footer {
   }
 
   #page2-break {
-    height: 0px;
+    height: 40px;
     width: 800px;
     float:left;
   }
@@ -326,7 +326,7 @@ footer {
 
 /*print */
 
-
+/*
 @media screen and (max-width: 960px) {
   
   div.wrapper {
