@@ -48,7 +48,7 @@ h4 {
 
 #profile b {
   font-weight: normal;
-
+  color: #000;
 }
 
 a {
@@ -256,7 +256,7 @@ header ul a strong {
 }
 
 section {
-  width: 675px;
+  width: 700px;
   float:right;
   padding-bottom:0px;
 }
