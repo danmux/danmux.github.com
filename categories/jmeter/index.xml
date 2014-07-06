@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Golang on Dans Stuff </title>
+      <title>Jmeter on Dans Stuff </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://danmux.com/categories/golang/index.xml</link>
+    <link>http://danmux.com/categories/jmeter/index.xml</link>
     
     
     
@@ -60,28 +60,6 @@
 &lt;p&gt;Do we build our own tests?&lt;/p&gt;
 
 &lt;p&gt;Is there a more JSON friendly tool that can assert, pass on responses to the next step and load the service in parallel? I couldnt find anything.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Moving to Hugo</title>
-      <link>http://danmux.com/posts/hugo_based_blog</link>
-      <pubDate>Thu, 29 May 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://danmux.com/posts/hugo_based_blog</guid>
-      <description>
-
-&lt;p&gt;I decided that I should blog under my danmux.com domain - I often use danmux around the internet, sometimes danmull, but normally danmux for tech type things, so it makes sense.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;danmux&lt;/strong&gt; because the &lt;strong&gt;x&lt;/strong&gt; has always been a notable part of my name - and mux reminds me of my electrical engineering days, and I think humans multiplex all the time, there it is.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Github Pages&lt;/h2&gt;
-
-&lt;p&gt;As this will only get a couple of hits what could be better than hosting it on &lt;a href=&#34;https://pages.github.com/&#34;&gt;github pages&lt;/a&gt; - I&amp;rsquo;m a little bit in love with github anyway so perfect choice.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;Hugo&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;m a little bit in love with go - so &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; was the perfect choice as well, and its been great so far, other than is typical of newish open source projects slightly lacking in the documentation department.&lt;/p&gt;
 </description>
     </item>
     
