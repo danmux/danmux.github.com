@@ -17,9 +17,9 @@
       <guid>http://danmux.com/posts/embedded_gists</guid>
       <description>
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
 
-&lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;. But also wanted to try embedding gists&lt;/p&gt;
 
 &lt;p&gt;So here is an example&amp;hellip;&lt;/p&gt;
 

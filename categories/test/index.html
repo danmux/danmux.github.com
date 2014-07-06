@@ -7,9 +7,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <base href="http://danmux.com">
+    <base href="http://localhost:1313">
     <title> Test </title>
-    <link rel="canonical" href="http://danmux.com/categories/test">
+    <link rel="canonical" href="http://localhost:1313/categories/test">
     
 
 <link rel="stylesheet" href="/css/poole.css">
@@ -69,13 +69,14 @@
 
 <article class="post">
     <header>
-      <h2><a href='http://danmux.com/posts/newest'> Just another sample post</a> </h2>
-      <div class="meta">Sat, Mar 29, 2014</div>
+      <h2><a href='http://localhost:1313/posts/hugo_based_blog'> Moving to Hugo</a> </h2>
+      <div class="meta">Thu, May 29, 2014</div>
     </header>
 
-    First Heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequatur aspernatur omnis iste. Voluptates, id inventore ea natus ab sed amet ipsa ratione sunt dignissimos. Soluta illum aliquid repellendus recusandae. Sub Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, perferendis saepe voluptatem a nesciunt architecto voluptas deleniti dolor tempora quasi quidem odit rem fugit magnam minima quam dolores vel id? Conclusion Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    <p>So I decided that I should blog under my danmux.com domain - im often use danmux around the internet - sometimes danmull</p>
+
     <footer>
-        <a href='http://danmux.com/posts/newest'><nobr>Read more →</nobr></a>
+        <a href='http://localhost:1313/posts/hugo_based_blog'><nobr>Read more →</nobr></a>
     </footer>
 </article>
 
@@ -113,7 +114,10 @@
 
 </script>
 
-</body>
+<script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
 
 

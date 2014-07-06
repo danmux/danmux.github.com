@@ -3,31 +3,29 @@
   <channel>
       <title>Fun on Dans Stuff </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://danmux.com/categories/fun/index.xml</link>
+    <link>http://localhost:1313/categories/fun/index.xml</link>
     
     
     
-    <updated>Sat, 29 Mar 2014 00:00:00 UTC</updated>
+    <updated>Thu, 29 May 2014 00:00:00 UTC</updated>
     
     <item>
-      <title>Just another sample post</title>
-      <link>http://danmux.com/posts/newest</link>
-      <pubDate>Sat, 29 Mar 2014 00:00:00 UTC</pubDate>
+      <title>Moving to Hugo</title>
+      <link>http://localhost:1313/posts/hugo_based_blog</link>
+      <pubDate>Thu, 29 May 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/newest</guid>
+      <guid>http://localhost:1313/posts/hugo_based_blog</guid>
       <description>
 
-&lt;h2 id=&#34;toc_0&#34;&gt;First Heading&lt;/h2&gt;
+&lt;p&gt;So I decided that I should blog under my danmux.com domain - im often use danmux around the internet - sometimes danmull&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequatur aspernatur omnis iste. Voluptates, id inventore ea natus ab sed amet ipsa ratione sunt dignissimos. Soluta illum aliquid repellendus recusandae.&lt;/p&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Github Pages&lt;/h2&gt;
 
-&lt;h3 id=&#34;toc_1&#34;&gt;Sub&lt;/h3&gt;
+&lt;p&gt;As this will only get a couple of hits what could be better than hosting it on github pages - I&amp;rsquo;m a little bit in love with github anyway so perfect choice.&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, perferendis saepe voluptatem a nesciunt architecto voluptas deleniti dolor tempora quasi quidem odit rem fugit magnam minima quam dolores vel id?&lt;/p&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;Hugo&lt;/h2&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, numquam ipsa ad! Quasi, deleniti quae sint consequatur error corporis dicta inventore alias soluta dignissimos? Molestias, quia ab deserunt repellat ut.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m a little bit in love with go - so Hugo was the perfect choice.&lt;/p&gt;
 </description>
     </item>
     

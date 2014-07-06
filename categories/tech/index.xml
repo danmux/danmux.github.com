@@ -17,9 +17,9 @@
       <guid>http://danmux.com/posts/embedded_gists</guid>
       <description>
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
 
-&lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;. But also wanted to try embedding gists&lt;/p&gt;
 
 &lt;p&gt;So here is an example&amp;hellip;&lt;/p&gt;
 
@@ -85,6 +85,47 @@
 &lt;p&gt;Nice work &lt;a href=&#34;https://github.com/jmitchell&#34;&gt;jmitchell&lt;/a&gt; and &lt;a href=&#34;https://github.com/spf13&#34;&gt;Steve Francia&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;So gists it is for me&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Making Your Own Summary</title>
+      <link>http://danmux.com/posts/hugo_summary</link>
+      <pubDate>Sat, 28 Jun 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://danmux.com/posts/hugo_summary</guid>
+      <description>&lt;p&gt;Hugo allows you to specify where the summary stops - and allows the full markdown including shortcodes.&lt;/p&gt;
+
+&lt;p&gt;You just need to construct the first bit of your article so that it makes a nice summary and then end it with&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt; !--more--&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(of course dont include the space :) )&lt;/p&gt;
+
+&lt;!-- here is the real more... --&gt;
+
+&lt;p&gt;Everything after the more comment will not make it into the summary - sweet.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Moving to Hugo</title>
+      <link>http://danmux.com/posts/hugo_based_blog</link>
+      <pubDate>Thu, 29 May 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://danmux.com/posts/hugo_based_blog</guid>
+      <description>
+
+&lt;p&gt;So I decided that I should blog under my danmux.com domain - im often use danmux around the internet - sometimes danmull&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Github Pages&lt;/h2&gt;
+
+&lt;p&gt;As this will only get a couple of hits what could be better than hosting it on github pages - I&amp;rsquo;m a little bit in love with github anyway so perfect choice.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Hugo&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m a little bit in love with go - so Hugo was the perfect choice.&lt;/p&gt;
 </description>
     </item>
     

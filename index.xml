@@ -17,9 +17,9 @@
       <guid>http://danmux.com/posts/embedded_gists</guid>
       <description>
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
 
-&lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;. But also wanted to try embedding gists&lt;/p&gt;
 
 &lt;p&gt;So here is an example&amp;hellip;&lt;/p&gt;
 
@@ -89,51 +89,43 @@
     </item>
     
     <item>
-      <title>Just another sample post</title>
-      <link>http://danmux.com/posts/newest</link>
-      <pubDate>Sat, 29 Mar 2014 00:00:00 UTC</pubDate>
+      <title>Making Your Own Summary</title>
+      <link>http://danmux.com/posts/hugo_summary</link>
+      <pubDate>Sat, 28 Jun 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/newest</guid>
-      <description>
+      <guid>http://danmux.com/posts/hugo_summary</guid>
+      <description>&lt;p&gt;Hugo allows you to specify where the summary stops - and allows the full markdown including shortcodes.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;First Heading&lt;/h2&gt;
+&lt;p&gt;You just need to construct the first bit of your article so that it makes a nice summary and then end it with&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequatur aspernatur omnis iste. Voluptates, id inventore ea natus ab sed amet ipsa ratione sunt dignissimos. Soluta illum aliquid repellendus recusandae.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt; !--more--&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;toc_1&#34;&gt;Sub&lt;/h3&gt;
+&lt;p&gt;(of course dont include the space :) )&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, perferendis saepe voluptatem a nesciunt architecto voluptas deleniti dolor tempora quasi quidem odit rem fugit magnam minima quam dolores vel id?&lt;/p&gt;
+&lt;!-- here is the real more... --&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, numquam ipsa ad! Quasi, deleniti quae sint consequatur error corporis dicta inventore alias soluta dignissimos? Molestias, quia ab deserunt repellat ut.&lt;/p&gt;
+&lt;p&gt;Everything after the more comment will not make it into the summary - sweet.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Second Post</title>
-      <link>http://danmux.com/posts/middle</link>
-      <pubDate>Fri, 28 Mar 2014 00:00:00 UTC</pubDate>
+      <title>Moving to Hugo</title>
+      <link>http://danmux.com/posts/hugo_based_blog</link>
+      <pubDate>Thu, 29 May 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/middle</guid>
+      <guid>http://danmux.com/posts/hugo_based_blog</guid>
       <description>
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Sample Post 1&lt;/h2&gt;
+&lt;p&gt;So I decided that I should blog under my danmux.com domain - im often use danmux around the internet - sometimes danmull&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Github Pages&lt;/h2&gt;
 
-&lt;h3 id=&#34;toc_1&#34;&gt;Sub-heading&lt;/h3&gt;
+&lt;p&gt;As this will only get a couple of hits what could be better than hosting it on github pages - I&amp;rsquo;m a little bit in love with github anyway so perfect choice.&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, non, ratione, molestiae illo optio quia sequi id fuga natus nihil ad architecto dolor alias ex sunt iste aperiam eius itaque.&lt;/p&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;Hugo&lt;/h2&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;foo&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, neque, eveniet voluptate eos debitis illum qui nostrum eius maxime ratione assumenda suscipit impedit deserunt voluptatibus odio ducimus non. Ex, ratione.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m a little bit in love with go - so Hugo was the perfect choice.&lt;/p&gt;
 </description>
     </item>
     
