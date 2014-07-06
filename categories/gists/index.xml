@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Gists on Dans Stuff </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/categories/gists/index.xml</link>
+    
+    
+    
+    <updated>Sun, 06 Jul 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Embedded Gists</title>
+      <link>http://localhost:1313/posts/embedded_gists</link>
+      <pubDate>Sun, 06 Jul 2014 00:00:00 UTC</pubDate>
+      
+      <guid>http://localhost:1313/posts/embedded_gists</guid>
+      <description>
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting&lt;/h2&gt;
+
+&lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So here is an example&amp;hellip;&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #447fcf&#34;&gt;digit_sum&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;(n):&lt;/span&gt;
+    &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;
+    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n:&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# while n is &amp;#39;truthy&amp;#39; for an integer that means not 0&lt;/span&gt;
+        &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;(n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7&lt;/span&gt;
+        &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# n = the integer of n / 10   int(15.7) = 15 &lt;/span&gt;
+    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt;
+   
+&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;digit_sum(&lt;/span&gt;&lt;span style=&#34;color: #3677a9&#34;&gt;157&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;calling digit_sum(157)&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt; &lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;loop  | s   | n   | n % 10  | n / 10&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;------------------------------------&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;0     | 0   | 157 |   7     |  15&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;1     | 7   | 15  |   5     |  1&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;2     | 12  | 1   |   1     |  0&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;3     | 13  | 0   |         |  &lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.&lt;/p&gt;
+
+&lt;p&gt;So on embedding a gist as follows (but without syntax highlighting) failed&amp;hellip;&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Putting it in another block partially worked&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I was left with an unclosed script tag.&lt;/p&gt;
+
+&lt;p&gt;A git of googling turned up this thread&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://groups.google.com/forum/#!topic/hugo-discuss/3GW56aMYQF8&#34;&gt;https://groups.google.com/forum/#!topic/hugo-discuss/3GW56aMYQF8&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;and this pull request &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/spf13/hugo/pull/305&#34;&gt;https://github.com/spf13/hugo/pull/305&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;which missed the latest release by a few days&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/spf13/hugo/releases/tag/v0.11&#34;&gt;https://github.com/spf13/hugo/releases/tag/v0.11&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So I went ahead an built the master head - from my fork (ya know just in case I can help)&lt;/p&gt;
+
+&lt;p&gt;and added the script tag in&amp;hellip;.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;toc_1&#34;&gt;And it worked !&lt;/h3&gt;
+
+&lt;p&gt;Nice work &lt;a href=&#34;https://github.com/jmitchell&#34;&gt;jmitchell&lt;/a&gt; and &lt;a href=&#34;https://github.com/spf13&#34;&gt;Steve Francia&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So gists it is for me&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
