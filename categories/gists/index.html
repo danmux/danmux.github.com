@@ -7,9 +7,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <base href="http://localhost:1313">
+    <base href="http://danmux.com">
     <title> Gists </title>
-    <link rel="canonical" href="http://localhost:1313/categories/gists">
+    <link rel="canonical" href="http://danmux.com/categories/gists">
     
 
 <link rel="stylesheet" href="/css/poole.css">
@@ -34,7 +34,7 @@
 
     <a class="sidebar-nav-item" href="/posts">Blog</a>
 
-    <a class="sidebar-nav-item" href="/me">Me</a>
+    <a class="sidebar-nav-item" href="/cv">Me</a>
   </nav>
 
   <div class="sidebar-item">
@@ -69,13 +69,13 @@
 
 <article class="post">
     <header>
-      <h2><a href='http://localhost:1313/posts/embedded_gists'> Embedded Gists</a> </h2>
+      <h2><a href='http://danmux.com/posts/embedded_gists'> Embedded Gists</a> </h2>
       <div class="meta">Sun, Jul 6, 2014</div>
     </header>
 
     Syntax Highlighting I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin Pygments. So here is an example&hellip; def digit_sum(n): s = 0 while n: # while n is &lsquo;truthy&rsquo; for an integer that means not 0 s = s + (n % 10) # the sum is the sum + the remainder of dividing the incoming number (n) by 10 157 % 10 = 7 n = n / 10 # n = the integer of n / 10 int(15.7) = 15 return s print digit_sum(157) &rdquo;&rsquo; calling digit_sum(157) loop | s | n | n % 10 | n / 10 0 | 0 | 157 | 7 | 15 1 | 7 | 15 | 5 | 1 2 | 12 | 1 | 1 | 0 3 | 13 | 0 | | &rdquo;&rsquo; But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.
     <footer>
-        <a href='http://localhost:1313/posts/embedded_gists'><nobr>Read more →</nobr></a>
+        <a href='http://danmux.com/posts/embedded_gists'><nobr>Read more →</nobr></a>
     </footer>
 </article>
 
@@ -113,10 +113,7 @@
 
 </script>
 
-<script>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+</body>
 </html>
 
 
