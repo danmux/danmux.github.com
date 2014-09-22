@@ -201,13 +201,13 @@
 
 <h2 id="toc_4">Summary</h2>
 
-<p>A compressed text based encoding like JSON <em>IS</em> more widely supported, quite compact and easier to test and debug, particularly if the consumer is a web browser.</p>
+<p>A compressed text based encoding like JSON <strong>is</strong> more widely supported, quite compact and easier to test and debug, particularly if the consumer is a web browser.</p>
 
 <p>Very few scenarios justify anything other than compressed JSON (swap JSON with XML if you are stuck in that particular hell)</p>
 
 <p>If you are approaching or know you will approach network limitations, or will save £1000’s per month (substitute for your own acceptable budget) and want to keep response rates up then a binary format may well be the right choice for all payload sizes</p>
 
-<p>If you’re system chatters lots of small chunks of data with a high ratio of none text to text data, at very high message rates, then a binary encoding, particularly over tcp, thereby avoiding the HTTP header overhead, is by far the more sensible choice.</p>
+<p>If your system chatters lots of small chunks of data with a high ratio of none text to text data, at very high message rates, then a binary encoding particularly over tcp (thereby avoiding the HTTP header overhead) is by far the more sensible choice.</p>
 
 <p>Testing and debugging binary protocols is not as bad as people make out, and should not be a massively deciding factor</p>
 
