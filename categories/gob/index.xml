@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Golang on Dans Stuff </title>
+      <title>Gob on Dans Stuff </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://danmux.com/categories/golang/index.xml</link>
+    <link>http://danmux.com/categories/gob/index.xml</link>
     
     
     
@@ -158,84 +158,6 @@
 &lt;p&gt;If you’re system chatters lots of small chunks of data with a high ratio of none text to text data, at very high message rates, then a binary encoding, particularly over tcp, thereby avoiding the http header overhead, is by far the more sensible choice.&lt;/p&gt;
 
 &lt;p&gt;Testing and debugging binary protocols is not as bad as people make out, and should not be a massively deciding factor&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Jmeter is a Poor Choice for REST and Golang</title>
-      <link>http://danmux.com/posts/jmeter_rest_golang</link>
-      <pubDate>Sun, 06 Jul 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://danmux.com/posts/jmeter_rest_golang</guid>
-      <description>
-
-&lt;p&gt;Its essential we have good integration tests and performance tests on our restful api, particularly now that many of the moving parts will migrate to microservices written in Go.&lt;/p&gt;
-
-&lt;p&gt;Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;JSON Requests are Hard&lt;/h2&gt;
-
-&lt;p&gt;Jmeter is crap at constructing anything but static JSON.&lt;/p&gt;
-
-&lt;p&gt;Just a quick search uncovers &lt;a href=&#34;http://beanshell.org/&#34;&gt;Beanshell&lt;/a&gt; - and it looks like hassle.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.ubik-ingenierie.com/blog/extract-JSON-content-efficiently-with-jmeter-using-JSON-path-syntax-with-ubik-load-pack/&#34;&gt;This alternative&lt;/a&gt; doesn&amp;rsquo;t look too much better.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;JSON Responses are Hard&lt;/h2&gt;
-
-&lt;p&gt;Applying meaningful assertions to the responses in Jmeter is also a bit of a ball ache - regex is the default. There is no json parsing out of the box.&lt;/p&gt;
-
-&lt;p&gt;Plugins improve things somewhat, but modelling a flow of a couple of requests with some shared session awareness is another load of hassle.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_2&#34;&gt;Performance is Questionable&lt;/h2&gt;
-
-&lt;p&gt;My own experiments and the thread below shows how a single jmeter instance is probably not quick enough to test the performance of a Go based web server, without setting up a few instances - but i spose we will have to do that in production even if we do find a fast tool.&lt;/p&gt;
-
-&lt;!-- Place this tag in your head or just before your close body tag. --&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://apis.google.com/js/plusone.js&#34;&gt;&lt;/script&gt;
-
-&lt;!-- Place this tag where you want the widget to render. --&gt;
-
-&lt;div class=&#34;g-post&#34; data-href=&#34;https://plus.google.com/101114877505962271216/posts/PeZk8FY3PWY&#34;&gt;&lt;/div&gt;
-
-&lt;h2 id=&#34;toc_3&#34;&gt;Alternatives&lt;/h2&gt;
-
-&lt;p&gt;A quick search shows&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://code.google.com/p/restty/&#34;&gt;Resty&lt;/a&gt; - not tried it, not sure it does performance testing.&lt;/p&gt;
-
-&lt;p&gt;Others via stack overflow etc. all appear to be pretty much GUI based or GUI only&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_4&#34;&gt;Next Steps&lt;/h2&gt;
-
-&lt;p&gt;Do we build our own tests?&lt;/p&gt;
-
-&lt;p&gt;Is there a more JSON friendly tool that can assert, pass on responses to the next step and load the service in parallel? I couldnt find anything.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=7995111&#34;&gt;Fancy discussing on HN&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Moving to Hugo</title>
-      <link>http://danmux.com/posts/hugo_based_blog</link>
-      <pubDate>Thu, 29 May 2014 00:00:00 UTC</pubDate>
-      
-      <guid>http://danmux.com/posts/hugo_based_blog</guid>
-      <description>
-
-&lt;p&gt;I decided that I should blog under my danmux.com domain - I often use danmux around the internet, sometimes danmull, but normally danmux for tech type things, so it makes sense.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;danmux&lt;/strong&gt; because the &lt;strong&gt;x&lt;/strong&gt; has always been a notable part of my name - and mux reminds me of my electrical engineering days, and I think humans multiplex all the time, there it is.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;Github Pages&lt;/h2&gt;
-
-&lt;p&gt;As this will only get a couple of hits what could be better than hosting it on &lt;a href=&#34;https://pages.github.com/&#34;&gt;github pages&lt;/a&gt; - I&amp;rsquo;m a little bit in love with github anyway so perfect choice.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;Hugo&lt;/h2&gt;
-
-&lt;p&gt;I&amp;rsquo;m a little bit in love with go - so &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; was the perfect choice as well, and its been great so far, other than is typical of newish open source projects slightly lacking in the documentation department.&lt;/p&gt;
 </description>
     </item>
     
