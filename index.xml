@@ -37,7 +37,7 @@
 
 &lt;p&gt;Having just built a nicely homogenous #golang rpc microservices framework (or ‘milliservices’ as &lt;a href=&#34;https://twitter.com/iand/status/510090898269831170&#34;&gt;Ian Davis called his&lt;/a&gt;) I was naturally drawn to the native RPC gob encoding, but I hedged my bets and did the second worst of both worlds a gob based RPC envelope - with a []byte payload that could carry any serialisation - a la http. (the absolute worst would be http, with a gob body)&lt;/p&gt;
 
-&lt;p&gt;The point of this ‘neither one nor the other’ design was that much like http the envelope is standard so all our components can speak the same language, output consistent log data and generally behave in a more homogenous way than you typically find in a mixed bag of microservices - what you put in the message payload is down to you and your services, of course for our internal systems gob is the natural choice for the payload as well.&lt;/p&gt;
+&lt;p&gt;The point of this ‘neither one nor the other’ design was that much like HTTP the envelope is standard so all our components can speak the same language, output consistent log data and generally behave in a more homogenous way than you typically find in a mixed bag of microservices - what you put in the message payload is down to you and your services, of course for our internal systems gob is the natural choice for the payload as well.&lt;/p&gt;
 
 &lt;h2 id=&#34;toc_2&#34;&gt;Some Trivial Calculations&lt;/h2&gt;
 
@@ -99,11 +99,13 @@
 
 &lt;p&gt;This data is for the payload or body only, whic relates to storage size (minus keys and indexes).&lt;/p&gt;
 
-&lt;p&gt;If http is used as the transport protocol then the average 300-500 bytes of http header should be taken into account when considering bandwidth, though with internal systems this would be more like 100-200 bytes.&lt;/p&gt;
+&lt;p&gt;If HTTP is used as the transport protocol then the average 300-500 bytes of HTTP header should be taken into account when considering bandwidth, though with internal systems this would be more like 100-200 bytes.&lt;/p&gt;
 
 &lt;p&gt;Header size becomes a profound factor when transporting small payloads, making TCP a smarter choice, but then introducing similar debugging issues as faced with binary encodings.&lt;/p&gt;
 
 &lt;p&gt;Our internal gob header is typically 40-50 bytes (mainly being the 36 byte text representation of &lt;a href=&#34;http://tools.ietf.org/html/rfc4122&#34;&gt;uuid&lt;/a&gt;, which would be better passed round as the raw 16 bytes)&lt;/p&gt;
+
+&lt;p&gt;For a 40 byte binary payload (an array of 20 &lt;code&gt;int16&lt;/code&gt;&amp;rsquo;s for example) HTTP could easily cost 10x more bandwidth than TCP.&lt;/p&gt;
 
 &lt;p&gt;The summary comparison to gob for our large data (remember this is a sub optimal use case for binary) is&amp;hellip;&lt;/p&gt;
 
@@ -155,7 +157,7 @@
 
 &lt;p&gt;If you are approaching or know you will approach network limitations, or will save £1000’s per month (substitute for your own acceptable budget) and want to keep response rates up then a binary format may well be the right choice for all payload sizes&lt;/p&gt;
 
-&lt;p&gt;If you’re system chatters lots of small chunks of data with a high ratio of none text to text data, at very high message rates, then a binary encoding, particularly over tcp, thereby avoiding the http header overhead, is by far the more sensible choice.&lt;/p&gt;
+&lt;p&gt;If you’re system chatters lots of small chunks of data with a high ratio of none text to text data, at very high message rates, then a binary encoding, particularly over tcp, thereby avoiding the HTTP header overhead, is by far the more sensible choice.&lt;/p&gt;
 
 &lt;p&gt;Testing and debugging binary protocols is not as bad as people make out, and should not be a massively deciding factor&lt;/p&gt;
 </description>
