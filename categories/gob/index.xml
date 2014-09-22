@@ -139,7 +139,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;So even with binary unfriendly large text data its hard to strike a better balance than Raw gob. If raw space and bandwidth were the primary concern than I would go for gzipped JSON over TCP.&lt;/p&gt;
+&lt;p&gt;So even with binary unfriendly large text data its hard to strike a better balance than plain gob. If raw space and bandwidth were the primary concern then I would &lt;strong&gt;go for gzipped JSON over TCP&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;I’m surprised how sluggish Snappy is. Others have &lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/7T1AKfDAOcQ&#34;&gt;reported&lt;/a&gt; the pure Go implementation to be quite slow.&lt;/p&gt;
 
@@ -147,7 +147,11 @@
 
 &lt;h2 id=&#34;toc_3&#34;&gt;Testing Binary Payloads&lt;/h2&gt;
 
-&lt;p&gt;Whilst it is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file. It is only marginally more hassle to construct test structs (or the equivalent in your own language) in unit or integration tests, and in general a better idea, and something you’ll have to do anyway. In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.&lt;/p&gt;
+&lt;p&gt;It is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file.&lt;/p&gt;
+
+&lt;p&gt;It is only marginally more hassle to construct test structs (or the equivalent in your own language) in unit or integration tests, and in general a better idea, and something you’ll have to do anyway.&lt;/p&gt;
+
+&lt;p&gt;In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.&lt;/p&gt;
 
 &lt;h2 id=&#34;toc_4&#34;&gt;Summary&lt;/h2&gt;
 

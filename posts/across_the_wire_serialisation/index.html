@@ -185,7 +185,7 @@
 </tbody>
 </table>
 
-<p>So even with binary unfriendly large text data its hard to strike a better balance than Raw gob. If raw space and bandwidth were the primary concern than I would go for gzipped JSON over TCP.</p>
+<p>So even with binary unfriendly large text data its hard to strike a better balance than plain gob. If raw space and bandwidth were the primary concern then I would <strong>go for gzipped JSON over TCP</strong>.</p>
 
 <p>I’m surprised how sluggish Snappy is. Others have <a href="https://groups.google.com/forum/#!topic/golang-nuts/7T1AKfDAOcQ">reported</a> the pure Go implementation to be quite slow.</p>
 
@@ -193,7 +193,11 @@
 
 <h2 id="toc_3">Testing Binary Payloads</h2>
 
-<p>Whilst it is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file. It is only marginally more hassle to construct test structs (or the equivalent in your own language) in unit or integration tests, and in general a better idea, and something you’ll have to do anyway. In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.</p>
+<p>It is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file.</p>
+
+<p>It is only marginally more hassle to construct test structs (or the equivalent in your own language) in unit or integration tests, and in general a better idea, and something you’ll have to do anyway.</p>
+
+<p>In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.</p>
 
 <h2 id="toc_4">Summary</h2>
 
