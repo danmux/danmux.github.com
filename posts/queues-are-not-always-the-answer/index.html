@@ -1,0 +1,188 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="http://danmux.com">
+    <title> Queues Are Not Always The Answer </title>
+    <link rel="canonical" href="http://danmux.com/posts/queues-are-not-always-the-answer/">
+    
+
+<link rel="stylesheet" href="/css/poole.css">
+
+<link rel="stylesheet" href="/css/lanyon.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+</head>
+
+
+<body class="theme-base-0b">
+  
+
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    <a class="sidebar-nav-item" href="/posts">Blog</a>
+
+    <a class="sidebar-nav-item" href="/cv">Me</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design reused from <a href="https://github.com/spencerlyon2">Spencer Lyon</a> which was modified from this Jekyl theme <a href="http://lanyon.getpoole.com">Lanyon</a> under this <a href="https://github.com/spencerlyon2/hugo_gh_blog/blob/master/LICENSE">licence</a>.
+    </p>
+  </div>
+</div>
+
+
+
+
+  
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/posts" title="Blog">Blog Posts</a>
+        </h3>
+      </div>
+    </div>
+
+    
+    <div class="container content">
+      <h1 class="post-title">Queues Are Not Always The Answer</h1>
+        <section id="main">
+          <h5 id="date"> Mon Jul 20, 2015 </h5>
+          
+
+<p>I feel developers reach for the queue all too quickly. I’m talking about stand alone message queue services like RabbitMQ, ActiveMQ etc. etc. Not an in memory data structure (which in fact can be all you need sometimes)</p>
+
+<h2 id="sync-or-queue:eb0f6f06ad8a7448f62939e06ec5d67a">Sync or Queue</h2>
+
+<p>Often the reasons for choosing a queue include many features that any synchronous service could provide.</p>
+
+<p>There are, in my opinion, only four compelling use cases for a queue over a simple remote service.</p>
+
+<p>This <a href="http://blog.iron.io/2012/12/top-10-uses-for-message-queue.html">blog post from Iron.io</a> is a good example of an article that whilst explaining why queues are good never mentions where a simple service would suffice.</p>
+
+<p>All the reasons they mention as to why queues are good are correct. I just want to remind (myself mainly, so I can reference it when I get challenged again as to why I have not suggested a queue) that most of the advantages they mention are not exclusive to queues.</p>
+
+<p><strong>Decoupling</strong> - Provides consistent interface, but then so do flexible payload interfaces. Admittedly a queue can allow the freedom to attach an number of subscribers without the publisher needing any further knowledge.</p>
+
+<p><strong>Redundancy</strong> - not really redundancy, but retry in upstream failure. Retry is a great feature, which is also often present in other interfaces. Often queues are hard to cluster for redundancy.</p>
+
+<p><strong>Scaleability</strong> - Queues support scaleability because of decoupling and ease of adding pub sub nodes to the queue - just the same effect as the decoupling delivered by an interface to any other out of process service.</p>
+
+<p><strong>Elasticity &amp; Spikability</strong> - the major use case  for queues - impedance miss-match</p>
+
+<p><strong>Resiliency</strong> - This argument assumes ALL processing nodes fail, otherwise it would just be the same behaviour as dealing with spikes (lack of cycles to process the work). This approach to ‘resiliency’ does not handle the case where the user is expecting feedback from the result of the request, then the queue lets them down.</p>
+
+<p><strong>Delivery Guarantees</strong> - is not an advantage of queues - it needs to be stated because it feels like queues may not deliver messages - a direct interface, being synchronous, has an implicit delivery ‘guarantee’</p>
+
+<p><strong>Ordering Guarantees</strong> - this can be a a valid use case if multiple processes feed into a queue, and assuming the queue itself is cluster-able, and has cross cluster atomic behaviour, then a queue, could be made to act like a temporal ordering funnel, in some way collating requests in a particular order (within an agreed time window). In any distributed system at scale, the clients of the queue are unlikely to deliver messages to the queue in a temporally deterministic order thereby undermining the queue value for this feature. Event ordering across a distributed cluster is THE hard problem in distributed systems, queues may inject some order into some parts of the system.</p>
+
+<p><strong>Buffering</strong> - a duplication of the Elasticity feature, and again a way of dealing with impedance mismatch - if any consuming processes behind an interface can operate in parallel and at different lifetimes then the same effect is achievable without a queue.</p>
+
+<p><strong>Understanding data flow</strong> - an argument for visibility, also solved by a consistent set of api’s in a system that are able to be reported on for statistics.</p>
+
+<p><strong>Asynchronous Communication</strong> - probably the single biggest most valuable use case - if the instigating process does not care directly about the outcome, or can check the outcome later, and the system still needs some eventually consistent guarantees then the queue is a fine choice. example use cases: event based features like triggering an email, or streaming into a reporting system</p>
+
+<p>I think the other major feature, not mentioned in the article, is that typically queues offer&hellip;</p>
+
+<p><strong>Rich Routing or Distribution Model</strong> - Fan out, topics etc etc.</p>
+
+<p><strong>Security</strong>
+The other aspect of a queue that is not mentioned in that article is security. A subscriber makes a connection outbound to the queue, so an internally secure zone in your network can avoid allowing any inbound connections, and only ever connects out to the queue, which could be considered more secure. Others may argue that all this does is change the attack vector slightly to focus on compromising the queue itself, and is no more secure than available attacks on the network layers, I don’t know enough about that, but it feels more secure to me not allowing inbound connections.</p>
+
+<p><strong>Bad UX</strong>
+Using a queue in any part of your architecture that affects the user experience is a risky compromise, which can often mask the underlying problem.</p>
+
+<h2 id="summary:eb0f6f06ad8a7448f62939e06ec5d67a">Summary</h2>
+
+<p>In summary use a queue, if you really don’t mind asynchronous or parallel work&hellip;</p>
+
+<ol>
+<li>If you truly have no control over, or don’t care about the upstream service response times.</li>
+<li>If you have spikes in your requests, and you can’t cost effectively keep to a reasonable response guarantee, and you know you have enough spare capacity in the off peak to catch up.</li>
+<li>If you want to do some funky distribution of your messages (typically to many observers) particularly if you are not bothered about the result of any upstream subscribers work<br /></li>
+<li>If you agree that the pull model from a secure zone to a queue adds to your network security.</li>
+</ol>
+
+        </section>
+  
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  
+
+<div class="container">
+  <hr />
+  
+
+  
+    <span class="right">
+    <em>Next: </em><a class="next" href="http://danmux.com/posts/across_the_wire_serialisation/"> &nbsp; JSON, Gzip, Snappy and Gob Across the Wire</a> &raquo;
+    </span>
+  
+</div>
+
+  <br />
+  
+<div class="container">
+  <ul class="catlist">
+    <li><em>Categories: </em></li>
+    
+      <li><a href="/categories/tech">tech</a> </li>
+    
+      <li><a href="/categories/queues">queues</a> </li>
+    
+      <li><a href="/categories/desing">desing</a> </li>
+    
+  </ul>
+</div>
+
+
+
+  
+  
+
+<div class="container content">
+<footer>
+  <div>
+    <p class="right credit">
+    <a href="/">Home Page</a>
+    <a href="/blog">Blog Index</a>
+    <a href="/cv">CV</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52564864-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+
+
+
+

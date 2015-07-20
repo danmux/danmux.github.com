@@ -1,20 +1,86 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Recent Content on Dans Stuff </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://danmux.com/index.xml</link>
+    <title>Dans Stuff</title>
+    <link>http://danmux.com/</link>
+    <description>Recent content on Dans Stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
     
     
     
-    <updated>Sun, 21 Sep 2014 00:00:00 UTC</updated>
+    
+    <lastBuildDate>Mon, 20 Jul 2015 17:02:07 BST</lastBuildDate>
+    <atom:link href="http://danmux.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Queues Are Not Always The Answer</title>
+      <link>http://danmux.com/posts/queues-are-not-always-the-answer/</link>
+      <pubDate>Mon, 20 Jul 2015 17:02:07 BST</pubDate>
+      
+      <guid>http://danmux.com/posts/queues-are-not-always-the-answer/</guid>
+      <description>
+
+&lt;p&gt;I feel developers reach for the queue all too quickly. I’m talking about stand alone message queue services like RabbitMQ, ActiveMQ etc. etc. Not an in memory data structure (which in fact can be all you need sometimes)&lt;/p&gt;
+
+&lt;h2 id=&#34;sync-or-queue:eb0f6f06ad8a7448f62939e06ec5d67a&#34;&gt;Sync or Queue&lt;/h2&gt;
+
+&lt;p&gt;Often the reasons for choosing a queue include many features that any synchronous service could provide.&lt;/p&gt;
+
+&lt;p&gt;There are, in my opinion, only four compelling use cases for a queue over a simple remote service.&lt;/p&gt;
+
+&lt;p&gt;This &lt;a href=&#34;http://blog.iron.io/2012/12/top-10-uses-for-message-queue.html&#34;&gt;blog post from Iron.io&lt;/a&gt; is a good example of an article that whilst explaining why queues are good never mentions where a simple service would suffice.&lt;/p&gt;
+
+&lt;p&gt;All the reasons they mention as to why queues are good are correct. I just want to remind (myself mainly, so I can reference it when I get challenged again as to why I have not suggested a queue) that most of the advantages they mention are not exclusive to queues.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Decoupling&lt;/strong&gt; - Provides consistent interface, but then so do flexible payload interfaces. Admittedly a queue can allow the freedom to attach an number of subscribers without the publisher needing any further knowledge.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Redundancy&lt;/strong&gt; - not really redundancy, but retry in upstream failure. Retry is a great feature, which is also often present in other interfaces. Often queues are hard to cluster for redundancy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Scaleability&lt;/strong&gt; - Queues support scaleability because of decoupling and ease of adding pub sub nodes to the queue - just the same effect as the decoupling delivered by an interface to any other out of process service.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Elasticity &amp;amp; Spikability&lt;/strong&gt; - the major use case  for queues - impedance miss-match&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Resiliency&lt;/strong&gt; - This argument assumes ALL processing nodes fail, otherwise it would just be the same behaviour as dealing with spikes (lack of cycles to process the work). This approach to ‘resiliency’ does not handle the case where the user is expecting feedback from the result of the request, then the queue lets them down.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Delivery Guarantees&lt;/strong&gt; - is not an advantage of queues - it needs to be stated because it feels like queues may not deliver messages - a direct interface, being synchronous, has an implicit delivery ‘guarantee’&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ordering Guarantees&lt;/strong&gt; - this can be a a valid use case if multiple processes feed into a queue, and assuming the queue itself is cluster-able, and has cross cluster atomic behaviour, then a queue, could be made to act like a temporal ordering funnel, in some way collating requests in a particular order (within an agreed time window). In any distributed system at scale, the clients of the queue are unlikely to deliver messages to the queue in a temporally deterministic order thereby undermining the queue value for this feature. Event ordering across a distributed cluster is THE hard problem in distributed systems, queues may inject some order into some parts of the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Buffering&lt;/strong&gt; - a duplication of the Elasticity feature, and again a way of dealing with impedance mismatch - if any consuming processes behind an interface can operate in parallel and at different lifetimes then the same effect is achievable without a queue.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Understanding data flow&lt;/strong&gt; - an argument for visibility, also solved by a consistent set of api’s in a system that are able to be reported on for statistics.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Asynchronous Communication&lt;/strong&gt; - probably the single biggest most valuable use case - if the instigating process does not care directly about the outcome, or can check the outcome later, and the system still needs some eventually consistent guarantees then the queue is a fine choice. example use cases: event based features like triggering an email, or streaming into a reporting system&lt;/p&gt;
+
+&lt;p&gt;I think the other major feature, not mentioned in the article, is that typically queues offer&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rich Routing or Distribution Model&lt;/strong&gt; - Fan out, topics etc etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Security&lt;/strong&gt;
+The other aspect of a queue that is not mentioned in that article is security. A subscriber makes a connection outbound to the queue, so an internally secure zone in your network can avoid allowing any inbound connections, and only ever connects out to the queue, which could be considered more secure. Others may argue that all this does is change the attack vector slightly to focus on compromising the queue itself, and is no more secure than available attacks on the network layers, I don’t know enough about that, but it feels more secure to me not allowing inbound connections.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bad UX&lt;/strong&gt;
+Using a queue in any part of your architecture that affects the user experience is a risky compromise, which can often mask the underlying problem.&lt;/p&gt;
+
+&lt;h2 id=&#34;summary:eb0f6f06ad8a7448f62939e06ec5d67a&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;In summary use a queue, if you really don’t mind asynchronous or parallel work&amp;hellip;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;If you truly have no control over, or don’t care about the upstream service response times.&lt;/li&gt;
+&lt;li&gt;If you have spikes in your requests, and you can’t cost effectively keep to a reasonable response guarantee, and you know you have enough spare capacity in the off peak to catch up.&lt;/li&gt;
+&lt;li&gt;If you want to do some funky distribution of your messages (typically to many observers) particularly if you are not bothered about the result of any upstream subscribers work&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;If you agree that the pull model from a secure zone to a queue adds to your network security.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>JSON, Gzip, Snappy and Gob Across the Wire</title>
-      <link>http://danmux.com/posts/across_the_wire_serialisation</link>
-      <pubDate>Sun, 21 Sep 2014 00:00:00 UTC</pubDate>
+      <link>http://danmux.com/posts/across_the_wire_serialisation/</link>
+      <pubDate>Sun, 21 Sep 2014 00:00:00 UT</pubDate>
       
-      <guid>http://danmux.com/posts/across_the_wire_serialisation</guid>
+      <guid>http://danmux.com/posts/across_the_wire_serialisation/</guid>
       <description>
 
 &lt;p&gt;Coming from a background where memory and clock cycles were sparse, binary encodings have always held an appeal. Since then I’ve been told we have loads of compute power, ample cheap RAM and disk, and when the network is the bottleneck then, well, that is a good problem to have.&lt;/p&gt;
@@ -23,7 +89,7 @@
 
 &lt;p&gt;(&lt;em&gt;tl;dr&lt;/em&gt; almost always use gzipped JSON)&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Serialising for Wire and Disk&lt;/h2&gt;
+&lt;h2 id=&#34;serialising-for-wire-and-disk:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Serialising for Wire and Disk&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Much better to use a more debuggable human readable encoding and compress it in flight during transmission or storage&lt;/strong&gt;, after all browsers have native support and the performance benefits of binary formats are negligible. This is the crux of the argument for those in favour of verbose text based serialisations.&lt;/p&gt;
 
@@ -33,13 +99,13 @@
 
 &lt;p&gt;Heres a &lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/xtXh0yWOens&#34;&gt;recent example of the debate&lt;/a&gt; with all the typical (valid) points being trotted out&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;In This Case&amp;hellip;&lt;/h2&gt;
+&lt;h2 id=&#34;in-this-case:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;In This Case&amp;hellip;&lt;/h2&gt;
 
 &lt;p&gt;Having just built a nicely homogenous #golang rpc microservices framework (or ‘milliservices’ as &lt;a href=&#34;https://twitter.com/iand/status/510090898269831170&#34;&gt;Ian Davis called his&lt;/a&gt;) I was naturally drawn to the native RPC gob encoding, but I hedged my bets and did the second worst of both worlds a gob based RPC envelope - with a []byte payload that could carry any serialisation - a la http. (the absolute worst would be http, with a gob body)&lt;/p&gt;
 
 &lt;p&gt;The point of this ‘neither one nor the other’ design was that much like HTTP the envelope is standard so all our components can speak the same language, output consistent log data and generally behave in a more homogenous way than you typically find in a mixed bag of microservices - what you put in the message payload is down to you and your services, of course for our internal systems gob is the natural choice for the payload as well.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Some Trivial Calculations&lt;/h2&gt;
+&lt;h2 id=&#34;some-trivial-calculations:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Some Trivial Calculations&lt;/h2&gt;
 
 &lt;p&gt;I did some initial calculations and benchmarking comparing gzipped JSON to ‘snappy’ JSON to raw gob. I suppose it would be useful to include lz4, but as far as I can tell snappy is not a million miles different.&lt;/p&gt;
 
@@ -145,7 +211,7 @@
 
 &lt;p&gt;None of the decoding benchmarks streamed the data - new encoders were made every loop, I know Gob would be even faster with this optimisation, all decoders decoded into an &lt;code&gt;interface{}&lt;/code&gt;, they would all have been quicker if a particular &lt;code&gt;struct&lt;/code&gt; was used.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_3&#34;&gt;Testing Binary Payloads&lt;/h2&gt;
+&lt;h2 id=&#34;testing-binary-payloads:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Testing Binary Payloads&lt;/h2&gt;
 
 &lt;p&gt;It is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file.&lt;/p&gt;
 
@@ -153,7 +219,7 @@
 
 &lt;p&gt;In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_4&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;A compressed text based encoding like JSON &lt;strong&gt;is&lt;/strong&gt; more widely supported, quite compact and easier to test and debug, particularly if the consumer is a web browser.&lt;/p&gt;
 
@@ -169,17 +235,17 @@
     
     <item>
       <title>Jmeter is a Poor Choice for REST and Golang</title>
-      <link>http://danmux.com/posts/jmeter_rest_golang</link>
-      <pubDate>Sun, 06 Jul 2014 00:00:00 UTC</pubDate>
+      <link>http://danmux.com/posts/jmeter_rest_golang/</link>
+      <pubDate>Sun, 06 Jul 2014 00:00:00 UT</pubDate>
       
-      <guid>http://danmux.com/posts/jmeter_rest_golang</guid>
+      <guid>http://danmux.com/posts/jmeter_rest_golang/</guid>
       <description>
 
 &lt;p&gt;Its essential we have good integration tests and performance tests on our restful api, particularly now that many of the moving parts will migrate to microservices written in Go.&lt;/p&gt;
 
 &lt;p&gt;Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;JSON Requests are Hard&lt;/h2&gt;
+&lt;h2 id=&#34;json-requests-are-hard:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;JSON Requests are Hard&lt;/h2&gt;
 
 &lt;p&gt;Jmeter is crap at constructing anything but static JSON.&lt;/p&gt;
 
@@ -187,13 +253,13 @@
 
 &lt;p&gt;&lt;a href=&#34;http://www.ubik-ingenierie.com/blog/extract-JSON-content-efficiently-with-jmeter-using-JSON-path-syntax-with-ubik-load-pack/&#34;&gt;This alternative&lt;/a&gt; doesn&amp;rsquo;t look too much better.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;JSON Responses are Hard&lt;/h2&gt;
+&lt;h2 id=&#34;json-responses-are-hard:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;JSON Responses are Hard&lt;/h2&gt;
 
 &lt;p&gt;Applying meaningful assertions to the responses in Jmeter is also a bit of a ball ache - regex is the default. There is no json parsing out of the box.&lt;/p&gt;
 
 &lt;p&gt;Plugins improve things somewhat, but modelling a flow of a couple of requests with some shared session awareness is another load of hassle.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Performance is Questionable&lt;/h2&gt;
+&lt;h2 id=&#34;performance-is-questionable:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Performance is Questionable&lt;/h2&gt;
 
 &lt;p&gt;My own experiments and the thread below shows how a single jmeter instance is probably not quick enough to test the performance of a Go based web server, without setting up a few instances - but i spose we will have to do that in production even if we do find a fast tool.&lt;/p&gt;
 
@@ -205,7 +271,7 @@
 
 &lt;div class=&#34;g-post&#34; data-href=&#34;https://plus.google.com/101114877505962271216/posts/PeZk8FY3PWY&#34;&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;toc_3&#34;&gt;Alternatives&lt;/h2&gt;
+&lt;h2 id=&#34;alternatives:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Alternatives&lt;/h2&gt;
 
 &lt;p&gt;A quick search shows&amp;hellip;&lt;/p&gt;
 
@@ -213,7 +279,7 @@
 
 &lt;p&gt;Others via stack overflow etc. all appear to be pretty much GUI based or GUI only&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_4&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;h2 id=&#34;next-steps:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Next Steps&lt;/h2&gt;
 
 &lt;p&gt;Do we build our own tests?&lt;/p&gt;
 
@@ -225,54 +291,54 @@
     
     <item>
       <title>Embedded Gists</title>
-      <link>http://danmux.com/posts/embedded_gists</link>
-      <pubDate>Sat, 05 Jul 2014 00:00:00 UTC</pubDate>
+      <link>http://danmux.com/posts/embedded_gists/</link>
+      <pubDate>Sat, 05 Jul 2014 00:00:00 UT</pubDate>
       
-      <guid>http://danmux.com/posts/embedded_gists</guid>
+      <guid>http://danmux.com/posts/embedded_gists/</guid>
       <description>
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
+&lt;h2 id=&#34;syntax-highlighting-or-embedded-gists:1344d5413a88f5694a6a670438370e1d&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
 
 &lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;. But also wanted to try embedding gists&lt;/p&gt;
 
 &lt;p&gt;So here is an example&amp;hellip;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #447fcf&#34;&gt;digit_sum&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;(n):&lt;/span&gt;
-    &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;
-    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n:&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# while n is &amp;#39;truthy&amp;#39; for an integer that means not 0&lt;/span&gt;
-        &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;(n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7&lt;/span&gt;
-        &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# n = the integer of n / 10   int(15.7) = 15 &lt;/span&gt;
-    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt;
-   
-&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;digit_sum(&lt;/span&gt;&lt;span style=&#34;color: #3677a9&#34;&gt;157&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&lt;/span&gt;
+&lt;p&gt;&lt;p&gt;def digit_sum(n):
+    s = 0
+    while n:   # while n is ‘truthy’ for an integer that means not 0
+        s = s + (n % 10)   # the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7
+        n = n / 10         # n = the integer of n / 10   int(15.7) = 15
+    return s&lt;/p&gt;
 
-&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt;calling digit_sum(157)&lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt; &lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt;loop  | s   | n   | n % 10  | n / 10&lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt;------------------------------------&lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt;0     | 0   | 157 |   7     |  15&lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt;1     | 7   | 15  |   5     |  1&lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt;2     | 12  | 1   |   1     |  0&lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt;3     | 13  | 0   |         |  &lt;/span&gt;
-&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;print digit_sum(157)&lt;/p&gt;
+
+&lt;p&gt;”’
+calling digit_sum(157)&lt;/p&gt;
+
+&lt;h2 id=&#34;loop-s-n-n-10-n-10:1344d5413a88f5694a6a670438370e1d&#34;&gt;loop  | s   | n   | n % 10  | n / 10&lt;/h2&gt;
+
+&lt;p&gt;0     | 0   | 157 |   7     |  15
+1     | 7   | 15  |   5     |  1
+2     | 12  | 1   |   1     |  0
+3     | 13  | 0   |         |&lt;br /&gt;
+”’&lt;/p&gt;
+&lt;/p&gt;
 
 &lt;p&gt;But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.&lt;/p&gt;
 
 &lt;p&gt;So on embedding a gist as follows (but without syntax highlighting) failed&amp;hellip;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;script src=&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;&gt;
+&lt;/script&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Putting it in another block partially worked&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;p&gt;
+    &lt;script src=&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;&gt;
+    &lt;/script&gt;
+&lt;/p&gt;
+&lt;/p&gt;
 
 &lt;p&gt;I was left with an unclosed script tag.&lt;/p&gt;
 
@@ -294,7 +360,7 @@
 
 &lt;script src=&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;&gt;&lt;/script&gt;
 
-&lt;h3 id=&#34;toc_1&#34;&gt;And it worked !&lt;/h3&gt;
+&lt;h3 id=&#34;and-it-worked:1344d5413a88f5694a6a670438370e1d&#34;&gt;And it worked !&lt;/h3&gt;
 
 &lt;p&gt;Nice work &lt;a href=&#34;https://github.com/jmitchell&#34;&gt;jmitchell&lt;/a&gt; and &lt;a href=&#34;https://github.com/spf13&#34;&gt;Steve Francia&lt;/a&gt;.&lt;/p&gt;
 
@@ -304,10 +370,10 @@
     
     <item>
       <title>Making Your Own Summary</title>
-      <link>http://danmux.com/posts/hugo_summary</link>
-      <pubDate>Sat, 28 Jun 2014 00:00:00 UTC</pubDate>
+      <link>http://danmux.com/posts/hugo_summary/</link>
+      <pubDate>Sat, 28 Jun 2014 00:00:00 UT</pubDate>
       
-      <guid>http://danmux.com/posts/hugo_summary</guid>
+      <guid>http://danmux.com/posts/hugo_summary/</guid>
       <description>&lt;p&gt;Hugo allows you to specify where the summary stops - and allows the full markdown including shortcodes.&lt;/p&gt;
 
 &lt;p&gt;You just need to construct the first bit of your article so that it makes a nice summary and then end it with&amp;hellip;&lt;/p&gt;
@@ -325,21 +391,21 @@
     
     <item>
       <title>Moving to Hugo</title>
-      <link>http://danmux.com/posts/hugo_based_blog</link>
-      <pubDate>Thu, 29 May 2014 00:00:00 UTC</pubDate>
+      <link>http://danmux.com/posts/hugo_based_blog/</link>
+      <pubDate>Thu, 29 May 2014 00:00:00 UT</pubDate>
       
-      <guid>http://danmux.com/posts/hugo_based_blog</guid>
+      <guid>http://danmux.com/posts/hugo_based_blog/</guid>
       <description>
 
 &lt;p&gt;I decided that I should blog under my danmux.com domain - I often use danmux around the internet, sometimes danmull, but normally danmux for tech type things, so it makes sense.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;danmux&lt;/strong&gt; because the &lt;strong&gt;x&lt;/strong&gt; has always been a notable part of my name - and mux reminds me of my electrical engineering days, and I think humans multiplex all the time, there it is.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Github Pages&lt;/h2&gt;
+&lt;h2 id=&#34;github-pages:a25a3b4ce2b3a612bd067d9bd96cbf79&#34;&gt;Github Pages&lt;/h2&gt;
 
 &lt;p&gt;As this will only get a couple of hits what could be better than hosting it on &lt;a href=&#34;https://pages.github.com/&#34;&gt;github pages&lt;/a&gt; - I&amp;rsquo;m a little bit in love with github anyway so perfect choice.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;Hugo&lt;/h2&gt;
+&lt;h2 id=&#34;hugo:a25a3b4ce2b3a612bd067d9bd96cbf79&#34;&gt;Hugo&lt;/h2&gt;
 
 &lt;p&gt;I&amp;rsquo;m a little bit in love with go - so &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; was the perfect choice as well, and its been great so far, other than is typical of newish open source projects slightly lacking in the documentation department.&lt;/p&gt;
 </description>

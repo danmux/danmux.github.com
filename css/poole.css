@@ -111,14 +111,22 @@ strong {
 }
 
 /* Lists */
-ul, ol, dl {
+ul, dl {
   margin-top: 0;
   padding-left: 0;
   margin-bottom: 1rem;
   list-style-type: none;
 }
 
+ol {
+  margin-top: 0;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
 
+ol li{
+  margin-left: 2rem;
+}
 
 dt {
   font-weight: bold;
