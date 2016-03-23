@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://danmux.com/</loc>
-    <lastmod>2015-07-20T17:02:07+01:00</lastmod>
+    <lastmod>2015-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/test_pyramid_availability_bias/</loc>
+    <lastmod>2015-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -35,6 +40,11 @@
   <url>
     <loc>http://danmux.com/posts/hugo_based_blog/</loc>
     <lastmod>2014-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/bank_1_5/</loc>
+    <lastmod>2011-09-23T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
