@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on Dans Stuff</title>
-    <link>http://danmux.com/categories/development/</link>
-    <description>Recent content in Development on Dans Stuff</description>
-    <generator>Hugo -- gohugo.io</generator>
+      <title>Development on Dans Stuff </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://danmux.com/categories/development/index.xml</link>
     
     
     
-    
-    <lastBuildDate>Mon, 21 Dec 2015 00:00:00 UT</lastBuildDate>
-    <atom:link href="http://danmux.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <updated>Mon, 21 Dec 2015 00:00:00 UTC</updated>
     
     <item>
       <title>The Test Pyramid and Availability Bias</title>
-      <link>http://danmux.com/posts/test_pyramid_availability_bias/</link>
-      <pubDate>Mon, 21 Dec 2015 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/test_pyramid_availability_bias</link>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/test_pyramid_availability_bias/</guid>
+      <guid>http://danmux.com/posts/test_pyramid_availability_bias</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&#34;&gt;The test pyramid&lt;/a&gt; has its place - it gets across a simple idea, but it has been taken too literally, and applied innapropriately.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-pyramid-and-dificult-compromises:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;The Pyramid and Dificult Compromises&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;The Pyramid and Dificult Compromises&lt;/h2&gt;
 
 &lt;p&gt;My understanding of Cohns original article was that people too often downplay the service or integration tests, and I think discussions of the pyramid miss this emphasis, and have focused too much on the Pyramid itself.&lt;/p&gt;
 
@@ -32,7 +29,7 @@
 
 &lt;p&gt;Judging good enough and risk is hard and takes confidence and experience to get the balance right in the many different projects and products we work within. A set of tried and tested prescriptions is always more straight forward.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-base-of-the-pyramid-problem:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;The Base of the Pyramid Problem&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;The Base of the Pyramid Problem&lt;/h2&gt;
 
 &lt;p&gt;It is way too prescriptive:&lt;/p&gt;
 
@@ -47,7 +44,7 @@
 &lt;li&gt;Unit tests themselves are a kind of availability bias - because they are easy to write and run they are used in the place of a more difficult, more complex, more valuable strategy, one that only becomes clear when you critically assess the real risks affecting quality.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;an-illustration-of-broken-thinking:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;An Illustration of Broken Thinking&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;An Illustration of Broken Thinking&lt;/h2&gt;
 
 &lt;p&gt;The article most cited to me is the well read &lt;a href=&#34;http://martinfowler.com/bliki/TestPyramid.html&#34;&gt;Test Pyramid&lt;/a&gt; by Martin Fowler which references the original Mike Cohn article, &lt;a href=&#34;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&#34;&gt;The Forgotten Layer of the Test Automation Pyramid&lt;/a&gt;&lt;/p&gt;
 
@@ -71,7 +68,7 @@
 &lt;p&gt;The testing strategy is not the problem here.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;detail-of-availability-bias:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;Detail of Availability Bias&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;Detail of Availability Bias&lt;/h2&gt;
 
 &lt;p&gt;(my own pseudo science - feel free to skip to next section (but there is mention of interesting work in any case))&lt;/p&gt;
 
@@ -104,7 +101,7 @@
 
 &lt;p&gt;I also think it is likely that we are still suffering the rebound from 10 years ago when test automation and unit testing were much less an integral part of the development cycle. The easiest goto tool in the interim has been the unit test.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-smart-way:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;The Smart Way&lt;/h2&gt;
+&lt;h2 id=&#34;toc_4&#34;&gt;The Smart Way&lt;/h2&gt;
 
 &lt;p&gt;Whilst this post actually started out as a document of my linking availability bias with the over emphasis on unit testing and was not meant to be about the value of various tests in practice, it is probably clear that I encourage a more individually considered approach, than a set of prescribed rules.&lt;/p&gt;
 

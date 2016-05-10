@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Performance on Dans Stuff</title>
-    <link>http://danmux.com/categories/performance/</link>
-    <description>Recent content in Performance on Dans Stuff</description>
-    <generator>Hugo -- gohugo.io</generator>
+      <title>Performance on Dans Stuff </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://danmux.com/categories/performance/index.xml</link>
     
     
     
-    
-    <lastBuildDate>Sun, 06 Jul 2014 00:00:00 UT</lastBuildDate>
-    <atom:link href="http://danmux.com/categories/performance/index.xml" rel="self" type="application/rss+xml" />
+    <updated>Sun, 06 Jul 2014 00:00:00 UTC</updated>
     
     <item>
       <title>Jmeter is a Poor Choice for REST and Golang</title>
-      <link>http://danmux.com/posts/jmeter_rest_golang/</link>
-      <pubDate>Sun, 06 Jul 2014 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/jmeter_rest_golang</link>
+      <pubDate>Sun, 06 Jul 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/jmeter_rest_golang/</guid>
+      <guid>http://danmux.com/posts/jmeter_rest_golang</guid>
       <description>
 
 &lt;p&gt;Its essential we have good integration tests and performance tests on our restful api, particularly now that many of the moving parts will migrate to microservices written in Go.&lt;/p&gt;
 
 &lt;p&gt;Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.&lt;/p&gt;
 
-&lt;h2 id=&#34;json-requests-are-hard:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;JSON Requests are Hard&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;JSON Requests are Hard&lt;/h2&gt;
 
 &lt;p&gt;Jmeter is crap at constructing anything but static JSON.&lt;/p&gt;
 
@@ -32,13 +29,13 @@
 
 &lt;p&gt;&lt;a href=&#34;http://www.ubik-ingenierie.com/blog/extract-JSON-content-efficiently-with-jmeter-using-JSON-path-syntax-with-ubik-load-pack/&#34;&gt;This alternative&lt;/a&gt; doesn&amp;rsquo;t look too much better.&lt;/p&gt;
 
-&lt;h2 id=&#34;json-responses-are-hard:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;JSON Responses are Hard&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;JSON Responses are Hard&lt;/h2&gt;
 
 &lt;p&gt;Applying meaningful assertions to the responses in Jmeter is also a bit of a ball ache - regex is the default. There is no json parsing out of the box.&lt;/p&gt;
 
 &lt;p&gt;Plugins improve things somewhat, but modelling a flow of a couple of requests with some shared session awareness is another load of hassle.&lt;/p&gt;
 
-&lt;h2 id=&#34;performance-is-questionable:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Performance is Questionable&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;Performance is Questionable&lt;/h2&gt;
 
 &lt;p&gt;My own experiments and the thread below shows how a single jmeter instance is probably not quick enough to test the performance of a Go based web server, without setting up a few instances - but i spose we will have to do that in production even if we do find a fast tool.&lt;/p&gt;
 
@@ -50,7 +47,7 @@
 
 &lt;div class=&#34;g-post&#34; data-href=&#34;https://plus.google.com/101114877505962271216/posts/PeZk8FY3PWY&#34;&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;alternatives:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Alternatives&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;Alternatives&lt;/h2&gt;
 
 &lt;p&gt;A quick search shows&amp;hellip;&lt;/p&gt;
 
@@ -58,7 +55,7 @@
 
 &lt;p&gt;Others via stack overflow etc. all appear to be pretty much GUI based or GUI only&lt;/p&gt;
 
-&lt;h2 id=&#34;next-steps:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;h2 id=&#34;toc_4&#34;&gt;Next Steps&lt;/h2&gt;
 
 &lt;p&gt;Do we build our own tests?&lt;/p&gt;
 

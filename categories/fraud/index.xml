@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fraud on Dans Stuff</title>
-    <link>http://danmux.com/categories/fraud/</link>
-    <description>Recent content in Fraud on Dans Stuff</description>
-    <generator>Hugo -- gohugo.io</generator>
+      <title>Fraud on Dans Stuff </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://danmux.com/categories/fraud/index.xml</link>
     
     
     
-    
-    <lastBuildDate>Fri, 03 Feb 2012 00:00:00 UT</lastBuildDate>
-    <atom:link href="http://danmux.com/categories/fraud/index.xml" rel="self" type="application/rss+xml" />
+    <updated>Fri, 03 Feb 2012 00:00:00 UTC</updated>
     
     <item>
       <title>Banks Love Hackers</title>
-      <link>http://danmux.com/posts/banks_love_hackers/</link>
-      <pubDate>Fri, 03 Feb 2012 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/banks_love_hackers</link>
+      <pubDate>Fri, 03 Feb 2012 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/banks_love_hackers/</guid>
+      <guid>http://danmux.com/posts/banks_love_hackers</guid>
       <description>
 
 &lt;p&gt;A recent BBC Click article reporting &lt;a href=&#34;http://www.bbc.co.uk/news/technology-16812064&#34;&gt;“Hackers outwit online banking identity security systems”&lt;/a&gt; show how ‘hackers’ can poison online banking web sites to trick customers into transferring money out of their accounts.&lt;/p&gt;
@@ -36,7 +33,7 @@
 
 &lt;p&gt;&lt;strong&gt;“Fraudsters dupe UK current account holders out of £2.6 Billion”.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;the-real-truth:29b4d8f37ceca4c7de5a5a33d1a60991&#34;&gt;The Real Truth&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;The Real Truth&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2011 Bank fraud in 2011:  £32 Million&lt;/li&gt;
@@ -45,9 +42,11 @@
 
 &lt;p&gt;These numbers are based on the &lt;a href=&#34;http://webarchive.nationalarchives.gov.uk/20140402142426/http:/oft.gov.uk/shared_oft/reports/financial_products/OFT1005exec.pdf&#34;&gt;OFT report from 2008&lt;/a&gt; – £2.6 billion in ‘unpaid item’ penaly charges during 2006 (there’s actually another £0.5billion in unauthorised overdraft fees as well). This number is probably now a tiny bit high. A more recent OFT report in 2010 show the average unpaid item fee has halved since the 2008 reports numbers, but when you factor in the other penalty fees, it won’t be far off.&lt;/p&gt;
 
-&lt;p&gt;You know I wouldn’t be surprised if the banks didn’t like a little bit of fraud – especially if its online – then they can keep not delivering the services that would help many more people to avoid these (still) ridiculous fees and charges. I wonder if any banks have a secret ‘hacker department’ (btw I’m using hacker in the now more common ‘bad guy at a computer’ way. Not the original and (correct) meaning, as per Zuks recent misunderstood statement). Whilst the banks have cleaned up their act a bit – we must applaud them for halving the average penalty from £34 to £17 – the OFT report in 2008, provides some choice insight into why the banks like these sneaky, after the event, charges.&lt;/p&gt;
+&lt;p&gt;You know I wouldn’t be surprised if the banks didn’t like a little bit of fraud – especially if its online – then they can keep not delivering the services that would help many more people to avoid these (still) ridiculous fees and charges. I wonder if any banks have a secret ‘hacker department’ (btw I’m using hacker in the now more common ‘bad guy at a computer’ way. Not the original and (correct) meaning, as per Zuks recent misunderstood statement). Whilst the banks have cleaned up their act a bit – we must applaud them for halving the average penalty from £34 to £17 – the OFT report in 2008, provides some choice insight into why the banks like these sneaky, after the event, charges:&lt;/p&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;The lack of visibility of insufficient funds charges to consumers has reduced the incentive for the banks to compete on these aspects. As a result some banks appear to see insufficient funds charges in particular as an attractive way to generate additional revenue without affecting demand for their accounts.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;A footnote goes into more detail: During the course of this market study, the OFT has seen banks’ internal documents on the level of charges that include statements such as:&lt;/p&gt;
 

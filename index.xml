@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dans Stuff</title>
-    <link>http://danmux.com/</link>
-    <description>Recent content on Dans Stuff</description>
-    <generator>Hugo -- gohugo.io</generator>
+      <title>Recent Content on Dans Stuff </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://danmux.com/index.xml</link>
     
     
     
-    
-    <lastBuildDate>Mon, 21 Dec 2015 00:00:00 UT</lastBuildDate>
-    <atom:link href="http://danmux.com/index.xml" rel="self" type="application/rss+xml" />
+    <updated>Mon, 21 Dec 2015 00:00:00 UTC</updated>
     
     <item>
       <title>The Test Pyramid and Availability Bias</title>
-      <link>http://danmux.com/posts/test_pyramid_availability_bias/</link>
-      <pubDate>Mon, 21 Dec 2015 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/test_pyramid_availability_bias</link>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/test_pyramid_availability_bias/</guid>
+      <guid>http://danmux.com/posts/test_pyramid_availability_bias</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&#34;&gt;The test pyramid&lt;/a&gt; has its place - it gets across a simple idea, but it has been taken too literally, and applied innapropriately.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-pyramid-and-dificult-compromises:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;The Pyramid and Dificult Compromises&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;The Pyramid and Dificult Compromises&lt;/h2&gt;
 
 &lt;p&gt;My understanding of Cohns original article was that people too often downplay the service or integration tests, and I think discussions of the pyramid miss this emphasis, and have focused too much on the Pyramid itself.&lt;/p&gt;
 
@@ -32,7 +29,7 @@
 
 &lt;p&gt;Judging good enough and risk is hard and takes confidence and experience to get the balance right in the many different projects and products we work within. A set of tried and tested prescriptions is always more straight forward.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-base-of-the-pyramid-problem:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;The Base of the Pyramid Problem&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;The Base of the Pyramid Problem&lt;/h2&gt;
 
 &lt;p&gt;It is way too prescriptive:&lt;/p&gt;
 
@@ -47,7 +44,7 @@
 &lt;li&gt;Unit tests themselves are a kind of availability bias - because they are easy to write and run they are used in the place of a more difficult, more complex, more valuable strategy, one that only becomes clear when you critically assess the real risks affecting quality.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;an-illustration-of-broken-thinking:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;An Illustration of Broken Thinking&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;An Illustration of Broken Thinking&lt;/h2&gt;
 
 &lt;p&gt;The article most cited to me is the well read &lt;a href=&#34;http://martinfowler.com/bliki/TestPyramid.html&#34;&gt;Test Pyramid&lt;/a&gt; by Martin Fowler which references the original Mike Cohn article, &lt;a href=&#34;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&#34;&gt;The Forgotten Layer of the Test Automation Pyramid&lt;/a&gt;&lt;/p&gt;
 
@@ -71,7 +68,7 @@
 &lt;p&gt;The testing strategy is not the problem here.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;detail-of-availability-bias:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;Detail of Availability Bias&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;Detail of Availability Bias&lt;/h2&gt;
 
 &lt;p&gt;(my own pseudo science - feel free to skip to next section (but there is mention of interesting work in any case))&lt;/p&gt;
 
@@ -104,7 +101,7 @@
 
 &lt;p&gt;I also think it is likely that we are still suffering the rebound from 10 years ago when test automation and unit testing were much less an integral part of the development cycle. The easiest goto tool in the interim has been the unit test.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-smart-way:f9c27430fb20a304ea9dd81fcf7df4c9&#34;&gt;The Smart Way&lt;/h2&gt;
+&lt;h2 id=&#34;toc_4&#34;&gt;The Smart Way&lt;/h2&gt;
 
 &lt;p&gt;Whilst this post actually started out as a document of my linking availability bias with the over emphasis on unit testing and was not meant to be about the value of various tests in practice, it is probably clear that I encourage a more individually considered approach, than a set of prescribed rules.&lt;/p&gt;
 
@@ -139,15 +136,15 @@
     
     <item>
       <title>Queues Are Not Always The Answer</title>
-      <link>http://danmux.com/posts/queues-are-not-always-the-answer/</link>
+      <link>http://danmux.com/posts/queues-are-not-always-the-answer</link>
       <pubDate>Mon, 20 Jul 2015 17:02:07 BST</pubDate>
       
-      <guid>http://danmux.com/posts/queues-are-not-always-the-answer/</guid>
+      <guid>http://danmux.com/posts/queues-are-not-always-the-answer</guid>
       <description>
 
 &lt;p&gt;I feel developers reach for the queue all too quickly. I’m talking about stand alone message queue services like RabbitMQ, ActiveMQ etc. etc. Not an in memory data structure (which in fact can be all you need sometimes)&lt;/p&gt;
 
-&lt;h2 id=&#34;sync-or-queue:eb0f6f06ad8a7448f62939e06ec5d67a&#34;&gt;Sync or Queue&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Sync or Queue&lt;/h2&gt;
 
 &lt;p&gt;Often the reasons for choosing a queue include many features that any synchronous service could provide.&lt;/p&gt;
 
@@ -187,7 +184,7 @@ The other aspect of a queue that is not mentioned in that article is security. A
 &lt;p&gt;&lt;strong&gt;Bad UX&lt;/strong&gt;
 Using a queue in any part of your architecture that affects the user experience is a risky compromise, which can often mask the underlying problem.&lt;/p&gt;
 
-&lt;h2 id=&#34;summary:eb0f6f06ad8a7448f62939e06ec5d67a&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;In summary use a queue, if you really don’t mind asynchronous or parallel work&amp;hellip;&lt;/p&gt;
 
@@ -202,10 +199,10 @@ Using a queue in any part of your architecture that affects the user experience 
     
     <item>
       <title>JSON, Gzip, Snappy and Gob Across the Wire</title>
-      <link>http://danmux.com/posts/across_the_wire_serialisation/</link>
-      <pubDate>Sun, 21 Sep 2014 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/across_the_wire_serialisation</link>
+      <pubDate>Sun, 21 Sep 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/across_the_wire_serialisation/</guid>
+      <guid>http://danmux.com/posts/across_the_wire_serialisation</guid>
       <description>
 
 &lt;p&gt;Coming from a background where memory and clock cycles were sparse, binary encodings have always held an appeal. Since then I’ve been told we have loads of compute power, ample cheap RAM and disk, and when the network is the bottleneck then, well, that is a good problem to have.&lt;/p&gt;
@@ -214,7 +211,7 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;(&lt;em&gt;tl;dr&lt;/em&gt; almost always use gzipped JSON)&lt;/p&gt;
 
-&lt;h2 id=&#34;serialising-for-wire-and-disk:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Serialising for Wire and Disk&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Serialising for Wire and Disk&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Much better to use a more debuggable human readable encoding and compress it in flight during transmission or storage&lt;/strong&gt;, after all browsers have native support and the performance benefits of binary formats are negligible. This is the crux of the argument for those in favour of verbose text based serialisations.&lt;/p&gt;
 
@@ -224,13 +221,13 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;Heres a &lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/xtXh0yWOens&#34;&gt;recent example of the debate&lt;/a&gt; with all the typical (valid) points being trotted out&lt;/p&gt;
 
-&lt;h2 id=&#34;in-this-case:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;In This Case&amp;hellip;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;In This Case&amp;hellip;&lt;/h2&gt;
 
 &lt;p&gt;Having just built a nicely homogenous #golang rpc microservices framework (or ‘milliservices’ as &lt;a href=&#34;https://twitter.com/iand/status/510090898269831170&#34;&gt;Ian Davis called his&lt;/a&gt;) I was naturally drawn to the native RPC gob encoding, but I hedged my bets and did the second worst of both worlds a gob based RPC envelope - with a []byte payload that could carry any serialisation - a la http. (the absolute worst would be http, with a gob body)&lt;/p&gt;
 
 &lt;p&gt;The point of this ‘neither one nor the other’ design was that much like HTTP the envelope is standard so all our components can speak the same language, output consistent log data and generally behave in a more homogenous way than you typically find in a mixed bag of microservices - what you put in the message payload is down to you and your services, of course for our internal systems gob is the natural choice for the payload as well.&lt;/p&gt;
 
-&lt;h2 id=&#34;some-trivial-calculations:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Some Trivial Calculations&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;Some Trivial Calculations&lt;/h2&gt;
 
 &lt;p&gt;I did some initial calculations and benchmarking comparing gzipped JSON to ‘snappy’ JSON to raw gob. I suppose it would be useful to include lz4, but as far as I can tell snappy is not a million miles different.&lt;/p&gt;
 
@@ -336,7 +333,7 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;None of the decoding benchmarks streamed the data - new encoders were made every loop, I know Gob would be even faster with this optimisation, all decoders decoded into an &lt;code&gt;interface{}&lt;/code&gt;, they would all have been quicker if a particular &lt;code&gt;struct&lt;/code&gt; was used.&lt;/p&gt;
 
-&lt;h2 id=&#34;testing-binary-payloads:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Testing Binary Payloads&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;Testing Binary Payloads&lt;/h2&gt;
 
 &lt;p&gt;It is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file.&lt;/p&gt;
 
@@ -344,7 +341,7 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.&lt;/p&gt;
 
-&lt;h2 id=&#34;summary:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;toc_4&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;A compressed text based encoding like JSON &lt;strong&gt;is&lt;/strong&gt; more widely supported, quite compact and easier to test and debug, particularly if the consumer is a web browser.&lt;/p&gt;
 
@@ -360,17 +357,17 @@ Using a queue in any part of your architecture that affects the user experience 
     
     <item>
       <title>Jmeter is a Poor Choice for REST and Golang</title>
-      <link>http://danmux.com/posts/jmeter_rest_golang/</link>
-      <pubDate>Sun, 06 Jul 2014 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/jmeter_rest_golang</link>
+      <pubDate>Sun, 06 Jul 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/jmeter_rest_golang/</guid>
+      <guid>http://danmux.com/posts/jmeter_rest_golang</guid>
       <description>
 
 &lt;p&gt;Its essential we have good integration tests and performance tests on our restful api, particularly now that many of the moving parts will migrate to microservices written in Go.&lt;/p&gt;
 
 &lt;p&gt;Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.&lt;/p&gt;
 
-&lt;h2 id=&#34;json-requests-are-hard:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;JSON Requests are Hard&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;JSON Requests are Hard&lt;/h2&gt;
 
 &lt;p&gt;Jmeter is crap at constructing anything but static JSON.&lt;/p&gt;
 
@@ -378,13 +375,13 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;&lt;a href=&#34;http://www.ubik-ingenierie.com/blog/extract-JSON-content-efficiently-with-jmeter-using-JSON-path-syntax-with-ubik-load-pack/&#34;&gt;This alternative&lt;/a&gt; doesn&amp;rsquo;t look too much better.&lt;/p&gt;
 
-&lt;h2 id=&#34;json-responses-are-hard:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;JSON Responses are Hard&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;JSON Responses are Hard&lt;/h2&gt;
 
 &lt;p&gt;Applying meaningful assertions to the responses in Jmeter is also a bit of a ball ache - regex is the default. There is no json parsing out of the box.&lt;/p&gt;
 
 &lt;p&gt;Plugins improve things somewhat, but modelling a flow of a couple of requests with some shared session awareness is another load of hassle.&lt;/p&gt;
 
-&lt;h2 id=&#34;performance-is-questionable:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Performance is Questionable&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;Performance is Questionable&lt;/h2&gt;
 
 &lt;p&gt;My own experiments and the thread below shows how a single jmeter instance is probably not quick enough to test the performance of a Go based web server, without setting up a few instances - but i spose we will have to do that in production even if we do find a fast tool.&lt;/p&gt;
 
@@ -396,7 +393,7 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;div class=&#34;g-post&#34; data-href=&#34;https://plus.google.com/101114877505962271216/posts/PeZk8FY3PWY&#34;&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;alternatives:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Alternatives&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;Alternatives&lt;/h2&gt;
 
 &lt;p&gt;A quick search shows&amp;hellip;&lt;/p&gt;
 
@@ -404,7 +401,7 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;Others via stack overflow etc. all appear to be pretty much GUI based or GUI only&lt;/p&gt;
 
-&lt;h2 id=&#34;next-steps:b02f6e156d0f66f8b442c69a9bfa839c&#34;&gt;Next Steps&lt;/h2&gt;
+&lt;h2 id=&#34;toc_4&#34;&gt;Next Steps&lt;/h2&gt;
 
 &lt;p&gt;Do we build our own tests?&lt;/p&gt;
 
@@ -416,57 +413,54 @@ Using a queue in any part of your architecture that affects the user experience 
     
     <item>
       <title>Embedded Gists</title>
-      <link>http://danmux.com/posts/embedded_gists/</link>
-      <pubDate>Sat, 05 Jul 2014 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/embedded_gists</link>
+      <pubDate>Sat, 05 Jul 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/embedded_gists/</guid>
+      <guid>http://danmux.com/posts/embedded_gists</guid>
       <description>
 
-&lt;h2 id=&#34;syntax-highlighting-or-embedded-gists:1344d5413a88f5694a6a670438370e1d&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
 
 &lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;. But also wanted to try embedding gists&lt;/p&gt;
 
 &lt;p&gt;So here is an example&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #447fcf&#34;&gt;digit_sum&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;(n):&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #447fcf&#34;&gt;digit_sum&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;(n):&lt;/span&gt;
     &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;
-    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n:&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# while n is ‘truthy’ for an integer that means not 0&lt;/span&gt;
+    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n:&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# while n is &amp;#39;truthy&amp;#39; for an integer that means not 0&lt;/span&gt;
         &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;(n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7&lt;/span&gt;
-        &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# n = the integer of n / 10   int(15.7) = 15&lt;/span&gt;
-    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&amp;lt;/p&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;         &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# n = the integer of n / 10   int(15.7) = 15 &lt;/span&gt;
+    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt;
+   
+&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;digit_sum(&lt;/span&gt;&lt;span style=&#34;color: #3677a9&#34;&gt;157&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&lt;/span&gt;
 
-&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;digit_sum(&lt;/span&gt;&lt;span style=&#34;color: #3677a9&#34;&gt;157&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&amp;lt;/p&amp;gt;&lt;/span&gt;
-
-&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #a61717; background-color: #e3d2d2&#34;&gt;”’&lt;/span&gt;
-&lt;span style=&#34;color: #d0d0d0&#34;&gt;calling&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;digit_sum(&lt;/span&gt;&lt;span style=&#34;color: #3677a9&#34;&gt;157&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&amp;lt;/p&amp;gt;&lt;/span&gt;
-
-&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;h2&lt;/span&gt; &lt;span style=&#34;color: #24909d&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;loop-s-n-n-10-n-10:1344d5413a88f5694a6a670438370e1d&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;loop&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
-
-&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;157&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;   &lt;span style=&#34;color: #3677a9&#34;&gt;7&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;  &lt;span style=&#34;color: #3677a9&#34;&gt;15&lt;/span&gt;
-&lt;span style=&#34;color: #3677a9&#34;&gt;1&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;7&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;15&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;   &lt;span style=&#34;color: #3677a9&#34;&gt;5&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;  &lt;span style=&#34;color: #3677a9&#34;&gt;1&lt;/span&gt;
-&lt;span style=&#34;color: #3677a9&#34;&gt;2&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;12&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;1&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;   &lt;span style=&#34;color: #3677a9&#34;&gt;1&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;  &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;
-&lt;span style=&#34;color: #3677a9&#34;&gt;3&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;13&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;         &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&amp;lt;br&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color: #a61717; background-color: #e3d2d2&#34;&gt;”’&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;calling digit_sum(157)&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt; &lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;loop  | s   | n   | n % 10  | n / 10&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;------------------------------------&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;0     | 0   | 157 |   7     |  15&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;1     | 7   | 15  |   5     |  1&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;2     | 12  | 1   |   1     |  0&lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;3     | 13  | 0   |         |  &lt;/span&gt;
+&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
 
 &lt;p&gt;But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.&lt;/p&gt;
 
 &lt;p&gt;So on embedding a gist as follows (but without syntax highlighting) failed&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
 
 &lt;p&gt;Putting it in another block partially worked&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
 
 &lt;p&gt;I was left with an unclosed script tag.&lt;/p&gt;
 
@@ -488,7 +482,7 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;script src=&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;&gt;&lt;/script&gt;
 
-&lt;h3 id=&#34;and-it-worked:1344d5413a88f5694a6a670438370e1d&#34;&gt;And it worked !&lt;/h3&gt;
+&lt;h3 id=&#34;toc_1&#34;&gt;And it worked !&lt;/h3&gt;
 
 &lt;p&gt;Nice work &lt;a href=&#34;https://github.com/jmitchell&#34;&gt;jmitchell&lt;/a&gt; and &lt;a href=&#34;https://github.com/spf13&#34;&gt;Steve Francia&lt;/a&gt;.&lt;/p&gt;
 
@@ -498,10 +492,10 @@ Using a queue in any part of your architecture that affects the user experience 
     
     <item>
       <title>Making Your Own Summary</title>
-      <link>http://danmux.com/posts/hugo_summary/</link>
-      <pubDate>Sat, 28 Jun 2014 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/hugo_summary</link>
+      <pubDate>Sat, 28 Jun 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/hugo_summary/</guid>
+      <guid>http://danmux.com/posts/hugo_summary</guid>
       <description>&lt;p&gt;Hugo allows you to specify where the summary stops - and allows the full markdown including shortcodes.&lt;/p&gt;
 
 &lt;p&gt;You just need to construct the first bit of your article so that it makes a nice summary and then end it with&amp;hellip;&lt;/p&gt;
@@ -519,21 +513,21 @@ Using a queue in any part of your architecture that affects the user experience 
     
     <item>
       <title>Moving to Hugo</title>
-      <link>http://danmux.com/posts/hugo_based_blog/</link>
-      <pubDate>Thu, 29 May 2014 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/hugo_based_blog</link>
+      <pubDate>Thu, 29 May 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/hugo_based_blog/</guid>
+      <guid>http://danmux.com/posts/hugo_based_blog</guid>
       <description>
 
 &lt;p&gt;I decided that I should blog under my danmux.com domain - I often use danmux around the internet, sometimes danmull, but normally danmux for tech type things, so it makes sense.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;danmux&lt;/strong&gt; because the &lt;strong&gt;x&lt;/strong&gt; has always been a notable part of my name - and mux reminds me of my electrical engineering days, and I think humans multiplex all the time, there it is.&lt;/p&gt;
 
-&lt;h2 id=&#34;github-pages:a25a3b4ce2b3a612bd067d9bd96cbf79&#34;&gt;Github Pages&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Github Pages&lt;/h2&gt;
 
 &lt;p&gt;As this will only get a couple of hits what could be better than hosting it on &lt;a href=&#34;https://pages.github.com/&#34;&gt;github pages&lt;/a&gt; - I&amp;rsquo;m a little bit in love with github anyway so perfect choice.&lt;/p&gt;
 
-&lt;h2 id=&#34;hugo:a25a3b4ce2b3a612bd067d9bd96cbf79&#34;&gt;Hugo&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;Hugo&lt;/h2&gt;
 
 &lt;p&gt;I&amp;rsquo;m a little bit in love with go - so &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; was the perfect choice as well, and its been great so far, other than is typical of newish open source projects slightly lacking in the documentation department.&lt;/p&gt;
 </description>
@@ -541,10 +535,10 @@ Using a queue in any part of your architecture that affects the user experience 
     
     <item>
       <title>Banks Love Hackers</title>
-      <link>http://danmux.com/posts/banks_love_hackers/</link>
-      <pubDate>Fri, 03 Feb 2012 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/banks_love_hackers</link>
+      <pubDate>Fri, 03 Feb 2012 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/banks_love_hackers/</guid>
+      <guid>http://danmux.com/posts/banks_love_hackers</guid>
       <description>
 
 &lt;p&gt;A recent BBC Click article reporting &lt;a href=&#34;http://www.bbc.co.uk/news/technology-16812064&#34;&gt;“Hackers outwit online banking identity security systems”&lt;/a&gt; show how ‘hackers’ can poison online banking web sites to trick customers into transferring money out of their accounts.&lt;/p&gt;
@@ -563,7 +557,7 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;&lt;strong&gt;“Fraudsters dupe UK current account holders out of £2.6 Billion”.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;the-real-truth:29b4d8f37ceca4c7de5a5a33d1a60991&#34;&gt;The Real Truth&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;The Real Truth&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;2011 Bank fraud in 2011:  £32 Million&lt;/li&gt;
@@ -572,9 +566,11 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;These numbers are based on the &lt;a href=&#34;http://webarchive.nationalarchives.gov.uk/20140402142426/http:/oft.gov.uk/shared_oft/reports/financial_products/OFT1005exec.pdf&#34;&gt;OFT report from 2008&lt;/a&gt; – £2.6 billion in ‘unpaid item’ penaly charges during 2006 (there’s actually another £0.5billion in unauthorised overdraft fees as well). This number is probably now a tiny bit high. A more recent OFT report in 2010 show the average unpaid item fee has halved since the 2008 reports numbers, but when you factor in the other penalty fees, it won’t be far off.&lt;/p&gt;
 
-&lt;p&gt;You know I wouldn’t be surprised if the banks didn’t like a little bit of fraud – especially if its online – then they can keep not delivering the services that would help many more people to avoid these (still) ridiculous fees and charges. I wonder if any banks have a secret ‘hacker department’ (btw I’m using hacker in the now more common ‘bad guy at a computer’ way. Not the original and (correct) meaning, as per Zuks recent misunderstood statement). Whilst the banks have cleaned up their act a bit – we must applaud them for halving the average penalty from £34 to £17 – the OFT report in 2008, provides some choice insight into why the banks like these sneaky, after the event, charges.&lt;/p&gt;
+&lt;p&gt;You know I wouldn’t be surprised if the banks didn’t like a little bit of fraud – especially if its online – then they can keep not delivering the services that would help many more people to avoid these (still) ridiculous fees and charges. I wonder if any banks have a secret ‘hacker department’ (btw I’m using hacker in the now more common ‘bad guy at a computer’ way. Not the original and (correct) meaning, as per Zuks recent misunderstood statement). Whilst the banks have cleaned up their act a bit – we must applaud them for halving the average penalty from £34 to £17 – the OFT report in 2008, provides some choice insight into why the banks like these sneaky, after the event, charges:&lt;/p&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;The lack of visibility of insufficient funds charges to consumers has reduced the incentive for the banks to compete on these aspects. As a result some banks appear to see insufficient funds charges in particular as an attractive way to generate additional revenue without affecting demand for their accounts.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;A footnote goes into more detail: During the course of this market study, the OFT has seen banks’ internal documents on the level of charges that include statements such as:&lt;/p&gt;
 
@@ -610,17 +606,17 @@ Using a queue in any part of your architecture that affects the user experience 
     
     <item>
       <title>Bank 1.5</title>
-      <link>http://danmux.com/posts/bank_1_5/</link>
-      <pubDate>Fri, 23 Sep 2011 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/bank_1_5</link>
+      <pubDate>Fri, 23 Sep 2011 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/bank_1_5/</guid>
+      <guid>http://danmux.com/posts/bank_1_5</guid>
       <description>
 
 &lt;p&gt;This past week saw two of the biggest banking and financial innovation conferences take place, Sibos and Finovate. On following a few Twitter streams of a few attendees, a new meme started to appear – possibly a bit premature to call it a meme and incorrect to call it new, but none the less the concept is valid if a bit bank-geeky.&lt;/p&gt;
 
 &lt;p&gt;Borrowing from the Web 2.0 catchall or marketing label for anything more interactive than the static Web 1.0 but less linked than the evolving beb of data (Web 3.0?) the banking innovation consultant, speaker and author Brett King has coalesced thoughts and ideas around the next generation of consumer banking and published them in his popular book – Bank 2.0&lt;/p&gt;
 
-&lt;h2 id=&#34;web-2-0:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;Web 2.0&lt;/h2&gt;
+&lt;h2 id=&#34;toc_0&#34;&gt;Web 2.0&lt;/h2&gt;
 
 &lt;p&gt;By borrowing the Web 2.0 concept, Bank 2.0 for those on the bank – web tech boundary conveys some immediate meaning.&lt;/p&gt;
 
@@ -634,21 +630,21 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;For the web to evolve into Web 2.0 it took a concerted global vertical technology stack refresh, from the improving hardware (thanks Moore) with httpd evolving to the more plug-able Apache through efficient (to code) programming languages through wider pipes with the growth in always connected broadband, up to Javascript (and the proprietary Flash), better home computing and tighter more open browsers.&lt;/p&gt;
 
-&lt;h2 id=&#34;open-innovation:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;Open Innovation&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;Open Innovation&lt;/h2&gt;
 
 &lt;p&gt;The reason that could happen so comparatively quickly – it was open. This is the very reason why Banks will not adopt the same path or pace. The seismic shift in the internet took billions of collaborative hours enabled by the nature of the internet itself and by the passion of the people to defend against any individual corporate land grab.&lt;/p&gt;
 
-&lt;h2 id=&#34;tbl:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;TBL&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;TBL&lt;/h2&gt;
 
 &lt;p&gt;The banks have a similar scale problem to solve, but they dont have an open infrastructure, they dont have an inter-net, they have a large closed global intra-net curated by a cartel of self interested owners which is deeply rooted in and protected by the governments that helped create this razor wired garden. This situation isn’t all bad, and I dont know if there could have been a realistic alternative, or if there will be. Time will tell if a decentralised none homogenous system of many parts can unseat the incumbent system, if it can, it will take many more years. I suspect that the global legislative innovation antibodies may win this one. Though having said that there are some strong network effects at play here with telcos and social networks picking at openings.&lt;/p&gt;
 
 &lt;p&gt;Bigger than all of this is perhaps the motivation for change, the internet changed because it was 10′s of thousands of people with a shared passion and vision that was well aligned with what the general public wanted, it was two sided, pull-pull, win-win. With Banks…meh!&lt;/p&gt;
 
-&lt;h2 id=&#34;more-layers:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;More Layers&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;More Layers&lt;/h2&gt;
 
 &lt;p&gt;The internet is shifting into the next phase where the technology stack is getting deeper – big internet companies are doing the heavy lifting and heavy investment to encourage an eco-system of impassioned organisms to symbiotically share their hard work – to build upon the work of the host – filling a multitude of difficult to reach customer niches, and importantly drive value into the host. Platform as a service – open web based API’s, Amazon web services, EC2, Azure, Google App Engine, force.com etc. etc. the list is endless and extremely lucrative.&lt;/p&gt;
 
-&lt;h2 id=&#34;excellence-expected:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;Excellence Expected&lt;/h2&gt;
+&lt;h2 id=&#34;toc_4&#34;&gt;Excellence Expected&lt;/h2&gt;
 
 &lt;p&gt;Apple, Amazon, Google, Facebook have driven customer expectation through the roof, particularly with respect to quality, and immediacy. What damage these pesky brilliant companies have done whilst delighting their customers! Do they realise how hard it is to hit the benchmark they have set. Do the banks realise their newer customers in particular expect no less!&lt;/p&gt;
 
@@ -656,7 +652,7 @@ Using a queue in any part of your architecture that affects the user experience 
 
 &lt;p&gt;I think it is too late for banks to continue to own the whole vertical. It is too big too fast and too difficult. Consumer expectation is moving too fast for them to make the fundamental corporate attitude shifts required to fully engage with real customers the way every recent poster child startup has. Let the front end be owned by those that ‘get it’ look at what Bank Simple is about to do, I reserve judgement but am equally optimistic about MovenBank – both have chosen not to beat the banks at their own game but build on the existing banks core competency.&lt;/p&gt;
 
-&lt;h2 id=&#34;towards-bank-2-0:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;Towards Bank 2.0&lt;/h2&gt;
+&lt;h2 id=&#34;toc_5&#34;&gt;Towards Bank 2.0&lt;/h2&gt;
 
 &lt;p&gt;Some Banks are starting the shift already – according to that Sibos and Finovate Twitter stream – Banking as a Service is on the way. Rather than Citi knocking the stuffing out of Bank 2.0 by releasing their payment API, they took a step towards enabling bank 2.0. Mastercard does it already. If the Banks are to thrive under this next wave they need to bend and work towards helping fulfil our expectations of Bank 2.0, they need to offer the next layer up even richer access to their services and data – I mean our data.&lt;/p&gt;
 

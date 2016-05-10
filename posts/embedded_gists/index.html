@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <base href="http://danmux.com">
     <title> Embedded Gists </title>
-    <link rel="canonical" href="http://danmux.com/posts/embedded_gists/">
+    <link rel="canonical" href="http://danmux.com/posts/embedded_gists">
     
 
 <link rel="stylesheet" href="/css/poole.css">
@@ -63,51 +63,48 @@
           <h5 id="date"> Sat Jul 5, 2014 </h5>
           
 
-<h2 id="syntax-highlighting-or-embedded-gists:1344d5413a88f5694a6a670438370e1d">Syntax Highlighting - or Embedded Gists</h2>
+<h2 id="toc_0">Syntax Highlighting - or Embedded Gists</h2>
 
 <p>I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin <a href="http://pygments.org/">Pygments</a>. But also wanted to try embedding gists</p>
 
 <p>So here is an example&hellip;</p>
 
-<p><div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span style="color: #d0d0d0">&lt;p&gt;</span><span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">digit_sum</span><span style="color: #d0d0d0">(n):</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">digit_sum</span><span style="color: #d0d0d0">(n):</span>
     <span style="color: #d0d0d0">s</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span>
-    <span style="color: #6ab825; font-weight: bold">while</span> <span style="color: #d0d0d0">n:</span>   <span style="color: #999999; font-style: italic"># while n is ‘truthy’ for an integer that means not 0</span>
+    <span style="color: #6ab825; font-weight: bold">while</span> <span style="color: #d0d0d0">n:</span>   <span style="color: #999999; font-style: italic"># while n is &#39;truthy&#39; for an integer that means not 0</span>
         <span style="color: #d0d0d0">s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">s</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">(n</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">10</span><span style="color: #d0d0d0">)</span>   <span style="color: #999999; font-style: italic"># the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7</span>
-        <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">10</span>         <span style="color: #999999; font-style: italic"># n = the integer of n / 10   int(15.7) = 15</span>
-    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">s&lt;/p&gt;</span>
+        <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">10</span>         <span style="color: #999999; font-style: italic"># n = the integer of n / 10   int(15.7) = 15 </span>
+    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">s</span>
+   
+<span style="color: #6ab825; font-weight: bold">print</span> <span style="color: #d0d0d0">digit_sum(</span><span style="color: #3677a9">157</span><span style="color: #d0d0d0">)</span>
 
-<span style="color: #d0d0d0">&lt;p&gt;</span><span style="color: #6ab825; font-weight: bold">print</span> <span style="color: #d0d0d0">digit_sum(</span><span style="color: #3677a9">157</span><span style="color: #d0d0d0">)&lt;/p&gt;</span>
-
-<span style="color: #d0d0d0">&lt;p&gt;</span><span style="color: #a61717; background-color: #e3d2d2">”’</span>
-<span style="color: #d0d0d0">calling</span> <span style="color: #d0d0d0">digit_sum(</span><span style="color: #3677a9">157</span><span style="color: #d0d0d0">)&lt;/p&gt;</span>
-
-<span style="color: #d0d0d0">&lt;h2</span> <span style="color: #24909d">id</span><span style="color: #d0d0d0">=</span><span style="color: #ed9d13">&quot;loop-s-n-n-10-n-10:1344d5413a88f5694a6a670438370e1d&quot;</span><span style="color: #d0d0d0">&gt;loop</span>  <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">s</span>   <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">n</span>   <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">10</span>  <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">10</span><span style="color: #d0d0d0">&lt;/h2&gt;</span>
-
-<span style="color: #d0d0d0">&lt;p&gt;</span><span style="color: #3677a9">0</span>     <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">0</span>   <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">157</span> <span style="color: #d0d0d0">|</span>   <span style="color: #3677a9">7</span>     <span style="color: #d0d0d0">|</span>  <span style="color: #3677a9">15</span>
-<span style="color: #3677a9">1</span>     <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">7</span>   <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">15</span>  <span style="color: #d0d0d0">|</span>   <span style="color: #3677a9">5</span>     <span style="color: #d0d0d0">|</span>  <span style="color: #3677a9">1</span>
-<span style="color: #3677a9">2</span>     <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">12</span>  <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">1</span>   <span style="color: #d0d0d0">|</span>   <span style="color: #3677a9">1</span>     <span style="color: #d0d0d0">|</span>  <span style="color: #3677a9">0</span>
-<span style="color: #3677a9">3</span>     <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">13</span>  <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">0</span>   <span style="color: #d0d0d0">|</span>         <span style="color: #d0d0d0">|&lt;br</span> <span style="color: #d0d0d0">/&gt;</span>
-<span style="color: #a61717; background-color: #e3d2d2">”’</span><span style="color: #d0d0d0">&lt;/p&gt;</span>
+<span style="color: #ed9d13">&#39;&#39;&#39;</span>
+<span style="color: #ed9d13">calling digit_sum(157)</span>
+<span style="color: #ed9d13"> </span>
+<span style="color: #ed9d13">loop  | s   | n   | n % 10  | n / 10</span>
+<span style="color: #ed9d13">------------------------------------</span>
+<span style="color: #ed9d13">0     | 0   | 157 |   7     |  15</span>
+<span style="color: #ed9d13">1     | 7   | 15  |   5     |  1</span>
+<span style="color: #ed9d13">2     | 12  | 1   |   1     |  0</span>
+<span style="color: #ed9d13">3     | 13  | 0   |         |  </span>
+<span style="color: #ed9d13">&#39;&#39;&#39;</span>
 </pre></div>
-</p>
 
 <p>But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.</p>
 
 <p>So on embedding a gist as follows (but without syntax highlighting) failed&hellip;</p>
 
-<p><div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;script </span><span style="color: #bbbbbb">src=</span><span style="color: #ed9d13">&quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;script </span><span style="color: #bbbbbb">src=</span><span style="color: #ed9d13">&quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
 <span style="color: #6ab825; font-weight: bold">&lt;/script&gt;</span>
 </pre></div>
-</p>
 
 <p>Putting it in another block partially worked</p>
 
-<p><div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;p&gt;</span>
+<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span style="color: #6ab825; font-weight: bold">&lt;p&gt;</span>
     <span style="color: #6ab825; font-weight: bold">&lt;script </span><span style="color: #bbbbbb">src=</span><span style="color: #ed9d13">&quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&quot;</span><span style="color: #6ab825; font-weight: bold">&gt;</span>
     <span style="color: #6ab825; font-weight: bold">&lt;/script&gt;</span>
 <span style="color: #6ab825; font-weight: bold">&lt;/p&gt;</span>
 </pre></div>
-</p>
 
 <p>I was left with an unclosed script tag.</p>
 
@@ -129,7 +126,7 @@
 
 <script src="https://gist.github.com/danmux/042fa69bed3791afe658.js"></script>
 
-<h3 id="and-it-worked:1344d5413a88f5694a6a670438370e1d">And it worked !</h3>
+<h3 id="toc_1">And it worked !</h3>
 
 <p>Nice work <a href="https://github.com/jmitchell">jmitchell</a> and <a href="https://github.com/spf13">Steve Francia</a>.</p>
 
@@ -148,13 +145,13 @@
   <hr />
   
     <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="http://danmux.com/posts/jmeter_rest_golang/">Jmeter is a Poor Choice for REST and Golang</a>
+    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="http://danmux.com/posts/jmeter_rest_golang">Jmeter is a Poor Choice for REST and Golang</a>
     </span>
   
 
   
     <span class="right">
-    <em>Next: </em><a class="next" href="http://danmux.com/posts/hugo_summary/"> &nbsp; Making Your Own Summary</a> &raquo;
+    <em>Next: </em><a class="next" href="http://danmux.com/posts/hugo_summary"> &nbsp; Making Your Own Summary</a> &raquo;
     </span>
   
 </div>

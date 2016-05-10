@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Template on Dans Stuff</title>
-    <link>http://danmux.com/categories/template/</link>
-    <description>Recent content in Template on Dans Stuff</description>
-    <generator>Hugo -- gohugo.io</generator>
+      <title>Template on Dans Stuff </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://danmux.com/categories/template/index.xml</link>
     
     
     
-    
-    <lastBuildDate>Sat, 28 Jun 2014 00:00:00 UT</lastBuildDate>
-    <atom:link href="http://danmux.com/categories/template/index.xml" rel="self" type="application/rss+xml" />
+    <updated>Sat, 28 Jun 2014 00:00:00 UTC</updated>
     
     <item>
       <title>Making Your Own Summary</title>
-      <link>http://danmux.com/posts/hugo_summary/</link>
-      <pubDate>Sat, 28 Jun 2014 00:00:00 UT</pubDate>
+      <link>http://danmux.com/posts/hugo_summary</link>
+      <pubDate>Sat, 28 Jun 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://danmux.com/posts/hugo_summary/</guid>
+      <guid>http://danmux.com/posts/hugo_summary</guid>
       <description>&lt;p&gt;Hugo allows you to specify where the summary stops - and allows the full markdown including shortcodes.&lt;/p&gt;
 
 &lt;p&gt;You just need to construct the first bit of your article so that it makes a nice summary and then end it with&amp;hellip;&lt;/p&gt;
