@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Json on Dans Stuff </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://danmux.com/categories/json/index.xml</link>
-    
-    
-    
-    <updated>Sun, 21 Sep 2014 00:00:00 UTC</updated>
+    <title>Json on Dans Stuff</title>
+    <link>http://danmux.com/categories/json/</link>
+    <description>Recent content in Json on Dans Stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 21 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://danmux.com/categories/json/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>JSON, Gzip, Snappy and Gob Across the Wire</title>
-      <link>http://danmux.com/posts/across_the_wire_serialisation</link>
-      <pubDate>Sun, 21 Sep 2014 00:00:00 UTC</pubDate>
+      <link>http://danmux.com/posts/across_the_wire_serialisation/</link>
+      <pubDate>Sun, 21 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/across_the_wire_serialisation</guid>
+      <guid>http://danmux.com/posts/across_the_wire_serialisation/</guid>
       <description>
 
 &lt;p&gt;Coming from a background where memory and clock cycles were sparse, binary encodings have always held an appeal. Since then I’ve been told we have loads of compute power, ample cheap RAM and disk, and when the network is the bottleneck then, well, that is a good problem to have.&lt;/p&gt;
@@ -23,7 +22,7 @@
 
 &lt;p&gt;(&lt;em&gt;tl;dr&lt;/em&gt; almost always use gzipped JSON)&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Serialising for Wire and Disk&lt;/h2&gt;
+&lt;h2 id=&#34;serialising-for-wire-and-disk:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Serialising for Wire and Disk&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Much better to use a more debuggable human readable encoding and compress it in flight during transmission or storage&lt;/strong&gt;, after all browsers have native support and the performance benefits of binary formats are negligible. This is the crux of the argument for those in favour of verbose text based serialisations.&lt;/p&gt;
 
@@ -33,13 +32,13 @@
 
 &lt;p&gt;Heres a &lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/xtXh0yWOens&#34;&gt;recent example of the debate&lt;/a&gt; with all the typical (valid) points being trotted out&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;In This Case&amp;hellip;&lt;/h2&gt;
+&lt;h2 id=&#34;in-this-case:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;In This Case&amp;hellip;&lt;/h2&gt;
 
 &lt;p&gt;Having just built a nicely homogenous #golang rpc microservices framework (or ‘milliservices’ as &lt;a href=&#34;https://twitter.com/iand/status/510090898269831170&#34;&gt;Ian Davis called his&lt;/a&gt;) I was naturally drawn to the native RPC gob encoding, but I hedged my bets and did the second worst of both worlds a gob based RPC envelope - with a []byte payload that could carry any serialisation - a la http. (the absolute worst would be http, with a gob body)&lt;/p&gt;
 
 &lt;p&gt;The point of this ‘neither one nor the other’ design was that much like HTTP the envelope is standard so all our components can speak the same language, output consistent log data and generally behave in a more homogenous way than you typically find in a mixed bag of microservices - what you put in the message payload is down to you and your services, of course for our internal systems gob is the natural choice for the payload as well.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Some Trivial Calculations&lt;/h2&gt;
+&lt;h2 id=&#34;some-trivial-calculations:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Some Trivial Calculations&lt;/h2&gt;
 
 &lt;p&gt;I did some initial calculations and benchmarking comparing gzipped JSON to ‘snappy’ JSON to raw gob. I suppose it would be useful to include lz4, but as far as I can tell snappy is not a million miles different.&lt;/p&gt;
 
@@ -145,7 +144,7 @@
 
 &lt;p&gt;None of the decoding benchmarks streamed the data - new encoders were made every loop, I know Gob would be even faster with this optimisation, all decoders decoded into an &lt;code&gt;interface{}&lt;/code&gt;, they would all have been quicker if a particular &lt;code&gt;struct&lt;/code&gt; was used.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_3&#34;&gt;Testing Binary Payloads&lt;/h2&gt;
+&lt;h2 id=&#34;testing-binary-payloads:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Testing Binary Payloads&lt;/h2&gt;
 
 &lt;p&gt;It is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file.&lt;/p&gt;
 
@@ -153,7 +152,7 @@
 
 &lt;p&gt;In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_4&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary:5bca79e758a5b8ad0a0678190c2bd34b&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;A compressed text based encoding like JSON &lt;strong&gt;is&lt;/strong&gt; more widely supported, quite compact and easier to test and debug, particularly if the consumer is a web browser.&lt;/p&gt;
 

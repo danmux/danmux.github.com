@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <base href="http://danmux.com">
     <title> Jmeter is a Poor Choice for REST and Golang </title>
-    <link rel="canonical" href="http://danmux.com/posts/jmeter_rest_golang">
+    <link rel="canonical" href="http://danmux.com/posts/jmeter_rest_golang/">
     
 
 <link rel="stylesheet" href="/css/poole.css">
@@ -67,7 +67,7 @@
 
 <p>Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.</p>
 
-<h2 id="toc_0">JSON Requests are Hard</h2>
+<h2 id="json-requests-are-hard:b02f6e156d0f66f8b442c69a9bfa839c">JSON Requests are Hard</h2>
 
 <p>Jmeter is crap at constructing anything but static JSON.</p>
 
@@ -75,13 +75,13 @@
 
 <p><a href="http://www.ubik-ingenierie.com/blog/extract-JSON-content-efficiently-with-jmeter-using-JSON-path-syntax-with-ubik-load-pack/">This alternative</a> doesn&rsquo;t look too much better.</p>
 
-<h2 id="toc_1">JSON Responses are Hard</h2>
+<h2 id="json-responses-are-hard:b02f6e156d0f66f8b442c69a9bfa839c">JSON Responses are Hard</h2>
 
 <p>Applying meaningful assertions to the responses in Jmeter is also a bit of a ball ache - regex is the default. There is no json parsing out of the box.</p>
 
 <p>Plugins improve things somewhat, but modelling a flow of a couple of requests with some shared session awareness is another load of hassle.</p>
 
-<h2 id="toc_2">Performance is Questionable</h2>
+<h2 id="performance-is-questionable:b02f6e156d0f66f8b442c69a9bfa839c">Performance is Questionable</h2>
 
 <p>My own experiments and the thread below shows how a single jmeter instance is probably not quick enough to test the performance of a Go based web server, without setting up a few instances - but i spose we will have to do that in production even if we do find a fast tool.</p>
 
@@ -93,7 +93,7 @@
 
 <div class="g-post" data-href="https://plus.google.com/101114877505962271216/posts/PeZk8FY3PWY"></div>
 
-<h2 id="toc_3">Alternatives</h2>
+<h2 id="alternatives:b02f6e156d0f66f8b442c69a9bfa839c">Alternatives</h2>
 
 <p>A quick search shows&hellip;</p>
 
@@ -101,7 +101,7 @@
 
 <p>Others via stack overflow etc. all appear to be pretty much GUI based or GUI only</p>
 
-<h2 id="toc_4">Next Steps</h2>
+<h2 id="next-steps:b02f6e156d0f66f8b442c69a9bfa839c">Next Steps</h2>
 
 <p>Do we build our own tests?</p>
 
@@ -122,13 +122,13 @@
   <hr />
   
     <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="http://danmux.com/posts/across_the_wire_serialisation">JSON, Gzip, Snappy and Gob Across the Wire</a>
+    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="http://danmux.com/posts/across_the_wire_serialisation/">JSON, Gzip, Snappy and Gob Across the Wire</a>
     </span>
   
 
   
     <span class="right">
-    <em>Next: </em><a class="next" href="http://danmux.com/posts/embedded_gists"> &nbsp; Embedded Gists</a> &raquo;
+    <em>Next: </em><a class="next" href="http://danmux.com/posts/embedded_gists/"> &nbsp; Embedded Gists</a> &raquo;
     </span>
   
 </div>
