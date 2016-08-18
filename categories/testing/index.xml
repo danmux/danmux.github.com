@@ -5,13 +5,17 @@
     <link>http://danmux.com/categories/testing/</link>
     <description>Recent content in Testing on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Dec 2015 00:00:00 +0000</lastBuildDate>
+    
+    
+    
+    
+    <lastBuildDate>Mon, 21 Dec 2015 00:00:00 UT</lastBuildDate>
     <atom:link href="http://danmux.com/categories/testing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Test Pyramid and Availability Bias</title>
       <link>http://danmux.com/posts/test_pyramid_availability_bias/</link>
-      <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Dec 2015 00:00:00 UT</pubDate>
       
       <guid>http://danmux.com/posts/test_pyramid_availability_bias/</guid>
       <description>
@@ -116,6 +120,7 @@
 &lt;p&gt;Especially salient is the advice from 25 minutes on, though this picture of the relative importance of different testing to mitigate the scale of the risks to the success of one particular project should illustrate the main thrust of the presentation&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/-uyf9z1SiSgw/Vnft1EYuFaI/AAAAAAAAMlQ/j_PQhbHL-jI/w1167-d-h870-p-rw&#34; alt=&#34;testing scales&#34; title=&#34;Testing Scales&#34; /&gt;
+
 &lt;em&gt;Figure 1. A custom set of sliding scales of differing test strategies&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;When we truly think about how we can best reduce the risk to success, and use alternative appropriate tools to manage that risk we start to focus more on delivering real value.&lt;/p&gt;
@@ -135,7 +140,7 @@
     <item>
       <title>Jmeter is a Poor Choice for REST and Golang</title>
       <link>http://danmux.com/posts/jmeter_rest_golang/</link>
-      <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 06 Jul 2014 00:00:00 UT</pubDate>
       
       <guid>http://danmux.com/posts/jmeter_rest_golang/</guid>
       <description>

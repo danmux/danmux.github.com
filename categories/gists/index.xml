@@ -5,13 +5,17 @@
     <link>http://danmux.com/categories/gists/</link>
     <description>Recent content in Gists on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 05 Jul 2014 00:00:00 +0000</lastBuildDate>
+    
+    
+    
+    
+    <lastBuildDate>Sat, 05 Jul 2014 00:00:00 UT</lastBuildDate>
     <atom:link href="http://danmux.com/categories/gists/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Embedded Gists</title>
       <link>http://danmux.com/posts/embedded_gists/</link>
-      <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 05 Jul 2014 00:00:00 UT</pubDate>
       
       <guid>http://danmux.com/posts/embedded_gists/</guid>
       <description>
@@ -22,7 +26,7 @@
 
 &lt;p&gt;So here is an example&amp;hellip;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #447fcf&#34;&gt;digit_sum&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;(n):&lt;/span&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #447fcf&#34;&gt;digit_sum&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;(n):&lt;/span&gt;
     &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;
     &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n:&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# while n is ‘truthy’ for an integer that means not 0&lt;/span&gt;
         &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;(n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7&lt;/span&gt;
@@ -42,7 +46,7 @@
 &lt;span style=&#34;color: #3677a9&#34;&gt;3&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;13&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;         &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&amp;lt;br&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #a61717; background-color: #e3d2d2&#34;&gt;”’&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
+&lt;/p&gt;
 
 &lt;p&gt;But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.&lt;/p&gt;
 
