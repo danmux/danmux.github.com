@@ -133,9 +133,7 @@
 
 <hr />
 
-<h3 id="note-1:6f23aa5cf001e206affe126e84fac8b3">Note 1.</h3>
-
-<hr />
+<h2 id="note-1:6f23aa5cf001e206affe126e84fac8b3">Note 1.</h2>
 
 <p>In our Von Neumann world we have basically three hardwired data structures, a register, a stack, and addressable memory, these are mapped via the instruction set to: register operations; effectively push and pop, moving data to and from memory addresses, and in CISC&rsquo;s contiguous memory operations, even in RISC&rsquo;s loop primitives are optimised for contiguous ranges. Ultimately these in turn map through compilers to value variables (which indirect the decision to use registers, the stack, or an addressable value), and reference variables, which contain the value of an address of the value, and slightly higher up the conceptual scale: arrays. Compilers also compose these fundamental variables into primitive data types: ints, floats, and arrays into strings etc. Finally, also through well managed contiguous memory, namely &lsquo;packing’, common primitives are grouped into &lsquo;structs&rsquo;. There are subtle variations on these themes, particularly with respect to structs or objects, involving further indirection (think v-tables etc), but that is the crux of it.</p>
 
