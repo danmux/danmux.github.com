@@ -61,11 +61,11 @@
       <h1 class="post-title">Queues Are Not Always The Answer</h1>
         <section id="main">
           <h5 id="date"> Mon Jul 20, 2015 </h5>
-          
+          <p>I feel developers reach for the queue all too quickly. I’m talking about stand alone message queue services like RabbitMQ, ActiveMQ etc. etc. Not an in memory data structure (which in fact can be all you need sometimes)</p>
 
-<p>I feel developers reach for the queue all too quickly. I’m talking about stand alone message queue services like RabbitMQ, ActiveMQ etc. etc. Not an in memory data structure (which in fact can be all you need sometimes)</p>
+<p></p>
 
-<h2 id="sync-or-queue:eb0f6f06ad8a7448f62939e06ec5d67a">Sync or Queue</h2>
+<h2 id="sync-or-queue">Sync or Queue</h2>
 
 <p>Often the reasons for choosing a queue include many features that any synchronous service could provide.</p>
 
@@ -105,7 +105,7 @@ The other aspect of a queue that is not mentioned in that article is security. A
 <p><strong>Bad UX</strong>
 Using a queue in any part of your architecture that affects the user experience is a risky compromise, which can often mask the underlying problem.</p>
 
-<h2 id="summary:eb0f6f06ad8a7448f62939e06ec5d67a">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p>In summary use a queue, if you really don’t mind asynchronous or parallel work&hellip;</p>
 
@@ -115,7 +115,6 @@ Using a queue in any part of your architecture that affects the user experience 
 <li>If you want to do some funky distribution of your messages (typically to many observers) particularly if you are not bothered about the result of any upstream subscribers work<br /></li>
 <li>If you agree that the pull model from a secure zone to a queue adds to your network security.</li>
 </ol>
-
         </section>
   
     </div>

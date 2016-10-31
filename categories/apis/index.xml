@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Apis on Dans Stuff</title>
-    <link>http://danmux.com/categories/apis/</link>
-    <description>Recent content in Apis on Dans Stuff</description>
+    <title>Dans Stuff</title>
+    <link>http://danmux.com/categories/apis/index.xml</link>
+    <description>Recent content on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-    
-    
-    
-    <lastBuildDate>Fri, 23 Sep 2011 00:00:00 UT</lastBuildDate>
     <atom:link href="http://danmux.com/categories/apis/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bank 1.5</title>
       <link>http://danmux.com/posts/bank_1_5/</link>
-      <pubDate>Fri, 23 Sep 2011 00:00:00 UT</pubDate>
+      <pubDate>Fri, 23 Sep 2011 00:00:00 +0000</pubDate>
       
       <guid>http://danmux.com/posts/bank_1_5/</guid>
-      <description>
-
-&lt;p&gt;This past week saw two of the biggest banking and financial innovation conferences take place, Sibos and Finovate. On following a few Twitter streams of a few attendees, a new meme started to appear – possibly a bit premature to call it a meme and incorrect to call it new, but none the less the concept is valid if a bit bank-geeky.&lt;/p&gt;
+      <description>&lt;p&gt;This past week saw two of the biggest banking and financial innovation conferences take place, Sibos and Finovate. On following a few Twitter streams of a few attendees, a new meme started to appear – possibly a bit premature to call it a meme and incorrect to call it new, but none the less the concept is valid if a bit bank-geeky.&lt;/p&gt;
 
 &lt;p&gt;Borrowing from the Web 2.0 catchall or marketing label for anything more interactive than the static Web 1.0 but less linked than the evolving beb of data (Web 3.0?) the banking innovation consultant, speaker and author Brett King has coalesced thoughts and ideas around the next generation of consumer banking and published them in his popular book – Bank 2.0&lt;/p&gt;
 
-&lt;h2 id=&#34;web-2-0:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;Web 2.0&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;web-2-0&#34;&gt;Web 2.0&lt;/h2&gt;
 
 &lt;p&gt;By borrowing the Web 2.0 concept, Bank 2.0 for those on the bank – web tech boundary conveys some immediate meaning.&lt;/p&gt;
 
@@ -38,21 +33,21 @@
 
 &lt;p&gt;For the web to evolve into Web 2.0 it took a concerted global vertical technology stack refresh, from the improving hardware (thanks Moore) with httpd evolving to the more plug-able Apache through efficient (to code) programming languages through wider pipes with the growth in always connected broadband, up to Javascript (and the proprietary Flash), better home computing and tighter more open browsers.&lt;/p&gt;
 
-&lt;h2 id=&#34;open-innovation:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;Open Innovation&lt;/h2&gt;
+&lt;h2 id=&#34;open-innovation&#34;&gt;Open Innovation&lt;/h2&gt;
 
 &lt;p&gt;The reason that could happen so comparatively quickly – it was open. This is the very reason why Banks will not adopt the same path or pace. The seismic shift in the internet took billions of collaborative hours enabled by the nature of the internet itself and by the passion of the people to defend against any individual corporate land grab.&lt;/p&gt;
 
-&lt;h2 id=&#34;tbl:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;TBL&lt;/h2&gt;
+&lt;h2 id=&#34;tbl&#34;&gt;TBL&lt;/h2&gt;
 
 &lt;p&gt;The banks have a similar scale problem to solve, but they dont have an open infrastructure, they dont have an inter-net, they have a large closed global intra-net curated by a cartel of self interested owners which is deeply rooted in and protected by the governments that helped create this razor wired garden. This situation isn’t all bad, and I dont know if there could have been a realistic alternative, or if there will be. Time will tell if a decentralised none homogenous system of many parts can unseat the incumbent system, if it can, it will take many more years. I suspect that the global legislative innovation antibodies may win this one. Though having said that there are some strong network effects at play here with telcos and social networks picking at openings.&lt;/p&gt;
 
 &lt;p&gt;Bigger than all of this is perhaps the motivation for change, the internet changed because it was 10′s of thousands of people with a shared passion and vision that was well aligned with what the general public wanted, it was two sided, pull-pull, win-win. With Banks…meh!&lt;/p&gt;
 
-&lt;h2 id=&#34;more-layers:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;More Layers&lt;/h2&gt;
+&lt;h2 id=&#34;more-layers&#34;&gt;More Layers&lt;/h2&gt;
 
 &lt;p&gt;The internet is shifting into the next phase where the technology stack is getting deeper – big internet companies are doing the heavy lifting and heavy investment to encourage an eco-system of impassioned organisms to symbiotically share their hard work – to build upon the work of the host – filling a multitude of difficult to reach customer niches, and importantly drive value into the host. Platform as a service – open web based API’s, Amazon web services, EC2, Azure, Google App Engine, force.com etc. etc. the list is endless and extremely lucrative.&lt;/p&gt;
 
-&lt;h2 id=&#34;excellence-expected:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;Excellence Expected&lt;/h2&gt;
+&lt;h2 id=&#34;excellence-expected&#34;&gt;Excellence Expected&lt;/h2&gt;
 
 &lt;p&gt;Apple, Amazon, Google, Facebook have driven customer expectation through the roof, particularly with respect to quality, and immediacy. What damage these pesky brilliant companies have done whilst delighting their customers! Do they realise how hard it is to hit the benchmark they have set. Do the banks realise their newer customers in particular expect no less!&lt;/p&gt;
 
@@ -60,12 +55,11 @@
 
 &lt;p&gt;I think it is too late for banks to continue to own the whole vertical. It is too big too fast and too difficult. Consumer expectation is moving too fast for them to make the fundamental corporate attitude shifts required to fully engage with real customers the way every recent poster child startup has. Let the front end be owned by those that ‘get it’ look at what Bank Simple is about to do, I reserve judgement but am equally optimistic about MovenBank – both have chosen not to beat the banks at their own game but build on the existing banks core competency.&lt;/p&gt;
 
-&lt;h2 id=&#34;towards-bank-2-0:11f35b58cf248b7079c7bd8c599f0aaf&#34;&gt;Towards Bank 2.0&lt;/h2&gt;
+&lt;h2 id=&#34;towards-bank-2-0&#34;&gt;Towards Bank 2.0&lt;/h2&gt;
 
 &lt;p&gt;Some Banks are starting the shift already – according to that Sibos and Finovate Twitter stream – Banking as a Service is on the way. Rather than Citi knocking the stuffing out of Bank 2.0 by releasing their payment API, they took a step towards enabling bank 2.0. Mastercard does it already. If the Banks are to thrive under this next wave they need to bend and work towards helping fulfil our expectations of Bank 2.0, they need to offer the next layer up even richer access to their services and data – I mean our data.&lt;/p&gt;
 
-&lt;p&gt;We need them to loosen the grip, we need those API’s, we need Banking as a Service.&lt;/p&gt;
-</description>
+&lt;p&gt;We need them to loosen the grip, we need those API’s, we need Banking as a Service.&lt;/p&gt;</description>
     </item>
     
   </channel>

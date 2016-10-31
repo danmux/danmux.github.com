@@ -210,10 +210,9 @@ blockquote p:last-child {
 
 img {
   display: block;
-  margin: 0 0 1rem;
+  margin: 0 auto;
   border-radius: 5px;
   height: auto;
-  width:100%;
 }
 
 .fpimg {

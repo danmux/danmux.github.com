@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Dans Stuff</title>
-    <link>http://danmux.com/categories/hugo/</link>
-    <description>Recent content in Hugo on Dans Stuff</description>
+    <title>Dans Stuff</title>
+    <link>http://danmux.com/categories/hugo/index.xml</link>
+    <description>Recent content on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    
-    
-    
-    
-    <lastBuildDate>Sat, 05 Jul 2014 00:00:00 UT</lastBuildDate>
     <atom:link href="http://danmux.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Embedded Gists</title>
       <link>http://danmux.com/posts/embedded_gists/</link>
-      <pubDate>Sat, 05 Jul 2014 00:00:00 UT</pubDate>
+      <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>http://danmux.com/posts/embedded_gists/</guid>
-      <description>
-
-&lt;h2 id=&#34;syntax-highlighting-or-embedded-gists:1344d5413a88f5694a6a670438370e1d&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;syntax-highlighting-or-embedded-gists&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
 
 &lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;. But also wanted to try embedding gists&lt;/p&gt;
 
-&lt;p&gt;So here is an example&amp;hellip;&lt;/p&gt;
+&lt;p&gt;
+So here is an example&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #447fcf&#34;&gt;digit_sum&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;(n):&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color: #447fcf&#34;&gt;digit_sum&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;(n):&lt;/span&gt;
     &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;
     &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n:&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# while n is ‘truthy’ for an integer that means not 0&lt;/span&gt;
         &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;(n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&lt;/span&gt;   &lt;span style=&#34;color: #999999; font-style: italic&#34;&gt;# the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7&lt;/span&gt;
@@ -38,7 +32,7 @@
 &lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #a61717; background-color: #e3d2d2&#34;&gt;”’&lt;/span&gt;
 &lt;span style=&#34;color: #d0d0d0&#34;&gt;calling&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;digit_sum(&lt;/span&gt;&lt;span style=&#34;color: #3677a9&#34;&gt;157&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;)&amp;lt;/p&amp;gt;&lt;/span&gt;
 
-&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;h2&lt;/span&gt; &lt;span style=&#34;color: #24909d&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;loop-s-n-n-10-n-10:1344d5413a88f5694a6a670438370e1d&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;loop&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;h2&lt;/span&gt; &lt;span style=&#34;color: #24909d&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;loop-s-n-n-10-n-10&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;loop&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;s&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;%&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;n&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
 
 &lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;157&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;   &lt;span style=&#34;color: #3677a9&#34;&gt;7&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;  &lt;span style=&#34;color: #3677a9&#34;&gt;15&lt;/span&gt;
 &lt;span style=&#34;color: #3677a9&#34;&gt;1&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;7&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;15&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;   &lt;span style=&#34;color: #3677a9&#34;&gt;5&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;  &lt;span style=&#34;color: #3677a9&#34;&gt;1&lt;/span&gt;
@@ -46,25 +40,25 @@
 &lt;span style=&#34;color: #3677a9&#34;&gt;3&lt;/span&gt;     &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;13&lt;/span&gt;  &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #3677a9&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&lt;/span&gt;         &lt;span style=&#34;color: #d0d0d0&#34;&gt;|&amp;lt;br&lt;/span&gt; &lt;span style=&#34;color: #d0d0d0&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color: #a61717; background-color: #e3d2d2&#34;&gt;”’&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.&lt;/p&gt;
 
 &lt;p&gt;So on embedding a gist as follows (but without syntax highlighting) failed&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #bbbbbb&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/p&gt;
 
 &lt;p&gt;Putting it in another block partially worked&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;script &lt;/span&gt;&lt;span style=&#34;color: #bbbbbb&#34;&gt;src=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #202020&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color: #bbbbbb&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ed9d13&#34;&gt;&amp;quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span style=&#34;color: #6ab825; font-weight: bold&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #d0d0d0&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;I was left with an unclosed script tag.&lt;/p&gt;
 
@@ -86,18 +80,17 @@
 
 &lt;script src=&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;&gt;&lt;/script&gt;
 
-&lt;h3 id=&#34;and-it-worked:1344d5413a88f5694a6a670438370e1d&#34;&gt;And it worked !&lt;/h3&gt;
+&lt;h3 id=&#34;and-it-worked&#34;&gt;And it worked !&lt;/h3&gt;
 
 &lt;p&gt;Nice work &lt;a href=&#34;https://github.com/jmitchell&#34;&gt;jmitchell&lt;/a&gt; and &lt;a href=&#34;https://github.com/spf13&#34;&gt;Steve Francia&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So gists it is for me&lt;/p&gt;
-</description>
+&lt;p&gt;So gists it is for me&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Making Your Own Summary</title>
       <link>http://danmux.com/posts/hugo_summary/</link>
-      <pubDate>Sat, 28 Jun 2014 00:00:00 UT</pubDate>
+      <pubDate>Sat, 28 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>http://danmux.com/posts/hugo_summary/</guid>
       <description>&lt;p&gt;Hugo allows you to specify where the summary stops - and allows the full markdown including shortcodes.&lt;/p&gt;
@@ -111,30 +104,30 @@
 
 &lt;!-- here is the real more... --&gt;
 
-&lt;p&gt;Everything after the more comment will not make it into the summary - sweet.&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Everything after the more comment will not make it into the summary - sweet.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Moving to Hugo</title>
       <link>http://danmux.com/posts/hugo_based_blog/</link>
-      <pubDate>Thu, 29 May 2014 00:00:00 UT</pubDate>
+      <pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
       
       <guid>http://danmux.com/posts/hugo_based_blog/</guid>
-      <description>
-
-&lt;p&gt;I decided that I should blog under my danmux.com domain - I often use danmux around the internet, sometimes danmull, but normally danmux for tech type things, so it makes sense.&lt;/p&gt;
+      <description>&lt;p&gt;I decided that I should blog under my danmux.com domain - I often use danmux around the internet, sometimes danmull, but normally danmux for tech type things, so it makes sense.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;danmux&lt;/strong&gt; because the &lt;strong&gt;x&lt;/strong&gt; has always been a notable part of my name - and mux reminds me of my electrical engineering days, and I think humans multiplex all the time, there it is.&lt;/p&gt;
 
-&lt;h2 id=&#34;github-pages:a25a3b4ce2b3a612bd067d9bd96cbf79&#34;&gt;Github Pages&lt;/h2&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;github-pages&#34;&gt;Github Pages&lt;/h2&gt;
 
 &lt;p&gt;As this will only get a couple of hits what could be better than hosting it on &lt;a href=&#34;https://pages.github.com/&#34;&gt;github pages&lt;/a&gt; - I&amp;rsquo;m a little bit in love with github anyway so perfect choice.&lt;/p&gt;
 
-&lt;h2 id=&#34;hugo:a25a3b4ce2b3a612bd067d9bd96cbf79&#34;&gt;Hugo&lt;/h2&gt;
+&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;
 
-&lt;p&gt;I&amp;rsquo;m a little bit in love with go - so &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; was the perfect choice as well, and its been great so far, other than is typical of newish open source projects slightly lacking in the documentation department.&lt;/p&gt;
-</description>
+&lt;p&gt;I&amp;rsquo;m a little bit in love with go - so &lt;a href=&#34;http://hugo.spf13.com/&#34;&gt;Hugo&lt;/a&gt; was the perfect choice as well, and its been great so far, other than is typical of newish open source projects slightly lacking in the documentation department.&lt;/p&gt;</description>
     </item>
     
   </channel>

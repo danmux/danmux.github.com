@@ -61,15 +61,15 @@
       <h1 class="post-title">JSON, Gzip, Snappy and Gob Across the Wire</h1>
         <section id="main">
           <h5 id="date"> Sun Sep 21, 2014 </h5>
-          
-
-<p>Coming from a background where memory and clock cycles were sparse, binary encodings have always held an appeal. Since then I’ve been told we have loads of compute power, ample cheap RAM and disk, and when the network is the bottleneck then, well, that is a good problem to have.</p>
+          <p>Coming from a background where memory and clock cycles were sparse, binary encodings have always held an appeal. Since then I’ve been told we have loads of compute power, ample cheap RAM and disk, and when the network is the bottleneck then, well, that is a good problem to have.</p>
 
 <p>Its one of those ages old occasionally heated debates&hellip;.</p>
 
 <p>(<em>tl;dr</em> almost always use gzipped JSON)</p>
 
-<h2 id="serialising-for-wire-and-disk:5bca79e758a5b8ad0a0678190c2bd34b">Serialising for Wire and Disk</h2>
+<p></p>
+
+<h2 id="serialising-for-wire-and-disk">Serialising for Wire and Disk</h2>
 
 <p><strong>Much better to use a more debuggable human readable encoding and compress it in flight during transmission or storage</strong>, after all browsers have native support and the performance benefits of binary formats are negligible. This is the crux of the argument for those in favour of verbose text based serialisations.</p>
 
@@ -79,13 +79,13 @@
 
 <p>Heres a <a href="https://groups.google.com/forum/#!topic/golang-nuts/xtXh0yWOens">recent example of the debate</a> with all the typical (valid) points being trotted out</p>
 
-<h2 id="in-this-case:5bca79e758a5b8ad0a0678190c2bd34b">In This Case&hellip;</h2>
+<h2 id="in-this-case">In This Case&hellip;</h2>
 
 <p>Having just built a nicely homogenous #golang rpc microservices framework (or ‘milliservices’ as <a href="https://twitter.com/iand/status/510090898269831170">Ian Davis called his</a>) I was naturally drawn to the native RPC gob encoding, but I hedged my bets and did the second worst of both worlds a gob based RPC envelope - with a []byte payload that could carry any serialisation - a la http. (the absolute worst would be http, with a gob body)</p>
 
 <p>The point of this ‘neither one nor the other’ design was that much like HTTP the envelope is standard so all our components can speak the same language, output consistent log data and generally behave in a more homogenous way than you typically find in a mixed bag of microservices - what you put in the message payload is down to you and your services, of course for our internal systems gob is the natural choice for the payload as well.</p>
 
-<h2 id="some-trivial-calculations:5bca79e758a5b8ad0a0678190c2bd34b">Some Trivial Calculations</h2>
+<h2 id="some-trivial-calculations">Some Trivial Calculations</h2>
 
 <p>I did some initial calculations and benchmarking comparing gzipped JSON to ‘snappy’ JSON to raw gob. I suppose it would be useful to include lz4, but as far as I can tell snappy is not a million miles different.</p>
 
@@ -191,7 +191,7 @@
 
 <p>None of the decoding benchmarks streamed the data - new encoders were made every loop, I know Gob would be even faster with this optimisation, all decoders decoded into an <code>interface{}</code>, they would all have been quicker if a particular <code>struct</code> was used.</p>
 
-<h2 id="testing-binary-payloads:5bca79e758a5b8ad0a0678190c2bd34b">Testing Binary Payloads</h2>
+<h2 id="testing-binary-payloads">Testing Binary Payloads</h2>
 
 <p>It is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file.</p>
 
@@ -199,7 +199,7 @@
 
 <p>In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.</p>
 
-<h2 id="summary:5bca79e758a5b8ad0a0678190c2bd34b">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p>A compressed text based encoding like JSON <strong>is</strong> more widely supported, quite compact and easier to test and debug, particularly if the consumer is a web browser.</p>
 
@@ -210,7 +210,6 @@
 <p>If your system chatters lots of small chunks of data with a high ratio of none text to text data, at very high message rates, then a binary encoding particularly over TCP (thereby avoiding the HTTP header overhead) is by far the more sensible choice.</p>
 
 <p>Testing and debugging binary protocols is not as bad as people make out, and should not be a massively deciding factor.</p>
-
         </section>
   
     </div>
