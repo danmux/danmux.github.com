@@ -339,11 +339,13 @@ pointer addresses.</p>
 
 <p>Dependencies don&rsquo;t come for free.</p>
 
-<p>GoConvey only clocks in at 8300 lines, but its assertion package is 26,000 lines.</p>
+<p>GoConvey only clocks in at 8300 lines, but its assertion package will introduce a further 26,000 lines (including a number of test libraries by Aaron Jacobs).</p>
 
-<p>The code extracted from testify just to support <code>Equals</code> is 323 lines and 8200 characters, the full package is over 14,000 lines and exports 80 functions.</p>
+<p>The code extracted from testify just to support <code>Equals</code> is 323 lines and 8200 characters, the full package adds 14,000 lines and exports 80 functions.</p>
 
-<p>One of the larger libraries used by the <a href="https://github.com/onsi/ginkgo">Ginkgo</a> framework is <a href="https://onsi.github.io/gomega/">Gomega</a> it has 1500 lines of documentation and just under 12,000 lines of code, Ginkgo has 20,000 lines - these counts don&rsquo;t include any other dependencies.</p>
+<p>One of the larger libraries used by the <a href="https://github.com/onsi/ginkgo">Ginkgo</a> framework is <a href="https://onsi.github.io/gomega/">Gomega</a> it has 1500 lines of documentation and just under 12,000 lines, Ginkgo has 20,000 lines - these counts don&rsquo;t include any other dependencies.</p>
+
+<p>(for clarity: <em>&ldquo;lines&rdquo;</em> is lines in all go files using the naive <code>find . -name '*.go' | xargs wc -l</code> simply to get a sense of scale)</p>
 
 <p>The one thing these libs have in common is bugs. It is annoying enough to have to debug test code, let alone 3rd party test support libraries.</p>
 

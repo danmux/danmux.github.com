@@ -291,11 +291,13 @@ pointer addresses.&lt;/p&gt;
 
 &lt;p&gt;Dependencies don&amp;rsquo;t come for free.&lt;/p&gt;
 
-&lt;p&gt;GoConvey only clocks in at 8300 lines, but its assertion package is 26,000 lines.&lt;/p&gt;
+&lt;p&gt;GoConvey only clocks in at 8300 lines, but its assertion package will introduce a further 26,000 lines (including a number of test libraries by Aaron Jacobs).&lt;/p&gt;
 
-&lt;p&gt;The code extracted from testify just to support &lt;code&gt;Equals&lt;/code&gt; is 323 lines and 8200 characters, the full package is over 14,000 lines and exports 80 functions.&lt;/p&gt;
+&lt;p&gt;The code extracted from testify just to support &lt;code&gt;Equals&lt;/code&gt; is 323 lines and 8200 characters, the full package adds 14,000 lines and exports 80 functions.&lt;/p&gt;
 
-&lt;p&gt;One of the larger libraries used by the &lt;a href=&#34;https://github.com/onsi/ginkgo&#34;&gt;Ginkgo&lt;/a&gt; framework is &lt;a href=&#34;https://onsi.github.io/gomega/&#34;&gt;Gomega&lt;/a&gt; it has 1500 lines of documentation and just under 12,000 lines of code, Ginkgo has 20,000 lines - these counts don&amp;rsquo;t include any other dependencies.&lt;/p&gt;
+&lt;p&gt;One of the larger libraries used by the &lt;a href=&#34;https://github.com/onsi/ginkgo&#34;&gt;Ginkgo&lt;/a&gt; framework is &lt;a href=&#34;https://onsi.github.io/gomega/&#34;&gt;Gomega&lt;/a&gt; it has 1500 lines of documentation and just under 12,000 lines, Ginkgo has 20,000 lines - these counts don&amp;rsquo;t include any other dependencies.&lt;/p&gt;
+
+&lt;p&gt;(for clarity: &lt;em&gt;&amp;ldquo;lines&amp;rdquo;&lt;/em&gt; is lines in all go files using the naive &lt;code&gt;find . -name &#39;*.go&#39; | xargs wc -l&lt;/code&gt; simply to get a sense of scale)&lt;/p&gt;
 
 &lt;p&gt;The one thing these libs have in common is bugs. It is annoying enough to have to debug test code, let alone 3rd party test support libraries.&lt;/p&gt;
 
