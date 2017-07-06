@@ -5,8 +5,177 @@
     <link>http://danmux.com/index.xml</link>
     <description>Recent content on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 30 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jul 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://danmux.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Road Not Taken</title>
+      <link>http://danmux.com/posts/ramblings/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://danmux.com/posts/ramblings/</guid>
+      <description>&lt;p&gt;On our honeymoon In the mountains around Kitzbuhel in the summer many years ago, me and my wife were following a Wanderweg when we turned onto a small path that the map showed to be a nice route back to our hotel Schloss Lebenberg.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;After 2 hours we were in a thick felled pine forest, probably a ski run for next year. We clambered from trunk to trunk, legs getting scratched and cut on sharp branches in the process. Across a ravine the forest was standing and looked navigable.&lt;/p&gt;
+
+&lt;p&gt;My wife had said a few times:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;This is silly, let’s turn back onto the path we know.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I said&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;But we will waste two hours. We must be close, I&amp;rsquo;m sure I can see light breaking through those trees.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We hid from a rain storm in a cow shed, and shared our last apple. It was well after dark many hours later when we got to the bottom of the valley. Still an hour away from the hotel, we were exhausted and we surrendered, we got a drink in a nearby hotel and called a taxi.&lt;/p&gt;
+
+&lt;p&gt;The bad turn we took was only an hour or so from the Schloss. If we had turned back we would have been sipping cocktails by the pool rather than rubbing antiseptic cream into cuts and bruises and crashing out early.&lt;/p&gt;
+
+&lt;p&gt;If you can afford it and the rewards worthy, sure, take the path less trodden. Sometimes, even when it looks like you might be almost there, it&amp;rsquo;s better to just turn back.&lt;/p&gt;
+
+&lt;p&gt;When the nice looking beta tool keeps bruising you, just turn back.&lt;/p&gt;
+
+&lt;p&gt;Despite what Robert Frost&amp;rsquo;s poem may inspire&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;the-road-not-taken&#34;&gt;The Road Not Taken&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;BY ROBERT FROST&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Two roads diverged in a yellow wood,&lt;/p&gt;
+
+&lt;p&gt;And sorry I could not travel both&lt;/p&gt;
+
+&lt;p&gt;And be one traveler, long I stood&lt;/p&gt;
+
+&lt;p&gt;And looked down one as far as I could&lt;/p&gt;
+
+&lt;p&gt;To where it bent in the undergrowth;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Then took the other, as just as fair,&lt;/p&gt;
+
+&lt;p&gt;And having perhaps the better claim,&lt;/p&gt;
+
+&lt;p&gt;Because it was grassy and wanted wear;&lt;/p&gt;
+
+&lt;p&gt;Though as for that the passing there&lt;/p&gt;
+
+&lt;p&gt;Had worn them really about the same,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;And both that morning equally lay&lt;/p&gt;
+
+&lt;p&gt;In leaves no step had trodden black.&lt;/p&gt;
+
+&lt;p&gt;Oh, I kept the first for another day!&lt;/p&gt;
+
+&lt;p&gt;Yet knowing how way leads on to way,&lt;/p&gt;
+
+&lt;p&gt;I doubted if I should ever come back.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I shall be telling this with a sigh&lt;/p&gt;
+
+&lt;p&gt;Somewhere ages and ages hence:&lt;/p&gt;
+
+&lt;p&gt;Two roads diverged in a wood, and I—&lt;/p&gt;
+
+&lt;p&gt;I took the one less traveled by,&lt;/p&gt;
+
+&lt;p&gt;And that has made all the difference.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shut Up and Take My Money Summary</title>
+      <link>http://danmux.com/posts/shut_up_and_take_my_money/</link>
+      <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://danmux.com/posts/shut_up_and_take_my_money/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://fahrplan.events.ccc.de/congress/2016/Fahrplan/speakers/5995.html&#34;&gt;Vincent Haupert&lt;/a&gt; Presented at the Chaos Communication Congress A talk about some severe security breaches in the fintech startup &lt;a href=&#34;https://n26.com/&#34;&gt;Number26&lt;/a&gt; app and API. Here is a summary of the key points.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;If you only have 5 mins to grab the key points they are summarised below.&lt;/p&gt;
+
+&lt;p&gt;The Original presentation is &lt;a href=&#34;https://media.ccc.de/v/33c3-7969-shut_up_and_take_my_money&#34;&gt;here&lt;/a&gt; and it is quite fun to watch.&lt;/p&gt;
+
+&lt;p&gt;Or watch the Youtube version here:&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/KopWe2ZpVQI&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;No certificate pinning&lt;/strong&gt;, making MitM of the API, much easier.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Password reset via email only&lt;/strong&gt; - compromised email account may be more likely if no 2fa and easy password (but actually access to the email account is not even needed - &lt;em&gt;see later!&lt;/em&gt; )&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spear fishing is made more easy&lt;/strong&gt; than it should be to gain login credentials.
+
+&lt;ul&gt;
+&lt;li&gt;3.1. API accepts (un-hashed) email and responds if they are a Numbr26 user or not (to support address book based send money).&lt;/li&gt;
+&lt;li&gt;3.2. The email lookup API is not throttled.&lt;/li&gt;
+&lt;li&gt;3.3. 68M dropbox emails evaluated against the API, no blocking, no suspicion raised at all.&lt;/li&gt;
+&lt;li&gt;3.4. 33k users identified - nice list for targeted (spear) phishing.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Weak pairing scheme&lt;/strong&gt; the token sharing, phone pairing scheme is &lt;em&gt;only a client side feature&lt;/em&gt; (no keys checked on server), so the raw API call for send money works from any client!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Send money not rate limited.&lt;/strong&gt; Sent 2000 1c transactions to the same user in 30 mins, no suspicion raised.
+
+&lt;ul&gt;
+&lt;li&gt;5.a. 3 weeks later N26 contacted the &lt;em&gt;recipient&lt;/em&gt; (not the sender) and wanted to block his account!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email reset token leaked in API.&lt;/strong&gt; The reset API request responds with the actual token/link (should only be sent to the email account), so you don&amp;rsquo;t actually need the email account to reset credentials!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Secret ID Leaked in the API.&lt;/strong&gt; Other secure features need a &amp;lsquo;secret&amp;rsquo; card ID that is readily discoverable. This ID is not the 16 digit card number, but another ID/Token printed on the physical MasterCard. However this ID is also used in transaction ID&amp;rsquo;s and is leaked in the API, hence possession of the card is not needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pin vulnerable to brute force&lt;/strong&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;8.1. The 5 digit Pin is needed for some secure requests.&lt;/li&gt;
+&lt;li&gt;8.2. Pin check API is not throttled, managed 160 rps, so averagely takes 5 mins to brute force the PIN.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Full account control.&lt;/strong&gt; With those 4 facts - total control of all account features is possible - e.g. unpairing a device.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unparing token leaked in API.&lt;/strong&gt; Un-pairing link also sent in API response (no email account needed)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support call authentication secret leaked in API.&lt;/strong&gt; Changing email of an account needs a support call (support can also unpair a device). Support need the Master Card ID, Account balance, Place Of Birth.
+
+&lt;ul&gt;
+&lt;li&gt;12.1. Place Of birth, is also returned in an personal info API response, now attacker has all three facts and can change email, making further exploitation stealthier.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Risk elevation.&lt;/strong&gt; Even accounts with no balance can be exploited because the attacker can get an overdraft of up to €2000 approved in 2 mins.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;comment&#34;&gt;Comment&lt;/h1&gt;
+
+&lt;p&gt;These vulnerabilities are incredibly naive, and N26 has let the whole challenger FinTech community down. We should be building a reputation and trust with consumers, by blowing the banks out of the water, on all angles.&lt;/p&gt;
+
+&lt;h2 id=&#34;to-be-this-negligent-with-security-is-beyond-comprehension&#34;&gt;To be this negligent with security is beyond comprehension&amp;hellip;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;No rate limiting.&lt;/li&gt;
+&lt;li&gt;Leaking security facts in the API.&lt;/li&gt;
+&lt;li&gt;Leaking security tokens in the API.&lt;/li&gt;
+&lt;li&gt;No token validation on the API (client only)&lt;/li&gt;
+&lt;li&gt;No effective 2fa.&lt;/li&gt;
+&lt;li&gt;No hashing of emails in unsecured API.&lt;/li&gt;
+&lt;li&gt;No other unusual behavior detection.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;n-b&#34;&gt;N.B.&lt;/h3&gt;
+
+&lt;p&gt;Regarding N26 targeting the the recipient account for blocking, Haupert draws an analogy of blocking your email account for receiving spam. The difference here is that value is received. Perhaps N26 were wise to target the recipient as possibly being the more likely attacker. However it &lt;em&gt;was&lt;/em&gt; the senders account that was compromised, and could still be used to transfer money into any number of other accounts. Both accounts should be secured.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>The Cult of Go Test</title>

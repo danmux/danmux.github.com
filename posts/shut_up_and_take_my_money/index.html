@@ -1,0 +1,207 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="http://danmux.com">
+    <title> Shut Up and Take My Money Summary </title>
+    <link rel="canonical" href="http://danmux.com/posts/shut_up_and_take_my_money/">
+    
+
+<link rel="stylesheet" href="/css/poole.css">
+
+<link rel="stylesheet" href="/css/lanyon.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+</head>
+
+
+<body class="theme-base-0b">
+  
+
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    <a class="sidebar-nav-item" href="/posts">Blog</a>
+
+    <a class="sidebar-nav-item" href="/cv">Me</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design reused from <a href="https://github.com/spencerlyon2">Spencer Lyon</a> which was modified from this Jekyl theme <a href="http://lanyon.getpoole.com">Lanyon</a> under this <a href="https://github.com/spencerlyon2/hugo_gh_blog/blob/master/LICENSE">licence</a>.
+    </p>
+  </div>
+</div>
+
+
+
+
+  
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/posts" title="Blog">Blog Posts</a>
+        </h3>
+      </div>
+    </div>
+
+    
+    <div class="container content">
+      <h1 class="post-title">Shut Up and Take My Money Summary</h1>
+        <section id="main">
+          <h5 id="date"> Fri Dec 30, 2016 </h5>
+          <p><a href="https://fahrplan.events.ccc.de/congress/2016/Fahrplan/speakers/5995.html">Vincent Haupert</a> Presented at the Chaos Communication Congress A talk about some severe security breaches in the fintech startup <a href="https://n26.com/">Number26</a> app and API. Here is a summary of the key points.</p>
+
+<p></p>
+
+<p>If you only have 5 mins to grab the key points they are summarised below.</p>
+
+<p>The Original presentation is <a href="https://media.ccc.de/v/33c3-7969-shut_up_and_take_my_money">here</a> and it is quite fun to watch.</p>
+
+<p>Or watch the Youtube version here:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KopWe2ZpVQI" frameborder="0" allowfullscreen></iframe>
+
+<h1 id="summary">Summary</h1>
+
+<ol>
+<li><strong>No certificate pinning</strong>, making MitM of the API, much easier.</li>
+<li><strong>Password reset via email only</strong> - compromised email account may be more likely if no 2fa and easy password (but actually access to the email account is not even needed - <em>see later!</em> )</li>
+<li><strong>Spear fishing is made more easy</strong> than it should be to gain login credentials.
+
+<ul>
+<li>3.1. API accepts (un-hashed) email and responds if they are a Numbr26 user or not (to support address book based send money).</li>
+<li>3.2. The email lookup API is not throttled.</li>
+<li>3.3. 68M dropbox emails evaluated against the API, no blocking, no suspicion raised at all.</li>
+<li>3.4. 33k users identified - nice list for targeted (spear) phishing.</li>
+</ul></li>
+<li><strong>Weak pairing scheme</strong> the token sharing, phone pairing scheme is <em>only a client side feature</em> (no keys checked on server), so the raw API call for send money works from any client!</li>
+<li><strong>Send money not rate limited.</strong> Sent 2000 1c transactions to the same user in 30 mins, no suspicion raised.
+
+<ul>
+<li>5.a. 3 weeks later N26 contacted the <em>recipient</em> (not the sender) and wanted to block his account!</li>
+</ul></li>
+<li><strong>Email reset token leaked in API.</strong> The reset API request responds with the actual token/link (should only be sent to the email account), so you don&rsquo;t actually need the email account to reset credentials!</li>
+<li><strong>Secret ID Leaked in the API.</strong> Other secure features need a &lsquo;secret&rsquo; card ID that is readily discoverable. This ID is not the 16 digit card number, but another ID/Token printed on the physical MasterCard. However this ID is also used in transaction ID&rsquo;s and is leaked in the API, hence possession of the card is not needed.</li>
+<li><strong>Pin vulnerable to brute force</strong>.
+
+<ul>
+<li>8.1. The 5 digit Pin is needed for some secure requests.</li>
+<li>8.2. Pin check API is not throttled, managed 160 rps, so averagely takes 5 mins to brute force the PIN.</li>
+</ul></li>
+<li><strong>Full account control.</strong> With those 4 facts - total control of all account features is possible - e.g. unpairing a device.</li>
+<li><strong>Unparing token leaked in API.</strong> Un-pairing link also sent in API response (no email account needed)</li>
+<li><strong>Support call authentication secret leaked in API.</strong> Changing email of an account needs a support call (support can also unpair a device). Support need the Master Card ID, Account balance, Place Of Birth.
+
+<ul>
+<li>12.1. Place Of birth, is also returned in an personal info API response, now attacker has all three facts and can change email, making further exploitation stealthier.</li>
+</ul></li>
+<li><strong>Risk elevation.</strong> Even accounts with no balance can be exploited because the attacker can get an overdraft of up to €2000 approved in 2 mins.</li>
+</ol>
+
+<h1 id="comment">Comment</h1>
+
+<p>These vulnerabilities are incredibly naive, and N26 has let the whole challenger FinTech community down. We should be building a reputation and trust with consumers, by blowing the banks out of the water, on all angles.</p>
+
+<h2 id="to-be-this-negligent-with-security-is-beyond-comprehension">To be this negligent with security is beyond comprehension&hellip;</h2>
+
+<ol>
+<li>No rate limiting.</li>
+<li>Leaking security facts in the API.</li>
+<li>Leaking security tokens in the API.</li>
+<li>No token validation on the API (client only)</li>
+<li>No effective 2fa.</li>
+<li>No hashing of emails in unsecured API.</li>
+<li>No other unusual behavior detection.</li>
+</ol>
+
+<h3 id="n-b">N.B.</h3>
+
+<p>Regarding N26 targeting the the recipient account for blocking, Haupert draws an analogy of blocking your email account for receiving spam. The difference here is that value is received. Perhaps N26 were wise to target the recipient as possibly being the more likely attacker. However it <em>was</em> the senders account that was compromised, and could still be used to transfer money into any number of other accounts. Both accounts should be secured.</p>
+        </section>
+  
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  
+
+<div class="container">
+  <hr />
+  
+    <span class="left">
+    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="http://danmux.com/posts/ramblings/">The Road Not Taken</a>
+    </span>
+  
+
+  
+    <span class="right">
+    <em>Next: </em><a class="next" href="http://danmux.com/posts/the_cult_of_go_test/"> &nbsp; The Cult of Go Test</a> &raquo;
+    </span>
+  
+</div>
+
+  <br />
+  
+<div class="container">
+  <ul class="catlist">
+    <li><em>Categories: </em></li>
+    
+      <li><a href="/categories/security">security</a> </li>
+    
+      <li><a href="/categories/tech">tech</a> </li>
+    
+      <li><a href="/categories/fintech">fintech</a> </li>
+    
+      <li><a href="/categories/engineering">engineering</a> </li>
+    
+  </ul>
+</div>
+
+
+
+  
+  
+
+<div class="container content">
+<footer>
+  <div>
+    <p class="right credit">
+    <a href="/">Home Page</a>
+    <a href="/blog">Blog Index</a>
+    <a href="/cv">CV</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52564864-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+
+
+
+
