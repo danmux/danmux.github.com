@@ -137,9 +137,7 @@
 
 &lt;h2 id=&#34;the-reality&#34;&gt;The Reality&lt;/h2&gt;
 
-&lt;p&gt;To set the scene, our codebase is mainly Go, including vendor directories, and a considerable amount of data compiled in, we have 2.5M lines of code, a full build from a clean clone on one of our Jenkins slaves takes 1 minute.&lt;/p&gt;
-
-&lt;p&gt;We had between 8 and 20 engineers working on that codebase. Importantly we all develop on Mac, but run in production in linux.&lt;/p&gt;
+&lt;p&gt;To set the scene we have a relatively large, predominantly Go codebase, and we are a medium sized team.&lt;/p&gt;
 
 &lt;p&gt;Bazel:&lt;/p&gt;
 
