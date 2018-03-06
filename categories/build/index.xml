@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dans Stuff</title>
+    <link>http://danmux.com/categories/build/index.xml</link>
+    <description>Recent content on Dans Stuff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <atom:link href="http://danmux.com/categories/build/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bazel Fawlty</title>
+      <link>http://danmux.com/posts/bazel_fawlty/</link>
+      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://danmux.com/posts/bazel_fawlty/</guid>
+      <description>&lt;p&gt;Like Basil Fawlty, Bazel promises a great deal, but makes a bit of a fuss about something that could have been done so much more easily. This is at least true in any medium to large sized Golang project, it is worse if using OSX. Whilst Bazels goals are desireable they are easily and more simply achieved with the Go tools, especially since go 1.10.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;We spent 6 months getting bazel build to work in our codebase, and a year working with it. Now we are pulling it out, here is why.&lt;/p&gt;
+
+&lt;p&gt;But first some background and key concepts, if you are familiar with the concepts then skip to specific Bazel sections &amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;The two most important features of a build system are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Correctness - which is actually not so easy to define.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Firstly it has to do what we expect it to do.&lt;/li&gt;
+&lt;li&gt;Secondly it has to behave consistently. For example if the same inputs are given to the build system the same output should be produced, also if slightly different inputs are given,the output should only contain the effects of those explicit changes.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Speed - The quicker the better, more on that later.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;an-aside-hope-is-a-strategy&#34;&gt;(An Aside) Hope &lt;strong&gt;is&lt;/strong&gt; a strategy&lt;/h3&gt;
+
+&lt;p&gt;Recently anyone who has read the Google SRE book, or is an Xoogler or is in that extended network can oft be heard reproducing the old business mantra: &amp;ldquo;Hope is not a strategy&amp;rdquo;, not uncommonly as a bit of a facetious put down. Whilst it is a succinct and catchy phrase, it is normally not true, or at best not particularly valuable. When you get down to it hope is our baseline. In fact I&amp;rsquo;ll add another &amp;lsquo;evil&amp;rsquo; to that&amp;hellip; assumption. At some point we have to hope and assume. for example eventually we hope the compiler authors did a good job with the next version we are about to use, or we assume that the kernel fix was good.&lt;/p&gt;
+
+&lt;p&gt;At some point our foundation is &amp;lsquo;faith&amp;rsquo; that other engineers have done a good job - that we are standing on the shoulders of giants. We are never going to know definitively, however good our tests are, or however long we &amp;lsquo;actively wait&amp;rsquo; for others to adopt first, we can only reduce the risks. At some point there is enough of a diminishing return on our efforts that we stop at some degree of hope that the rest of the system is as stable as we expect.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;For the rest of this article we will assume the build system behaves as we expect given the set of inputs it receives, so that all we are focussing on is the consistency aspect of correctness, and we hope that the tools are bug free.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;reproducibility&#34;&gt;Reproducibility&lt;/h2&gt;
+
+&lt;p&gt;Passing the same explicit inputs to a build system and getting the same output is the key characteristic of a reproducible build system. This behaviour is a strong indicator of a correctness. In reality actually using a build system to rebuild the same input multiple times is rare. Normally the build artefact itself is the asset that progresses down the release pipeline, and is archived for any rollback or debugging, but not always.&lt;/p&gt;
+
+&lt;p&gt;Whether a second build of the same source forms part of your deployment strategy or not, if your build is not reproducible then it is also quite likely not correct.&lt;/p&gt;
+
+&lt;p&gt;A reproducible build system that uses a buggy compiler is not &amp;lsquo;correct&amp;rsquo;, but as mentioned, compiler bugs don&amp;rsquo;t count here.&lt;/p&gt;
+
+&lt;h3 id=&#34;hermetic-builds&#34;&gt;Hermetic Builds&lt;/h3&gt;
+
+&lt;p&gt;Hermetic simply means that the system is sealed, is is not affected by inputs that we did not explicitly add to the sealed environment, and is one of the key ingredients to reproducibility.&lt;/p&gt;
+
+&lt;p&gt;Truly hermetic systems are hard (impossible) to achieve. The achievable goal in reality is to reduce differences in behaviour once the result of the build is used.&lt;/p&gt;
+
+&lt;p&gt;When people talk about introducing &amp;lsquo;hermetic&amp;rsquo; builds, they mean introducing more isolation than before, or put conversely: less variability between subsequent builds of the same source input.&lt;/p&gt;
+
+&lt;p&gt;So achieving a hermetic build boils down to controlling everything that can affect the resultant outputs, namely:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Source files.&lt;/li&gt;
+&lt;li&gt;Tooling.&lt;/li&gt;
+&lt;li&gt;Environment.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;same-source&#34;&gt;Same Source&lt;/h3&gt;
+
+&lt;p&gt;Of course the single most important input to a correct build is correct source data.&lt;/p&gt;
+
+&lt;p&gt;It is important to know that the source for the build is itself strictly controlled. If you make two or more builds of a particular version of your source, then that source needs to be identical in each of those builds. This is clearly one of the reasons VCS&amp;rsquo;s exist.&lt;/p&gt;
+
+&lt;p&gt;Git is a amongst the best in this regard, but even with Git attention has to be paid to how it is used and when files that are left after swapping branches may impact the build.&lt;/p&gt;
+
+&lt;p&gt;The major trip up in many types of project in this regard is the dependency management of third party sources. The same is true for Go. The solution is clear: only build source that exists in your own repo, hence &amp;lsquo;vendoring&amp;rsquo; of some sort. Pulling in source from systems not under your control increases the risk of a different behaviour.&lt;/p&gt;
+
+&lt;p&gt;Many tools don&amp;rsquo;t do decent hash based dependency analysis, the most famous being &lt;code&gt;make&lt;/code&gt;. Go pre 1.10 also had problems here, depending on time stamps too much, making it quite likely that an incorrect build could be produced under reasonably normal circumstances.&lt;/p&gt;
+
+&lt;h3 id=&#34;tooling&#34;&gt;Tooling&lt;/h3&gt;
+
+&lt;p&gt;It is all to easy to overlook the fact that once you change the version of Go on the build machine and build the same input source as you built before the version upgrade there is a strong chance your outputs are going to be different. The same may be said for clang, gcc or javac for instance. However Go is on a faster release cycle than most.&lt;/p&gt;
+
+&lt;h3 id=&#34;environment&#34;&gt;Environment&lt;/h3&gt;
+
+&lt;p&gt;In terms of building Go, the environment is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The operating system.&lt;/li&gt;
+&lt;li&gt;Environment variables.&lt;/li&gt;
+&lt;li&gt;Command line flags to build tools.&lt;/li&gt;
+&lt;li&gt;Files that are in scope of the build tools.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For Go the files that can influence a build are those under &lt;code&gt;$GOROOT&lt;/code&gt; and &lt;code&gt;$GOPATH&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you control Source, Tools and Environment correctly, then you will have a hermetic build, and if you have that with Go then you will have a reproducible build - in fact byte by byte reproducible.&lt;/p&gt;
+
+&lt;h2 id=&#34;reproducible-services&#34;&gt;Reproducible Services&lt;/h2&gt;
+
+&lt;p&gt;Being confident that your build is correct is important, and if you put in place a few simple things the Go tooling will give you that. Even if you make a couple of mistakes and your build is not fully hermetic, it is quite likely that the reproducibility of your build is one of your lowest risks.&lt;/p&gt;
+
+&lt;p&gt;Typically much bigger problems will be due to:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Correct code&lt;/strong&gt; - no need to worry about a solid build system, if your code is wrong or poor quality, untested etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Runtime configuration&lt;/strong&gt; - needs to be well controlled. Config change is as dangerous as code change, or maybe more so, typically because it has been managed outside the rigour of a build system. With code now as deploy-able as config, gone is the historical separation based on rate of change, all but per-environment config is migrating into the binary. How your remaining config is deployed should be as well controlled as your code. If is is not, then reproducibility in your build is amongst the least of your concerns.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Runtime environment&lt;/strong&gt; - Network policies, images, server specification, replica counts, routing config (if external balancers, proxies are in use) etc. These are an order of magnitude more likely to affect your service than a stray compiler flag for instance.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Then lets not forget the most uncontrollable factor of all: &lt;strong&gt;workload&lt;/strong&gt;. Your system in a test environment or local cluster is very likely to behave quite differently under different load and (particularly) concurrency patterns. There are other techniques to manage this kind of variability, load testing for instance but if you are not managing that risk, it is likely to bite much harder than your subtly incorrect build.&lt;/p&gt;
+
+&lt;p&gt;You can spend as much time removing the last iota of randomness in your build, but it can not address the fact that in practice the vast majority of the variability in your running services will be caused by these other things day to day.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, lets get back to the correct build problem.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-promise&#34;&gt;The Promise&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It promises a hermetic build so that even incremental builds are safe. (assuming your VCS is safe in this regard), by sanboxing build assets on the file system and controlling environment variables.&lt;/li&gt;
+&lt;li&gt;It has good hash based dependency analysis and local cache to be able to decide what tools need to be invoked, once you have explicitly declared the file dependencies, improving the correctness of incremental builds.&lt;/li&gt;
+&lt;li&gt;It can also decide what tests to run based on its dependency analysis, at least at package granularity, optimising test run times (if incremental)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above are claims that are hard to refute, however it claims it can speed build times up, whereas in our Go code base the opposite is generally true, even during developer incremental builds.&lt;/p&gt;
+
+&lt;p&gt;Bazel should in theory be able to decide if a docker image should be rebuilt, but we had trouble making anything work successfully in this regard, only getting as far as copying a binary into the folder and recreating the Dockerfile if the templates we use changed. In any case for all production builds we version stamp during linking, so the docker image will always need to be built.&lt;/p&gt;
+
+&lt;p&gt;Regarding build speed I think if the remote, or distributed cache would have worked it could have improved build times further. We had difficulty getting the cache to work, and when it did work it was quicker to build an asset than download it from the cache, others mileage here will probably be better.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-reality&#34;&gt;The Reality&lt;/h2&gt;
+
+&lt;p&gt;To set the scene, our codebase is mainly Go, including vendor directories, and a considerable amount of data compiled in, we have 2.5M lines of code, a full build from a clean clone on one of our Jenkins slaves takes 1 minute.&lt;/p&gt;
+
+&lt;p&gt;We had between 8 and 20 engineers working on that codebase. Importantly we all develop on Mac, but run in production in linux.&lt;/p&gt;
+
+&lt;p&gt;Bazel:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Enforced the version of Golang in use was the one set in the code repo in the &lt;code&gt;WORKSPACE&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;Isolated the build from any accidental environment variables changes.&lt;/li&gt;
+&lt;li&gt;Allowed us to only check in the sources for generated files, and not the generated files themselves.&lt;/li&gt;
+&lt;li&gt;Sped up some local unit testing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It should also have sandboxed the file system to avoid accidental assets affecting the build, but for us it didn&amp;rsquo;t - the Sandboxing on Mac did not work, and made it difficult to keep it enabled on the build machine. So essentially incremental builds were not guaranteed. In any case the build and unit test phase is less than 10% of the whole CI cycle - hermetic incremental builds were not guaranteed and not really needed.&lt;/p&gt;
+
+&lt;p&gt;For the record Bazel still actually uses Go to do the building - it is not a Go compiler itself.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-did-bazel-cost&#34;&gt;What Did Bazel Cost&lt;/h2&gt;
+
+&lt;p&gt;Firstly dont be fooled by how &amp;lsquo;easy&amp;rsquo; anyone claims Bazel to be. It took a huge effort to get Bazel to the point where it was no longer causing regular problems. In fact 83 commits over 8 months in our codebase specifically to get Bazel working, on top of this the lead engineer had many PR&amp;rsquo;s accepted into the bazel go rules git repo.&lt;/p&gt;
+
+&lt;p&gt;To understand the scale of the complexity that Bazel adds - it takes &amp;gt; 1000 command line parameters (&lt;a href=&#34;https://docs.bazel.build/versions/master/command-line-reference.html&#34;&gt;https://docs.bazel.build/versions/master/command-line-reference.html&lt;/a&gt;), it is 1.3M lines of code (from a simple cloc-ing), it currently has 1200 open issues, and had three releases this year already (two months at the time of writing) and HEAD has broken the latest go_rules again (&lt;a href=&#34;https://github.com/bazelbuild/bazel/issues/4659&#34;&gt;https://github.com/bazelbuild/bazel/issues/4659&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Working with bazel on OSX increases the cost&lt;/strong&gt; I realise a lot of our issues have been down to problems specific to Mac. The poster child of Bazel - Kubernetes - explicitly disabled Bazel on Mac for some time, I&amp;rsquo;m not sure if it is enabled now, but there are still open issue on Mac regarding Bazel. If we were developing on Linux we would possibly have continued with it, but I doubt it.&lt;/p&gt;
+
+&lt;p&gt;It added 22,000 lines of BUILD files into the repo, though all but a handful were auto created by a tool called Gazelle, which itself added a new step in the development process. If a file is added or removed or renamed, then a BUILD file has to be updated, either manually or by running &lt;code&gt;bazel run //:gazelle&lt;/code&gt;, which could take 30 seconds, or if you switched to a new hash that spanned a go rules version change it could take upto 4 mins to run&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bazel run //:gazelle  1.44s user 1.64s system 1% cpu 3:42.60 total&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Gazelle uses the Go tools to understand dependencies to create the BUILD files&amp;hellip; so we are invoking Go tools to create explicit dependency declarations, to feed into Bazel, to decide when to use Go tools to build things. A gentle irony there.&lt;/p&gt;
+
+&lt;p&gt;It increased the build time to 3 minutes (from 1 min before), though this includes compiling the unit tests. When you count Bazel running the tests at 1.7 mins, and Go doing it in 2.5. The total build and unit test time for Bazel is 4.7 mins vs Go&amp;rsquo;s 3.5 mins.&lt;/p&gt;
+
+&lt;p&gt;It added a dependency on the JVM. (I probably have an overly painful past with the JVM in production), suffice to say we had to bump up the RAM on the build machines.&lt;/p&gt;
+
+&lt;p&gt;It added another tool to upgrade, and it was/is changing often, the go rules changed even more often - 14 times in 1 year, sometimes with lock-step dependencies on the Bazel version, which required upgrades to all development machines and build slave images. We only bumped the Go version twice in that time. Even if the rules update did not specify a different version of Go - it would still trigger a re-download of go. A git bisect, build, debug cycle became a farce, watching the exact same go being downloaded (adding 3 mins over our network) to build a tiny delta.&lt;/p&gt;
+
+&lt;p&gt;It added a foreign command syntax, for all to learn. A simple build command is ok, being &amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bazel build  //myfunky/package
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;vs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go install ./myfunky/package
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;but individual tests are run like this&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bazel run //myfunky/package/:go_default_test -- -test.run=TestMyThing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;previously&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;go test ./myfunky/package -run=TestMyThing
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&amp;hellip;annoying.&lt;/p&gt;
+
+&lt;p&gt;The new syntax does not work with auto complete natively and needs some &lt;a href=&#34;https://github.com/bazelbuild/bazel/blob/master/scripts/zsh_completion/_bazel&#34;&gt;convoluted plugin&lt;/a&gt; to make work, but that too uses bazel behind the scenes and its bootstrapping causes a frustrating lag.&lt;/p&gt;
+
+&lt;p&gt;Fairly trivial things, and easy to look down on an engineer not enjoying this discomfort, but it is a valid muscle memory problem, that should not be dismissed.&lt;/p&gt;
+
+&lt;p&gt;It created a whole set of hoops to jump through to nicely support IDE&amp;rsquo;s code completion, symbol finding and VSCode at least would still need to compile using native tools. An example open issue (&lt;a href=&#34;https://github.com/bazelbuild/rules_go/issues/512&#34;&gt;https://github.com/bazelbuild/rules_go/issues/512&lt;/a&gt;) resulting in us committing symlinks to the bazel generated files, in fact a symlink to the symlink of the generated files&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Test coverage is not supported in Bazel, so that needed separate native builds as well as the Bazel build - sub-optimal.&lt;/p&gt;
+
+&lt;p&gt;We don&amp;rsquo;t use cross compilation on the build machines, but it is handy to do quick builds for local testing in a container. Bazel had problems, and is still not fully supported I believe, so we reverted to standard Go here as well, further bypassing any benefits of the cache.&lt;/p&gt;
+
+&lt;p&gt;Whilst ultimately we started to accept the new system and extra Gazelle step, and could just about hack a BUILD file to do what we needed (though some people have checked in &lt;code&gt;stringer&lt;/code&gt; and &lt;code&gt;bindata&lt;/code&gt; output) it invariably caused some issue if we wanted to upgrade Go - most recently with Go 1.9.4 needing some explicit import path declaration or other.&lt;/p&gt;
+
+&lt;p&gt;This was the straw that broke the Bazel back. That and two major upgrades in go 1.10&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Test caching.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;correct&amp;rsquo; dependency analysis and artefact caching.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And the fact that the version of Bazel and go rules changed more frequently than Go surely casts some doubt onto which system may be adding more variability.&lt;/p&gt;
+
+&lt;p&gt;These things made it all the more obvious Bazel was not the right tool for us.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;an-aside-a-note-on-bazel-builds-on-different-operating-systems&#34;&gt;(An Aside) A Note on Bazel Builds on Different Operating Systems&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s be clear - there is no need to consider reproducibility between different operating systems running the build.&lt;/p&gt;
+
+&lt;p&gt;When Bazel builds Go code on linux, in an Alpine container for instance, it uses the external linker &lt;code&gt;gcc&lt;/code&gt; and asks for the gold linker for ELF files. Gold is not used on OSX, Bazel also has to add a hack wrapper script: &lt;code&gt;cc_wrapper.sh&lt;/code&gt;,  because&amp;hellip;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# OS X relpath is not really working. This is a wrapper script around gcc
+# to simulate relpath behavior. 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This only relates to the linker, which &amp;lsquo;probably&amp;rsquo; behaves pretty consistently - but the point is there are differences.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t think anyone is suggesting, even with cross compilation (which Bazel does not support yet), that there are any guarantees when different versions of build OS and GCC are in play.&lt;/p&gt;
+
+&lt;p&gt;Stronger guarantees are achievable by building in a well controlled container. But in practice this level of consistency between dev and production - literally does not matter 99% of the time.&lt;/p&gt;
+
+&lt;p&gt;Whatever anyone says - running on your local machine (yes even in containers) is &lt;strong&gt;nothing like&lt;/strong&gt; running in production.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;back-to-the-future&#34;&gt;Back to the Future.&lt;/h2&gt;
+
+&lt;p&gt;No doubt if we ever reach Google scale, or have many build time dependencies between many different languages, then an explicit dependency declaration and distributed artefact cache, will start to pay off - especially if the development machines are the same OS as the build machines.&lt;/p&gt;
+
+&lt;p&gt;However in our medium size pure Go environment is it simply not worth the investment.&lt;/p&gt;
+
+&lt;p&gt;It took one weekend to remove all trace of Bazel &lt;strong&gt;and&lt;/strong&gt; have a correct build.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The build machine downloads the version of Go specified in the repo.&lt;/li&gt;
+&lt;li&gt;Builds are always a clean clone into a newly launched container. (using Kubernetes to schedule)&lt;/li&gt;
+&lt;li&gt;All source is checked in - including generated files.&lt;/li&gt;
+&lt;li&gt;Make .PHONY targets are used as familiar entry points in front of a few shell scripts&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We are already Vendoring (and you still need to do that with Bazel)&lt;/p&gt;
+
+&lt;p&gt;Even if you are not set up to schedule a fresh container on every build you can put a certain amount of trust in your CI job to help with your controlled build environment (with caveats). More than that though, Go is well behaved and it is clear about what env vars may affect the build. In fact its defaults are probably all you need..&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;go env&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;GOARCH=&amp;quot;amd64&amp;quot;
+GOBIN=&amp;quot;&amp;quot;
+GOEXE=&amp;quot;&amp;quot;
+GOHOSTARCH=&amp;quot;amd64&amp;quot;
+GOHOSTOS=&amp;quot;darwin&amp;quot;
+GOOS=&amp;quot;darwin&amp;quot;
+GOPATH=&amp;quot;/Users/dan/myproj&amp;quot;
+GORACE=&amp;quot;&amp;quot;
+GOROOT=&amp;quot;/usr/local/Cellar/go/1.8.3/libexec&amp;quot;
+GOTOOLDIR=&amp;quot;/usr/local/Cellar/go/1.8.3/libexec/pkg/tool/darwin_amd64&amp;quot;
+GCCGO=&amp;quot;gccgo&amp;quot;
+CC=&amp;quot;clang&amp;quot;
+GOGCCFLAGS=&amp;quot;-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/cn/8f4yl60x4y19m4m7lc2d8r380000gn/T/go-build643053316=/tmp/go-build -gno-record-gcc-switches -fno-common&amp;quot;
+CXX=&amp;quot;clang++&amp;quot;
+CGO_ENABLED=&amp;quot;1&amp;quot;
+PKG_CONFIG=&amp;quot;pkg-config&amp;quot;
+CGO_CFLAGS=&amp;quot;-g -O2&amp;quot;
+CGO_CPPFLAGS=&amp;quot;&amp;quot;
+CGO_CXXFLAGS=&amp;quot;-g -O2&amp;quot;
+CGO_FFLAGS=&amp;quot;-g -O2&amp;quot;
+CGO_LDFLAGS=&amp;quot;-g -O2&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So you can check these vars in if you like and export them on each new build.&lt;/p&gt;
+
+&lt;p&gt;We have swapped the &lt;code&gt;make bazel-gazelle&lt;/code&gt; step for a &lt;code&gt;go generate&lt;/code&gt; step, and instead of our build server triggering a script to confirm BUILD.bazel files are up to date, we confirm that the generated files are.&lt;/p&gt;
+
+&lt;p&gt;All in all removing Bazel has meant an increase of 40 lines of bash.&lt;/p&gt;
+
+&lt;p&gt;We will introduce a pre-commit Git hook that checks the local version of Go, and if the generated files are out of date, just to encourage the incremental local development environments to be in close sync (even though this is the rarest source of problems)&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Bazel has brave ambitions, and may suit bigger projects, and will one day be stable and valuable. In our project it was just too young and too much trouble, and could not offer anything that can not be achieved more simply with standard tools.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
