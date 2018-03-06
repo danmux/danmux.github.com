@@ -5,16 +5,16 @@
     <link>http://danmux.com/posts/index.xml</link>
     <description>Recent content in Posts-rsses on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 16 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://danmux.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bazel Fawlty</title>
       <link>http://danmux.com/posts/bazel_fawlty/</link>
-      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>http://danmux.com/posts/bazel_fawlty/</guid>
-      <description>&lt;p&gt;Like Basil Fawlty, Bazel promises a great deal, but makes a bit of a fuss about something that could have been done so much more easily. This is at least true in any medium to large sized Golang project, it is worse if using OSX. Whilst Bazels goals are desireable they are easily and more simply achieved with the Go tools, especially since go 1.10.&lt;/p&gt;
+      <description>&lt;p&gt;Like &lt;a href=&#34;https://www.youtube.com/watch?v=mv0onXhyLlE&#34;&gt;Basil Fawlty&lt;/a&gt;, Bazel promises a great deal, but makes a bit of a fuss about something that could have been done so much more easily. This is at least true in any medium to large sized Golang project, it is worse if using OSX. Whilst Bazels goals are desireable they are easily and more simply achieved with the Go tools, especially since go 1.10.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
