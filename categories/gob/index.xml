@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dans Stuff</title>
-    <link>http://danmux.com/categories/gob/index.xml</link>
-    <description>Recent content on Dans Stuff</description>
+    <title>Gob on Dans Stuff</title>
+    <link>http://danmux.com/categories/gob/</link>
+    <description>Recent content in Gob on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://danmux.com/categories/gob/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://danmux.com/categories/gob/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>JSON, Gzip, Snappy and Gob Across the Wire</title>
@@ -19,149 +22,7 @@
 
 &lt;p&gt;(&lt;em&gt;tl;dr&lt;/em&gt; almost always use gzipped JSON)&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;serialising-for-wire-and-disk&#34;&gt;Serialising for Wire and Disk&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Much better to use a more debuggable human readable encoding and compress it in flight during transmission or storage&lt;/strong&gt;, after all browsers have native support and the performance benefits of binary formats are negligible. This is the crux of the argument for those in favour of verbose text based serialisations.&lt;/p&gt;
-
-&lt;p&gt;I understand the argument and &lt;strong&gt;this is almost always sound advice&lt;/strong&gt;, so why doesn’t Memcache do it, why do all NoSql and NewSql implementations offer a binary alternative if not &lt;em&gt;only&lt;/em&gt; a binary inerface? Why does Thrift thrive, and MessagePack pack a punch :p ?&lt;/p&gt;
-
-&lt;p&gt;Is it faster, or is it just cooler to do some binary stuff? - ‘Intellectual masturbation’ as an old learned colleague delightfully coined it. Or is there really a compelling use case for these things.&lt;/p&gt;
-
-&lt;p&gt;Heres a &lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/xtXh0yWOens&#34;&gt;recent example of the debate&lt;/a&gt; with all the typical (valid) points being trotted out&lt;/p&gt;
-
-&lt;h2 id=&#34;in-this-case&#34;&gt;In This Case&amp;hellip;&lt;/h2&gt;
-
-&lt;p&gt;Having just built a nicely homogenous #golang rpc microservices framework (or ‘milliservices’ as &lt;a href=&#34;https://twitter.com/iand/status/510090898269831170&#34;&gt;Ian Davis called his&lt;/a&gt;) I was naturally drawn to the native RPC gob encoding, but I hedged my bets and did the second worst of both worlds a gob based RPC envelope - with a []byte payload that could carry any serialisation - a la http. (the absolute worst would be http, with a gob body)&lt;/p&gt;
-
-&lt;p&gt;The point of this ‘neither one nor the other’ design was that much like HTTP the envelope is standard so all our components can speak the same language, output consistent log data and generally behave in a more homogenous way than you typically find in a mixed bag of microservices - what you put in the message payload is down to you and your services, of course for our internal systems gob is the natural choice for the payload as well.&lt;/p&gt;
-
-&lt;h2 id=&#34;some-trivial-calculations&#34;&gt;Some Trivial Calculations&lt;/h2&gt;
-
-&lt;p&gt;I did some initial calculations and benchmarking comparing gzipped JSON to ‘snappy’ JSON to raw gob. I suppose it would be useful to include lz4, but as far as I can tell snappy is not a million miles different.&lt;/p&gt;
-
-&lt;p&gt;The data is a pretty tabular in format being lists of (300 ish) financial transactions, so naturally this does not favour normal JSON which repeats the ‘column’ names, however compressing virtually removes this disadvantage.&lt;/p&gt;
-
-&lt;p&gt;The original data contained mainly text data, which does not favour binary.&lt;/p&gt;
-
-&lt;p&gt;I understand that without the example data and code this is unscientific, as it is impossible to reproduce, and therefore can be read only as a hint of what the truth may be. If there were any more interest than myself making notes for me then I could do a proper job later.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Raw Gob&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Raw Json&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Gzipped Json&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;Snappied Json&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Size  (bytes)&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;72111&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;252512&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;27115&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;47271&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Size (xGob)&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;3.5&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.38 (/2.66)&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.66 (/1.53)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Decode Speed  (ns/op)&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1453910&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1750450&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;3557621&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;3011828&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Decode Speed (xGob)&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.83 (/1.2)&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.41 (/2.45)&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;0.48 (/2.07)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;em&gt;xGob = multiplier of the Gob figure&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This data is for the payload or body only, whic relates to storage size (minus keys and indexes).&lt;/p&gt;
-
-&lt;p&gt;If HTTP is used as the transport protocol then the average 300-500 bytes of HTTP header should be taken into account when considering bandwidth, though with internal systems this would be more like 100-200 bytes.&lt;/p&gt;
-
-&lt;p&gt;Header size becomes a profound factor when transporting small payloads, making TCP a smarter choice, but then introducing similar debugging issues as faced with binary encodings.&lt;/p&gt;
-
-&lt;p&gt;Our internal gob header is typically 40-50 bytes (mainly being the 36 byte text representation of &lt;a href=&#34;http://tools.ietf.org/html/rfc4122&#34;&gt;uuid&lt;/a&gt;, which would be better passed round as the raw 16 bytes)&lt;/p&gt;
-
-&lt;p&gt;For a 40 byte binary payload (an array of 20 &lt;code&gt;int16&lt;/code&gt;&amp;rsquo;s for example) HTTP could easily cost 10x more bandwidth than TCP.&lt;/p&gt;
-
-&lt;p&gt;The summary comparison to gob for our large data (remember this is a sub optimal use case for binary) is&amp;hellip;&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Gzipped Json&lt;/td&gt;
-&lt;td&gt;2.5x slower&lt;/td&gt;
-&lt;td&gt;2.7x smaller&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Snappy Json&lt;/td&gt;
-&lt;td&gt;2x slower&lt;/td&gt;
-&lt;td&gt;1.5x smaller&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Uncompressed Json&lt;/td&gt;
-&lt;td&gt;1.2x slower&lt;/td&gt;
-&lt;td&gt;3.5x bigger&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;So even with binary unfriendly large text data its hard to strike a better balance than plain gob. If raw space and bandwidth were the primary concern then I would &lt;strong&gt;go for gzipped JSON over TCP&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;I’m surprised how sluggish Snappy is. Others have &lt;a href=&#34;https://groups.google.com/forum/#!topic/golang-nuts/7T1AKfDAOcQ&#34;&gt;reported&lt;/a&gt; the pure Go implementation to be quite slow.&lt;/p&gt;
-
-&lt;p&gt;None of the decoding benchmarks streamed the data - new encoders were made every loop, I know Gob would be even faster with this optimisation, all decoders decoded into an &lt;code&gt;interface{}&lt;/code&gt;, they would all have been quicker if a particular &lt;code&gt;struct&lt;/code&gt; was used.&lt;/p&gt;
-
-&lt;h2 id=&#34;testing-binary-payloads&#34;&gt;Testing Binary Payloads&lt;/h2&gt;
-
-&lt;p&gt;It is tempting to emphasise the more tangible representation of test data that a browser or even a prettified curl output offers, or the ease of editing a JSON file.&lt;/p&gt;
-
-&lt;p&gt;It is only marginally more hassle to construct test structs (or the equivalent in your own language) in unit or integration tests, and in general a better idea, and something you’ll have to do anyway.&lt;/p&gt;
-
-&lt;p&gt;In many languages (particularly Go) writing a curl like tool to interact with a binary rpc is, admittedly a tooling up overhead, however its a pretty simple, one off days work.&lt;/p&gt;
-
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;A compressed text based encoding like JSON &lt;strong&gt;is&lt;/strong&gt; more widely supported, quite compact and easier to test and debug, particularly if the consumer is a web browser.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Very few scenarios justify anything other than compressed JSON&lt;/strong&gt; (swap JSON with XML if you are stuck in that particular hell)&lt;/p&gt;
-
-&lt;p&gt;If you are approaching or know you will approach network limitations, or will save £1000’s per month (substitute for your own acceptable budget) and want to keep response rates up then a binary format may well be the right choice for all payload sizes.&lt;/p&gt;
-
-&lt;p&gt;If your system chatters lots of small chunks of data with a high ratio of none text to text data, at very high message rates, then a binary encoding particularly over TCP (thereby avoiding the HTTP header overhead) is by far the more sensible choice.&lt;/p&gt;
-
-&lt;p&gt;Testing and debugging binary protocols is not as bad as people make out, and should not be a massively deciding factor.&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

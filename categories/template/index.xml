@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dans Stuff</title>
-    <link>http://danmux.com/categories/template/index.xml</link>
-    <description>Recent content on Dans Stuff</description>
+    <title>Template on Dans Stuff</title>
+    <link>http://danmux.com/categories/template/</link>
+    <description>Recent content in Template on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://danmux.com/categories/template/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jun 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://danmux.com/categories/template/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Making Your Own Summary</title>
@@ -24,9 +27,7 @@
 
 &lt;!-- here is the real more... --&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;Everything after the more comment will not make it into the summary - sweet.&lt;/p&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

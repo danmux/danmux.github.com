@@ -187,10 +187,8 @@
 
 <p>You have to know and think about the <code>Equals</code> having type checking entirely removed. The following should never both pass, but they do:</p>
 
-<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #d0d0d0">assert.Equal(t,</span> <span style="color: #d0d0d0">iban.Bban,</span> <span style="color: #ed9d13">&quot;123&quot;</span><span style="color: #d0d0d0">)</span>
-<span style="color: #d0d0d0">assert.Equal(t,</span> <span style="color: #d0d0d0">iban.Bban,</span> <span style="color: #3677a9">123</span><span style="color: #d0d0d0">)</span>
-</pre></div>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">assert.Equal(t, iban.Bban, <span style="color:#ed9d13">&#34;123&#34;</span>)
+assert.Equal(t, iban.Bban, <span style="color:#3677a9">123</span>)</code></pre></div>
 
 <p>You may well know of another equality assertion in your favorite library that does type checking as well - but I expect that is only at runtime. There is considerable value in failing during compilation (more on the DSL later).</p>
 
@@ -223,32 +221,26 @@ pointer addresses.</p>
 
 <p>Equality never looked so complicated. What follows are some public API functions from testify:</p>
 
-<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #999999; font-style: italic">// ObjectsAreEqual determines if two objects are considered equal.</span>
-<span style="color: #999999; font-style: italic">//</span>
-<span style="color: #999999; font-style: italic">// This function does no assertion of any kind.</span>
-<span style="color: #6ab825; font-weight: bold">func</span> <span style="color: #d0d0d0">ObjectsAreEqual(expected,</span> <span style="color: #d0d0d0">actual</span> <span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{})</span> <span style="color: #6ab825; font-weight: bold">bool</span> <span style="color: #d0d0d0">{</span>
-</pre></div>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#999;font-style:italic">// ObjectsAreEqual determines if two objects are considered equal.
+</span><span style="color:#999;font-style:italic">//
+</span><span style="color:#999;font-style:italic">// This function does no assertion of any kind.
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> ObjectsAreEqual(expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {</code></pre></div>
 
 <p>(btw what does the comment &ldquo;This function does no assertion of any kind.&rdquo; mean)</p>
 
 <p>Then there are the following&hellip;</p>
 
-<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #6ab825; font-weight: bold">func</span> <span style="color: #d0d0d0">ObjectsAreEqualValues(expected,</span> <span style="color: #d0d0d0">actual</span> <span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{})</span> <span style="color: #6ab825; font-weight: bold">bool</span> <span style="color: #d0d0d0">{</span>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">func</span> ObjectsAreEqualValues(expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {
 
-<span style="color: #6ab825; font-weight: bold">func</span> <span style="color: #d0d0d0">EqualValues(t</span> <span style="color: #d0d0d0">TestingT,</span> <span style="color: #d0d0d0">expected,</span> <span style="color: #d0d0d0">actual</span> <span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{},</span> <span style="color: #d0d0d0">msgAndArgs</span> <span style="color: #d0d0d0">...</span><span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{})</span> <span style="color: #6ab825; font-weight: bold">bool</span> <span style="color: #d0d0d0">{</span>
+<span style="color:#6ab825;font-weight:bold">func</span> EqualValues(t TestingT, expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}, msgAndArgs ...<span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {
 
-<span style="color: #6ab825; font-weight: bold">func</span> <span style="color: #d0d0d0">Exactly(t</span> <span style="color: #d0d0d0">TestingT,</span> <span style="color: #d0d0d0">expected,</span> <span style="color: #d0d0d0">actual</span> <span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{},</span> <span style="color: #d0d0d0">msgAndArgs</span> <span style="color: #d0d0d0">...</span><span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{})</span> <span style="color: #6ab825; font-weight: bold">bool</span> <span style="color: #d0d0d0">{</span>
+<span style="color:#6ab825;font-weight:bold">func</span> Exactly(t TestingT, expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}, msgAndArgs ...<span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {
 
-<span style="color: #6ab825; font-weight: bold">func</span> <span style="color: #d0d0d0">Equal(t</span> <span style="color: #d0d0d0">TestingT,</span> <span style="color: #d0d0d0">expected,</span> <span style="color: #d0d0d0">actual</span> <span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{},</span> <span style="color: #d0d0d0">msgAndArgs</span> <span style="color: #d0d0d0">...</span><span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{})</span> <span style="color: #6ab825; font-weight: bold">bool</span> <span style="color: #d0d0d0">{</span>
-</pre></div>
-
+<span style="color:#6ab825;font-weight:bold">func</span> Equal(t TestingT, expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}, msgAndArgs ...<span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {</code></pre></div>
 
 <p>and then why is this &hellip;</p>
 
-<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #6ab825; font-weight: bold">func</span> <span style="color: #d0d0d0">NotEqual(t</span> <span style="color: #d0d0d0">TestingT,</span> <span style="color: #d0d0d0">expected,</span> <span style="color: #d0d0d0">actual</span> <span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{},</span> <span style="color: #d0d0d0">msgAndArgs</span> <span style="color: #d0d0d0">...</span><span style="color: #6ab825; font-weight: bold">interface</span><span style="color: #d0d0d0">{})</span> <span style="color: #6ab825; font-weight: bold">bool</span> <span style="color: #d0d0d0">{</span>
-</pre></div>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">func</span> NotEqual(t TestingT, expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}, msgAndArgs ...<span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {</code></pre></div>
 
 <p>different from <code>!Equal(...</code> ?</p>
 
@@ -270,71 +262,69 @@ pointer addresses.</p>
 
 <p>Here are all the other assertions we need to learn to become effective&hellip;</p>
 
-<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #6ab825; font-weight: bold">var</span> <span style="color: #d0d0d0">(</span>
-	<span style="color: #d0d0d0">ShouldEqual</span>          <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldEqual</span>
-	<span style="color: #d0d0d0">ShouldNotEqual</span>       <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotEqual</span>
-	<span style="color: #d0d0d0">ShouldAlmostEqual</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldAlmostEqual</span>
-	<span style="color: #d0d0d0">ShouldNotAlmostEqual</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotAlmostEqual</span>
-	<span style="color: #d0d0d0">ShouldResemble</span>       <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldResemble</span>
-	<span style="color: #d0d0d0">ShouldNotResemble</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotResemble</span>
-	<span style="color: #d0d0d0">ShouldPointTo</span>        <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldPointTo</span>
-	<span style="color: #d0d0d0">ShouldNotPointTo</span>     <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotPointTo</span>
-	<span style="color: #d0d0d0">ShouldBeNil</span>          <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeNil</span>
-	<span style="color: #d0d0d0">ShouldNotBeNil</span>       <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotBeNil</span>
-	<span style="color: #d0d0d0">ShouldBeTrue</span>         <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeTrue</span>
-	<span style="color: #d0d0d0">ShouldBeFalse</span>        <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeFalse</span>
-	<span style="color: #d0d0d0">ShouldBeZeroValue</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeZeroValue</span>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">var</span> (
+	ShouldEqual          = assertions.ShouldEqual
+	ShouldNotEqual       = assertions.ShouldNotEqual
+	ShouldAlmostEqual    = assertions.ShouldAlmostEqual
+	ShouldNotAlmostEqual = assertions.ShouldNotAlmostEqual
+	ShouldResemble       = assertions.ShouldResemble
+	ShouldNotResemble    = assertions.ShouldNotResemble
+	ShouldPointTo        = assertions.ShouldPointTo
+	ShouldNotPointTo     = assertions.ShouldNotPointTo
+	ShouldBeNil          = assertions.ShouldBeNil
+	ShouldNotBeNil       = assertions.ShouldNotBeNil
+	ShouldBeTrue         = assertions.ShouldBeTrue
+	ShouldBeFalse        = assertions.ShouldBeFalse
+	ShouldBeZeroValue    = assertions.ShouldBeZeroValue
 
-	<span style="color: #d0d0d0">ShouldBeGreaterThan</span>          <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeGreaterThan</span>
-	<span style="color: #d0d0d0">ShouldBeGreaterThanOrEqualTo</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeGreaterThanOrEqualTo</span>
-	<span style="color: #d0d0d0">ShouldBeLessThan</span>             <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeLessThan</span>
-	<span style="color: #d0d0d0">ShouldBeLessThanOrEqualTo</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeLessThanOrEqualTo</span>
-	<span style="color: #d0d0d0">ShouldBeBetween</span>              <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeBetween</span>
-	<span style="color: #d0d0d0">ShouldNotBeBetween</span>           <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotBeBetween</span>
-	<span style="color: #d0d0d0">ShouldBeBetweenOrEqual</span>       <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeBetweenOrEqual</span>
-	<span style="color: #d0d0d0">ShouldNotBeBetweenOrEqual</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotBeBetweenOrEqual</span>
+	ShouldBeGreaterThan          = assertions.ShouldBeGreaterThan
+	ShouldBeGreaterThanOrEqualTo = assertions.ShouldBeGreaterThanOrEqualTo
+	ShouldBeLessThan             = assertions.ShouldBeLessThan
+	ShouldBeLessThanOrEqualTo    = assertions.ShouldBeLessThanOrEqualTo
+	ShouldBeBetween              = assertions.ShouldBeBetween
+	ShouldNotBeBetween           = assertions.ShouldNotBeBetween
+	ShouldBeBetweenOrEqual       = assertions.ShouldBeBetweenOrEqual
+	ShouldNotBeBetweenOrEqual    = assertions.ShouldNotBeBetweenOrEqual
 
-	<span style="color: #d0d0d0">ShouldContain</span>       <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldContain</span>
-	<span style="color: #d0d0d0">ShouldNotContain</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotContain</span>
-	<span style="color: #d0d0d0">ShouldContainKey</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldContainKey</span>
-	<span style="color: #d0d0d0">ShouldNotContainKey</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotContainKey</span>
-	<span style="color: #d0d0d0">ShouldBeIn</span>          <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeIn</span>
-	<span style="color: #d0d0d0">ShouldNotBeIn</span>       <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotBeIn</span>
-	<span style="color: #d0d0d0">ShouldBeEmpty</span>       <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeEmpty</span>
-	<span style="color: #d0d0d0">ShouldNotBeEmpty</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotBeEmpty</span>
-	<span style="color: #d0d0d0">ShouldHaveLength</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHaveLength</span>
+	ShouldContain       = assertions.ShouldContain
+	ShouldNotContain    = assertions.ShouldNotContain
+	ShouldContainKey    = assertions.ShouldContainKey
+	ShouldNotContainKey = assertions.ShouldNotContainKey
+	ShouldBeIn          = assertions.ShouldBeIn
+	ShouldNotBeIn       = assertions.ShouldNotBeIn
+	ShouldBeEmpty       = assertions.ShouldBeEmpty
+	ShouldNotBeEmpty    = assertions.ShouldNotBeEmpty
+	ShouldHaveLength    = assertions.ShouldHaveLength
 
-	<span style="color: #d0d0d0">ShouldStartWith</span>           <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldStartWith</span>
-	<span style="color: #d0d0d0">ShouldNotStartWith</span>        <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotStartWith</span>
-	<span style="color: #d0d0d0">ShouldEndWith</span>             <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldEndWith</span>
-	<span style="color: #d0d0d0">ShouldNotEndWith</span>          <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotEndWith</span>
-	<span style="color: #d0d0d0">ShouldBeBlank</span>             <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeBlank</span>
-	<span style="color: #d0d0d0">ShouldNotBeBlank</span>          <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotBeBlank</span>
-	<span style="color: #d0d0d0">ShouldContainSubstring</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldContainSubstring</span>
-	<span style="color: #d0d0d0">ShouldNotContainSubstring</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotContainSubstring</span>
+	ShouldStartWith           = assertions.ShouldStartWith
+	ShouldNotStartWith        = assertions.ShouldNotStartWith
+	ShouldEndWith             = assertions.ShouldEndWith
+	ShouldNotEndWith          = assertions.ShouldNotEndWith
+	ShouldBeBlank             = assertions.ShouldBeBlank
+	ShouldNotBeBlank          = assertions.ShouldNotBeBlank
+	ShouldContainSubstring    = assertions.ShouldContainSubstring
+	ShouldNotContainSubstring = assertions.ShouldNotContainSubstring
 
-	<span style="color: #d0d0d0">ShouldPanic</span>        <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldPanic</span>
-	<span style="color: #d0d0d0">ShouldNotPanic</span>     <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotPanic</span>
-	<span style="color: #d0d0d0">ShouldPanicWith</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldPanicWith</span>
-	<span style="color: #d0d0d0">ShouldNotPanicWith</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotPanicWith</span>
+	ShouldPanic        = assertions.ShouldPanic
+	ShouldNotPanic     = assertions.ShouldNotPanic
+	ShouldPanicWith    = assertions.ShouldPanicWith
+	ShouldNotPanicWith = assertions.ShouldNotPanicWith
 
-	<span style="color: #d0d0d0">ShouldHaveSameTypeAs</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHaveSameTypeAs</span>
-	<span style="color: #d0d0d0">ShouldNotHaveSameTypeAs</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotHaveSameTypeAs</span>
-	<span style="color: #d0d0d0">ShouldImplement</span>         <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldImplement</span>
-	<span style="color: #d0d0d0">ShouldNotImplement</span>      <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotImplement</span>
+	ShouldHaveSameTypeAs    = assertions.ShouldHaveSameTypeAs
+	ShouldNotHaveSameTypeAs = assertions.ShouldNotHaveSameTypeAs
+	ShouldImplement         = assertions.ShouldImplement
+	ShouldNotImplement      = assertions.ShouldNotImplement
 
-	<span style="color: #d0d0d0">ShouldHappenBefore</span>         <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHappenBefore</span>
-	<span style="color: #d0d0d0">ShouldHappenOnOrBefore</span>     <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHappenOnOrBefore</span>
-	<span style="color: #d0d0d0">ShouldHappenAfter</span>          <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHappenAfter</span>
-	<span style="color: #d0d0d0">ShouldHappenOnOrAfter</span>      <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHappenOnOrAfter</span>
-	<span style="color: #d0d0d0">ShouldHappenBetween</span>        <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHappenBetween</span>
-	<span style="color: #d0d0d0">ShouldHappenOnOrBetween</span>    <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHappenOnOrBetween</span>
-	<span style="color: #d0d0d0">ShouldNotHappenOnOrBetween</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotHappenOnOrBetween</span>
-	<span style="color: #d0d0d0">ShouldHappenWithin</span>         <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldHappenWithin</span>
-	<span style="color: #d0d0d0">ShouldNotHappenWithin</span>      <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldNotHappenWithin</span>
-	<span style="color: #d0d0d0">ShouldBeChronological</span>      <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">assertions.ShouldBeChronological</span>
-</pre></div>
-
+	ShouldHappenBefore         = assertions.ShouldHappenBefore
+	ShouldHappenOnOrBefore     = assertions.ShouldHappenOnOrBefore
+	ShouldHappenAfter          = assertions.ShouldHappenAfter
+	ShouldHappenOnOrAfter      = assertions.ShouldHappenOnOrAfter
+	ShouldHappenBetween        = assertions.ShouldHappenBetween
+	ShouldHappenOnOrBetween    = assertions.ShouldHappenOnOrBetween
+	ShouldNotHappenOnOrBetween = assertions.ShouldNotHappenOnOrBetween
+	ShouldHappenWithin         = assertions.ShouldHappenWithin
+	ShouldNotHappenWithin      = assertions.ShouldNotHappenWithin
+	ShouldBeChronological      = assertions.ShouldBeChronological</code></pre></div>
 
 <p>Dependencies don&rsquo;t come for free.</p>
 

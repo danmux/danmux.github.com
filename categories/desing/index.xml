@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dans Stuff</title>
-    <link>http://danmux.com/categories/desing/index.xml</link>
-    <description>Recent content on Dans Stuff</description>
+    <title>Desing on Dans Stuff</title>
+    <link>http://danmux.com/categories/desing/</link>
+    <description>Recent content in Desing on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://danmux.com/categories/desing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jul 2015 17:02:07 +0100</lastBuildDate>
+    
+	<atom:link href="http://danmux.com/categories/desing/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Queues Are Not Always The Answer</title>
@@ -15,58 +18,7 @@
       <guid>http://danmux.com/posts/queues-are-not-always-the-answer/</guid>
       <description>&lt;p&gt;I feel developers reach for the queue all too quickly. I’m talking about stand alone message queue services like RabbitMQ, ActiveMQ etc. etc. Not an in memory data structure (which in fact can be all you need sometimes)&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;sync-or-queue&#34;&gt;Sync or Queue&lt;/h2&gt;
-
-&lt;p&gt;Often the reasons for choosing a queue include many features that any synchronous service could provide.&lt;/p&gt;
-
-&lt;p&gt;There are, in my opinion, only four compelling use cases for a queue over a simple remote service.&lt;/p&gt;
-
-&lt;p&gt;This &lt;a href=&#34;http://blog.iron.io/2012/12/top-10-uses-for-message-queue.html&#34;&gt;blog post from Iron.io&lt;/a&gt; is a good example of an article that whilst explaining why queues are good never mentions where a simple service would suffice.&lt;/p&gt;
-
-&lt;p&gt;All the reasons they mention as to why queues are good are correct. I just want to remind (myself mainly, so I can reference it when I get challenged again as to why I have not suggested a queue) that most of the advantages they mention are not exclusive to queues.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Decoupling&lt;/strong&gt; - Provides consistent interface, but then so do flexible payload interfaces. Admittedly a queue can allow the freedom to attach an number of subscribers without the publisher needing any further knowledge.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Redundancy&lt;/strong&gt; - not really redundancy, but retry in upstream failure. Retry is a great feature, which is also often present in other interfaces. Often queues are hard to cluster for redundancy.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Scaleability&lt;/strong&gt; - Queues support scaleability because of decoupling and ease of adding pub sub nodes to the queue - just the same effect as the decoupling delivered by an interface to any other out of process service.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Elasticity &amp;amp; Spikability&lt;/strong&gt; - the major use case  for queues - impedance miss-match&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Resiliency&lt;/strong&gt; - This argument assumes ALL processing nodes fail, otherwise it would just be the same behaviour as dealing with spikes (lack of cycles to process the work). This approach to ‘resiliency’ does not handle the case where the user is expecting feedback from the result of the request, then the queue lets them down.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Delivery Guarantees&lt;/strong&gt; - is not an advantage of queues - it needs to be stated because it feels like queues may not deliver messages - a direct interface, being synchronous, has an implicit delivery ‘guarantee’&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Ordering Guarantees&lt;/strong&gt; - this can be a a valid use case if multiple processes feed into a queue, and assuming the queue itself is cluster-able, and has cross cluster atomic behaviour, then a queue, could be made to act like a temporal ordering funnel, in some way collating requests in a particular order (within an agreed time window). In any distributed system at scale, the clients of the queue are unlikely to deliver messages to the queue in a temporally deterministic order thereby undermining the queue value for this feature. Event ordering across a distributed cluster is THE hard problem in distributed systems, queues may inject some order into some parts of the system.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Buffering&lt;/strong&gt; - a duplication of the Elasticity feature, and again a way of dealing with impedance mismatch - if any consuming processes behind an interface can operate in parallel and at different lifetimes then the same effect is achievable without a queue.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Understanding data flow&lt;/strong&gt; - an argument for visibility, also solved by a consistent set of api’s in a system that are able to be reported on for statistics.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Asynchronous Communication&lt;/strong&gt; - probably the single biggest most valuable use case - if the instigating process does not care directly about the outcome, or can check the outcome later, and the system still needs some eventually consistent guarantees then the queue is a fine choice. example use cases: event based features like triggering an email, or streaming into a reporting system&lt;/p&gt;
-
-&lt;p&gt;I think the other major feature, not mentioned in the article, is that typically queues offer&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Rich Routing or Distribution Model&lt;/strong&gt; - Fan out, topics etc etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Security&lt;/strong&gt;
-The other aspect of a queue that is not mentioned in that article is security. A subscriber makes a connection outbound to the queue, so an internally secure zone in your network can avoid allowing any inbound connections, and only ever connects out to the queue, which could be considered more secure. Others may argue that all this does is change the attack vector slightly to focus on compromising the queue itself, and is no more secure than available attacks on the network layers, I don’t know enough about that, but it feels more secure to me not allowing inbound connections.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bad UX&lt;/strong&gt;
-Using a queue in any part of your architecture that affects the user experience is a risky compromise, which can often mask the underlying problem.&lt;/p&gt;
-
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-
-&lt;p&gt;In summary use a queue, if you really don’t mind asynchronous or parallel work&amp;hellip;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;If you truly have no control over, or don’t care about the upstream service response times.&lt;/li&gt;
-&lt;li&gt;If you have spikes in your requests, and you can’t cost effectively keep to a reasonable response guarantee, and you know you have enough spare capacity in the off peak to catch up.&lt;/li&gt;
-&lt;li&gt;If you want to do some funky distribution of your messages (typically to many observers) particularly if you are not bothered about the result of any upstream subscribers work&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;If you agree that the pull model from a secure zone to a queue adds to your network security.&lt;/li&gt;
-&lt;/ol&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

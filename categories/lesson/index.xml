@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dans Stuff</title>
-    <link>http://danmux.com/categories/lesson/index.xml</link>
-    <description>Recent content on Dans Stuff</description>
+    <title>Lesson on Dans Stuff</title>
+    <link>http://danmux.com/categories/lesson/</link>
+    <description>Recent content in Lesson on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="http://danmux.com/categories/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://danmux.com/categories/lesson/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>The Road Not Taken</title>
@@ -15,89 +18,7 @@
       <guid>http://danmux.com/posts/ramblings/</guid>
       <description>&lt;p&gt;On our honeymoon In the mountains around Kitzbuhel in the summer many years ago, me and my wife were following a Wanderweg when we turned onto a small path that the map showed to be a nice route back to our hotel Schloss Lebenberg.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;After 2 hours we were in a thick felled pine forest, probably a ski run for next year. We clambered from trunk to trunk, legs getting scratched and cut on sharp branches in the process. Across a ravine the forest was standing and looked navigable.&lt;/p&gt;
-
-&lt;p&gt;My wife had said a few times:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;This is silly, let’s turn back onto the path we know.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I said&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;But we will waste two hours. We must be close, I&amp;rsquo;m sure I can see light breaking through those trees.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;We hid from a rain storm in a cow shed, and shared our last apple. It was well after dark many hours later when we got to the bottom of the valley. Still an hour away from the hotel, we were exhausted and we surrendered, we got a drink in a nearby hotel and called a taxi.&lt;/p&gt;
-
-&lt;p&gt;The bad turn we took was only an hour or so from the Schloss. If we had turned back we would have been sipping cocktails by the pool instead of rubbing antiseptic cream into cuts and bruises and crashing out early.&lt;/p&gt;
-
-&lt;p&gt;If you can afford it and the rewards worthy, sure, take the path less trodden. Sometimes, even when it looks like you might be almost there, it&amp;rsquo;s better to just turn back.&lt;/p&gt;
-
-&lt;p&gt;When the nice looking beta tool keeps bruising you, just turn back&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;..despite what Robert Frost&amp;rsquo;s poem may inspire:&lt;/p&gt;
-
-&lt;h2 id=&#34;the-road-not-taken&#34;&gt;The Road Not Taken&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;BY ROBERT FROST&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Two roads diverged in a yellow wood,&lt;/p&gt;
-
-&lt;p&gt;And sorry I could not travel both&lt;/p&gt;
-
-&lt;p&gt;And be one traveler, long I stood&lt;/p&gt;
-
-&lt;p&gt;And looked down one as far as I could&lt;/p&gt;
-
-&lt;p&gt;To where it bent in the undergrowth;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Then took the other, as just as fair,&lt;/p&gt;
-
-&lt;p&gt;And having perhaps the better claim,&lt;/p&gt;
-
-&lt;p&gt;Because it was grassy and wanted wear;&lt;/p&gt;
-
-&lt;p&gt;Though as for that the passing there&lt;/p&gt;
-
-&lt;p&gt;Had worn them really about the same,&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;And both that morning equally lay&lt;/p&gt;
-
-&lt;p&gt;In leaves no step had trodden black.&lt;/p&gt;
-
-&lt;p&gt;Oh, I kept the first for another day!&lt;/p&gt;
-
-&lt;p&gt;Yet knowing how way leads on to way,&lt;/p&gt;
-
-&lt;p&gt;I doubted if I should ever come back.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I shall be telling this with a sigh&lt;/p&gt;
-
-&lt;p&gt;Somewhere ages and ages hence:&lt;/p&gt;
-
-&lt;p&gt;Two roads diverged in a wood, and I—&lt;/p&gt;
-
-&lt;p&gt;I took the one less traveled by,&lt;/p&gt;
-
-&lt;p&gt;And that has made all the difference.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

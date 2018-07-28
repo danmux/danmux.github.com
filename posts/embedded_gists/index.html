@@ -67,45 +67,39 @@
 <p>
 So here is an example&hellip;</p>
 
-<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #d0d0d0">&lt;p&gt;</span><span style="color: #6ab825; font-weight: bold">def</span> <span style="color: #447fcf">digit_sum</span><span style="color: #d0d0d0">(n):</span>
-    <span style="color: #d0d0d0">s</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span>
-    <span style="color: #6ab825; font-weight: bold">while</span> <span style="color: #d0d0d0">n:</span>   <span style="color: #999999; font-style: italic"># while n is ‘truthy’ for an integer that means not 0</span>
-        <span style="color: #d0d0d0">s</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">s</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">(n</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">10</span><span style="color: #d0d0d0">)</span>   <span style="color: #999999; font-style: italic"># the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7</span>
-        <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">10</span>         <span style="color: #999999; font-style: italic"># n = the integer of n / 10   int(15.7) = 15</span>
-    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">s&lt;/p&gt;</span>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">&lt;p&gt;<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">digit_sum</span>(n):
+    s = <span style="color:#3677a9">0</span>
+    <span style="color:#6ab825;font-weight:bold">while</span> n:   <span style="color:#999;font-style:italic"># while n is &amp;lsquo;truthy&amp;rsquo; for an integer that means not 0</span>
+        s = s + (n % <span style="color:#3677a9">10</span>)   <span style="color:#999;font-style:italic"># the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7</span>
+        n = n / <span style="color:#3677a9">10</span>         <span style="color:#999;font-style:italic"># n = the integer of n / 10   int(15.7) = 15</span>
+    <span style="color:#6ab825;font-weight:bold">return</span> s&lt;/p&gt;
 
-<span style="color: #d0d0d0">&lt;p&gt;</span><span style="color: #6ab825; font-weight: bold">print</span> <span style="color: #d0d0d0">digit_sum(</span><span style="color: #3677a9">157</span><span style="color: #d0d0d0">)&lt;/p&gt;</span>
+&lt;p&gt;<span style="color:#6ab825;font-weight:bold">print</span> digit_sum(<span style="color:#3677a9">157</span>)&lt;/p&gt;
 
-<span style="color: #d0d0d0">&lt;p&gt;</span><span style="color: #a61717; background-color: #e3d2d2">”’</span>
-<span style="color: #d0d0d0">calling</span> <span style="color: #d0d0d0">digit_sum(</span><span style="color: #3677a9">157</span><span style="color: #d0d0d0">)&lt;/p&gt;</span>
+&lt;p&gt;&amp;rdquo;&amp;rsquo;
+calling digit_sum(<span style="color:#3677a9">157</span>)&lt;/p&gt;
 
-<span style="color: #d0d0d0">&lt;h2</span> <span style="color: #24909d">id</span><span style="color: #d0d0d0">=</span><span style="color: #ed9d13">&quot;loop-s-n-n-10-n-10&quot;</span><span style="color: #d0d0d0">&gt;loop</span>  <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">s</span>   <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">n</span>   <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">10</span>  <span style="color: #d0d0d0">|</span> <span style="color: #d0d0d0">n</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">10</span><span style="color: #d0d0d0">&lt;/h2&gt;</span>
+&lt;h2 <span style="color:#24909d">id</span>=<span style="color:#ed9d13">&#34;loop-s-n-n-10-n-10&#34;</span>&gt;loop  | s   | n   | n % <span style="color:#3677a9">10</span>  | n / <span style="color:#3677a9">10</span>&lt;/h2&gt;
 
-<span style="color: #d0d0d0">&lt;p&gt;</span><span style="color: #3677a9">0</span>     <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">0</span>   <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">157</span> <span style="color: #d0d0d0">|</span>   <span style="color: #3677a9">7</span>     <span style="color: #d0d0d0">|</span>  <span style="color: #3677a9">15</span>
-<span style="color: #3677a9">1</span>     <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">7</span>   <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">15</span>  <span style="color: #d0d0d0">|</span>   <span style="color: #3677a9">5</span>     <span style="color: #d0d0d0">|</span>  <span style="color: #3677a9">1</span>
-<span style="color: #3677a9">2</span>     <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">12</span>  <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">1</span>   <span style="color: #d0d0d0">|</span>   <span style="color: #3677a9">1</span>     <span style="color: #d0d0d0">|</span>  <span style="color: #3677a9">0</span>
-<span style="color: #3677a9">3</span>     <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">13</span>  <span style="color: #d0d0d0">|</span> <span style="color: #3677a9">0</span>   <span style="color: #d0d0d0">|</span>         <span style="color: #d0d0d0">|&lt;br</span> <span style="color: #d0d0d0">/&gt;</span>
-<span style="color: #a61717; background-color: #e3d2d2">”’</span><span style="color: #d0d0d0">&lt;/p&gt;</span>
-</pre></div>
-
+&lt;p&gt;<span style="color:#3677a9">0</span>     | <span style="color:#3677a9">0</span>   | <span style="color:#3677a9">157</span> |   <span style="color:#3677a9">7</span>     |  <span style="color:#3677a9">15</span>
+<span style="color:#3677a9">1</span>     | <span style="color:#3677a9">7</span>   | <span style="color:#3677a9">15</span>  |   <span style="color:#3677a9">5</span>     |  <span style="color:#3677a9">1</span>
+<span style="color:#3677a9">2</span>     | <span style="color:#3677a9">12</span>  | <span style="color:#3677a9">1</span>   |   <span style="color:#3677a9">1</span>     |  <span style="color:#3677a9">0</span>
+<span style="color:#3677a9">3</span>     | <span style="color:#3677a9">13</span>  | <span style="color:#3677a9">0</span>   |         |&lt;br /&gt;
+&amp;rdquo;&amp;rsquo;&lt;/p&gt;</code></pre></div>
 
 <p>But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.</p>
 
 <p>So on embedding a gist as follows (but without syntax highlighting) failed&hellip;</p>
 
-<p><div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #d0d0d0">&lt;</span><span style="color: #6ab825; font-weight: bold">script</span> <span style="color: #bbbbbb">src</span><span style="color: #d0d0d0">=</span><span style="color: #ed9d13">&quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&quot;</span><span style="color: #d0d0d0">&gt;</span>
-<span style="color: #d0d0d0">&lt;/</span><span style="color: #6ab825; font-weight: bold">script</span><span style="color: #d0d0d0">&gt;</span>
-</pre></div>
-</p>
+<p><div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#6ab825;font-weight:bold">script</span> <span style="color:#bbb">src</span>=<span style="color:#ed9d13">&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;</span>&gt;
+&lt;/<span style="color:#6ab825;font-weight:bold">script</span>&gt;</code></pre></div></p>
 
 <p>Putting it in another block partially worked</p>
 
-<div class="highlight" style="background: #202020"><pre style="line-height: 125%"><span></span><span style="color: #d0d0d0">&lt;</span><span style="color: #6ab825; font-weight: bold">p</span><span style="color: #d0d0d0">&gt;</span>
-    <span style="color: #d0d0d0">&lt;</span><span style="color: #6ab825; font-weight: bold">script</span> <span style="color: #bbbbbb">src</span><span style="color: #d0d0d0">=</span><span style="color: #ed9d13">&quot;https://gist.github.com/danmux/042fa69bed3791afe658.js&quot;</span><span style="color: #d0d0d0">&gt;</span>
-    <span style="color: #d0d0d0">&lt;/</span><span style="color: #6ab825; font-weight: bold">script</span><span style="color: #d0d0d0">&gt;</span>
-<span style="color: #d0d0d0">&lt;/</span><span style="color: #6ab825; font-weight: bold">p</span><span style="color: #d0d0d0">&gt;</span>
-</pre></div>
-
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#6ab825;font-weight:bold">p</span>&gt;
+    &lt;<span style="color:#6ab825;font-weight:bold">script</span> <span style="color:#bbb">src</span>=<span style="color:#ed9d13">&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;</span>&gt;
+    &lt;/<span style="color:#6ab825;font-weight:bold">script</span>&gt;
+&lt;/<span style="color:#6ab825;font-weight:bold">p</span>&gt;</code></pre></div>
 
 <p>I was left with an unclosed script tag.</p>
 
