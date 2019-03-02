@@ -2,25 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jmeter on Dans Stuff</title>
-    <link>http://danmux.com/categories/jmeter/</link>
+    <link>https://danmux.com/categories/jmeter/</link>
     <description>Recent content in Jmeter on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 06 Jul 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/jmeter/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/jmeter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jmeter is a Poor Choice for REST and Golang</title>
-      <link>http://danmux.com/posts/jmeter_rest_golang/</link>
+      <link>https://danmux.com/posts/jmeter_rest_golang/</link>
       <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/jmeter_rest_golang/</guid>
+      <guid>https://danmux.com/posts/jmeter_rest_golang/</guid>
       <description>&lt;p&gt;Its essential we have good integration tests and performance tests on our restful api, particularly now that many of the moving parts will migrate to microservices written in Go.&lt;/p&gt;
 
-&lt;p&gt;Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.&lt;/p&gt;</description>
     </item>
     
   </channel>

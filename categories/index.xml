@@ -2,254 +2,254 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Dans Stuff</title>
-    <link>http://danmux.com/categories/</link>
+    <link>https://danmux.com/categories/</link>
     <description>Recent content in Categories on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 23 Sep 2011 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apis</title>
-      <link>http://danmux.com/categories/apis/</link>
+      <link>https://danmux.com/categories/apis/</link>
       <pubDate>Fri, 23 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/apis/</guid>
+      <guid>https://danmux.com/categories/apis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bank</title>
-      <link>http://danmux.com/categories/bank/</link>
+      <link>https://danmux.com/categories/bank/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/bank/</guid>
+      <guid>https://danmux.com/categories/bank/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Banks</title>
-      <link>http://danmux.com/categories/banks/</link>
+      <link>https://danmux.com/categories/banks/</link>
       <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/banks/</guid>
+      <guid>https://danmux.com/categories/banks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bazel</title>
-      <link>http://danmux.com/categories/bazel/</link>
+      <link>https://danmux.com/categories/bazel/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/bazel/</guid>
+      <guid>https://danmux.com/categories/bazel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Build</title>
-      <link>http://danmux.com/categories/build/</link>
+      <link>https://danmux.com/categories/build/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/build/</guid>
+      <guid>https://danmux.com/categories/build/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Continuous Integration</title>
-      <link>http://danmux.com/categories/continuous-integration/</link>
+      <link>https://danmux.com/categories/continuous-integration/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/continuous-integration/</guid>
+      <guid>https://danmux.com/categories/continuous-integration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Desing</title>
-      <link>http://danmux.com/categories/desing/</link>
+      <link>https://danmux.com/categories/desing/</link>
       <pubDate>Mon, 20 Jul 2015 17:02:07 +0100</pubDate>
       
-      <guid>http://danmux.com/categories/desing/</guid>
+      <guid>https://danmux.com/categories/desing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Development</title>
-      <link>http://danmux.com/categories/development/</link>
+      <link>https://danmux.com/categories/development/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/development/</guid>
+      <guid>https://danmux.com/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Engineering</title>
-      <link>http://danmux.com/categories/engineering/</link>
+      <link>https://danmux.com/categories/engineering/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/engineering/</guid>
+      <guid>https://danmux.com/categories/engineering/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fintech</title>
-      <link>http://danmux.com/categories/fintech/</link>
+      <link>https://danmux.com/categories/fintech/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/fintech/</guid>
+      <guid>https://danmux.com/categories/fintech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fraud</title>
-      <link>http://danmux.com/categories/fraud/</link>
+      <link>https://danmux.com/categories/fraud/</link>
       <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/fraud/</guid>
+      <guid>https://danmux.com/categories/fraud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gists</title>
-      <link>http://danmux.com/categories/gists/</link>
+      <link>https://danmux.com/categories/gists/</link>
       <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/gists/</guid>
+      <guid>https://danmux.com/categories/gists/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>http://danmux.com/categories/github/</link>
+      <link>https://danmux.com/categories/github/</link>
       <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/github/</guid>
+      <guid>https://danmux.com/categories/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>http://danmux.com/categories/go/</link>
+      <link>https://danmux.com/categories/go/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/go/</guid>
+      <guid>https://danmux.com/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gob</title>
-      <link>http://danmux.com/categories/gob/</link>
+      <link>https://danmux.com/categories/gob/</link>
       <pubDate>Sun, 21 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/gob/</guid>
+      <guid>https://danmux.com/categories/gob/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>http://danmux.com/categories/golang/</link>
+      <link>https://danmux.com/categories/golang/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/golang/</guid>
+      <guid>https://danmux.com/categories/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>http://danmux.com/categories/hugo/</link>
+      <link>https://danmux.com/categories/hugo/</link>
       <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/hugo/</guid>
+      <guid>https://danmux.com/categories/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jmeter</title>
-      <link>http://danmux.com/categories/jmeter/</link>
+      <link>https://danmux.com/categories/jmeter/</link>
       <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/jmeter/</guid>
+      <guid>https://danmux.com/categories/jmeter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Json</title>
-      <link>http://danmux.com/categories/json/</link>
+      <link>https://danmux.com/categories/json/</link>
       <pubDate>Sun, 21 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/json/</guid>
+      <guid>https://danmux.com/categories/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lesson</title>
-      <link>http://danmux.com/categories/lesson/</link>
+      <link>https://danmux.com/categories/lesson/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/lesson/</guid>
+      <guid>https://danmux.com/categories/lesson/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Performance</title>
-      <link>http://danmux.com/categories/performance/</link>
+      <link>https://danmux.com/categories/performance/</link>
       <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/performance/</guid>
+      <guid>https://danmux.com/categories/performance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quality</title>
-      <link>http://danmux.com/categories/quality/</link>
+      <link>https://danmux.com/categories/quality/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/quality/</guid>
+      <guid>https://danmux.com/categories/quality/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Queues</title>
-      <link>http://danmux.com/categories/queues/</link>
+      <link>https://danmux.com/categories/queues/</link>
       <pubDate>Mon, 20 Jul 2015 17:02:07 +0100</pubDate>
       
-      <guid>http://danmux.com/categories/queues/</guid>
+      <guid>https://danmux.com/categories/queues/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security</title>
-      <link>http://danmux.com/categories/security/</link>
+      <link>https://danmux.com/categories/security/</link>
       <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/security/</guid>
+      <guid>https://danmux.com/categories/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tech</title>
-      <link>http://danmux.com/categories/tech/</link>
+      <link>https://danmux.com/categories/tech/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/tech/</guid>
+      <guid>https://danmux.com/categories/tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Template</title>
-      <link>http://danmux.com/categories/template/</link>
+      <link>https://danmux.com/categories/template/</link>
       <pubDate>Sat, 28 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/template/</guid>
+      <guid>https://danmux.com/categories/template/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Testing</title>
-      <link>http://danmux.com/categories/testing/</link>
+      <link>https://danmux.com/categories/testing/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/categories/testing/</guid>
+      <guid>https://danmux.com/categories/testing/</guid>
       <description></description>
     </item>
     

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gists on Dans Stuff</title>
-    <link>http://danmux.com/categories/gists/</link>
+    <link>https://danmux.com/categories/gists/</link>
     <description>Recent content in Gists on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 05 Jul 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/gists/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/gists/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Embedded Gists</title>
-      <link>http://danmux.com/posts/embedded_gists/</link>
+      <link>https://danmux.com/posts/embedded_gists/</link>
       <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/embedded_gists/</guid>
+      <guid>https://danmux.com/posts/embedded_gists/</guid>
       <description>&lt;h2 id=&#34;syntax-highlighting-or-embedded-gists&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
 
 &lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;. But also wanted to try embedding gists&lt;/p&gt;</description>

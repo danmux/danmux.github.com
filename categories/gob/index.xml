@@ -2,27 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gob on Dans Stuff</title>
-    <link>http://danmux.com/categories/gob/</link>
+    <link>https://danmux.com/categories/gob/</link>
     <description>Recent content in Gob on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 21 Sep 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/gob/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/gob/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JSON, Gzip, Snappy and Gob Across the Wire</title>
-      <link>http://danmux.com/posts/across_the_wire_serialisation/</link>
+      <link>https://danmux.com/posts/across_the_wire_serialisation/</link>
       <pubDate>Sun, 21 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/across_the_wire_serialisation/</guid>
+      <guid>https://danmux.com/posts/across_the_wire_serialisation/</guid>
       <description>&lt;p&gt;Coming from a background where memory and clock cycles were sparse, binary encodings have always held an appeal. Since then I’ve been told we have loads of compute power, ample cheap RAM and disk, and when the network is the bottleneck then, well, that is a good problem to have.&lt;/p&gt;
 
 &lt;p&gt;Its one of those ages old occasionally heated debates&amp;hellip;.&lt;/p&gt;
 
-&lt;p&gt;(&lt;em&gt;tl;dr&lt;/em&gt; almost always use gzipped JSON)&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;(&lt;em&gt;tl;dr&lt;/em&gt; almost always use gzipped JSON)&lt;/p&gt;</description>
     </item>
     
   </channel>

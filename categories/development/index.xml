@@ -2,45 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Dans Stuff</title>
-    <link>http://danmux.com/categories/development/</link>
+    <link>https://danmux.com/categories/development/</link>
     <description>Recent content in Development on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 30 Oct 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Cult of Go Test</title>
-      <link>http://danmux.com/posts/the_cult_of_go_test/</link>
+      <link>https://danmux.com/posts/the_cult_of_go_test/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/the_cult_of_go_test/</guid>
-      <description>&lt;p&gt;A favourite test helper library, with some simple test assertion functions clearly has some value. But this post puts forward some useable concrete arguments why they are normally just not worth it.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://danmux.com/posts/the_cult_of_go_test/</guid>
+      <description>&lt;p&gt;A favourite test helper library, with some simple test assertion functions clearly has some value. But this post puts forward some useable concrete arguments why they are normally just not worth it.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>What Golang Is and Is Not</title>
-      <link>http://danmux.com/posts/what_golang_isnt/</link>
+      <link>https://danmux.com/posts/what_golang_isnt/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/what_golang_isnt/</guid>
-      <description>&lt;p&gt;We are all products of our own histories, and I suspect many routes to Go have been made less enjoyable by misguided expectations. The journey from when a budding developer first ‘hello worlded’ to now may have made Go’s more subtle strengths less obvious to them.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://danmux.com/posts/what_golang_isnt/</guid>
+      <description>&lt;p&gt;We are all products of our own histories, and I suspect many routes to Go have been made less enjoyable by misguided expectations. The journey from when a budding developer first ‘hello worlded’ to now may have made Go’s more subtle strengths less obvious to them.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Test Pyramid and Availability Bias</title>
-      <link>http://danmux.com/posts/test_pyramid_availability_bias/</link>
+      <link>https://danmux.com/posts/test_pyramid_availability_bias/</link>
       <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/test_pyramid_availability_bias/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&#34;&gt;The test pyramid&lt;/a&gt; has its place - it gets across a simple idea, but it has been taken too literally, and applied innapropriately.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://danmux.com/posts/test_pyramid_availability_bias/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&#34;&gt;The test pyramid&lt;/a&gt; has its place - it gets across a simple idea, but it has been taken too literally, and applied innapropriately.&lt;/p&gt;</description>
     </item>
     
   </channel>

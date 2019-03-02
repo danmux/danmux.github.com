@@ -2,36 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on Dans Stuff</title>
-    <link>http://danmux.com/categories/security/</link>
+    <link>https://danmux.com/categories/security/</link>
     <description>Recent content in Security on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 30 Dec 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/security/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/security/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Shut Up and Take My Money Summary</title>
-      <link>http://danmux.com/posts/shut_up_and_take_my_money/</link>
+      <link>https://danmux.com/posts/shut_up_and_take_my_money/</link>
       <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/shut_up_and_take_my_money/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://fahrplan.events.ccc.de/congress/2016/Fahrplan/speakers/5995.html&#34;&gt;Vincent Haupert&lt;/a&gt; Presented at the Chaos Communication Congress A talk about some severe security breaches in the fintech startup &lt;a href=&#34;https://n26.com/&#34;&gt;Number26&lt;/a&gt; app and API. Here is a summary of the key points.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://danmux.com/posts/shut_up_and_take_my_money/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://fahrplan.events.ccc.de/congress/2016/Fahrplan/speakers/5995.html&#34;&gt;Vincent Haupert&lt;/a&gt; Presented at the Chaos Communication Congress A talk about some severe security breaches in the fintech startup &lt;a href=&#34;https://n26.com/&#34;&gt;Number26&lt;/a&gt; app and API. Here is a summary of the key points.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Banks Love Hackers</title>
-      <link>http://danmux.com/posts/banks_love_hackers/</link>
+      <link>https://danmux.com/posts/banks_love_hackers/</link>
       <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/banks_love_hackers/</guid>
+      <guid>https://danmux.com/posts/banks_love_hackers/</guid>
       <description>&lt;p&gt;A recent BBC Click article reporting &lt;a href=&#34;http://www.bbc.co.uk/news/technology-16812064&#34;&gt;“Hackers outwit online banking identity security systems”&lt;/a&gt; show how ‘hackers’ can poison online banking web sites to trick customers into transferring money out of their accounts.&lt;/p&gt;
 
-&lt;p&gt;Banks love this kind of article because if keeps their smoke screen smouldering.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Banks love this kind of article because if keeps their smoke screen smouldering.&lt;/p&gt;</description>
     </item>
     
   </channel>
