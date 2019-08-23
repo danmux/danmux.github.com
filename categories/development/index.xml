@@ -29,6 +29,15 @@
     </item>
     
     <item>
+      <title>What&#39;s In a Go Name</title>
+      <link>https://danmux.com/posts/whats_in_a_go_name/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://danmux.com/posts/whats_in_a_go_name/</guid>
+      <description>&lt;p&gt;Is I have mentioned in a previous post we are all products of our own histories, and this will definitely impact your appreciation or frustration of the subtleties of the Go community guidelines on naming.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>The Test Pyramid and Availability Bias</title>
       <link>https://danmux.com/posts/test_pyramid_availability_bias/</link>
       <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>

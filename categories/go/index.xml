@@ -37,5 +37,14 @@
       <description>&lt;p&gt;We are all products of our own histories, and I suspect many routes to Go have been made less enjoyable by misguided expectations. The journey from when a budding developer first ‘hello worlded’ to now may have made Go’s more subtle strengths less obvious to them.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>What&#39;s In a Go Name</title>
+      <link>https://danmux.com/posts/whats_in_a_go_name/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://danmux.com/posts/whats_in_a_go_name/</guid>
+      <description>&lt;p&gt;Is I have mentioned in a previous post we are all products of our own histories, and this will definitely impact your appreciation or frustration of the subtleties of the Go community guidelines on naming.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
