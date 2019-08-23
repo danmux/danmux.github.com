@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on Dans Stuff</title>
-    <link>http://danmux.com/categories/go/</link>
+    <link>https://danmux.com/categories/go/</link>
     <description>Recent content in go on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What&#39;s the Shrt Stry on Go Var Names</title>
-      <link>http://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</link>
+      <link>https://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</guid>
+      <guid>https://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</guid>
       <description>&lt;p&gt;Is I have mentioned in a previous post we are all products of our own histories, and this will definitely impact your appreciation or frustration of the subtleties of the Go community guidelines on naming.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bazel Fawlty</title>
-      <link>http://danmux.com/posts/bazel_fawlty/</link>
+      <link>https://danmux.com/posts/bazel_fawlty/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/bazel_fawlty/</guid>
+      <guid>https://danmux.com/posts/bazel_fawlty/</guid>
       <description>&lt;p&gt;Like &lt;a href=&#34;https://www.youtube.com/watch?v=mv0onXhyLlE&#34;&gt;Basil Fawlty&lt;/a&gt;, Bazel promises a great deal, but makes a bit of a fuss about something that could have been done so much more easily. This is at least true in any medium to large sized Golang project, it is worse if using OSX. Whilst Bazels goals are desireable they are easily and more simply achieved with the Go tools, especially since go 1.10.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Cult of Go Test</title>
-      <link>http://danmux.com/posts/the_cult_of_go_test/</link>
+      <link>https://danmux.com/posts/the_cult_of_go_test/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/the_cult_of_go_test/</guid>
+      <guid>https://danmux.com/posts/the_cult_of_go_test/</guid>
       <description>&lt;p&gt;A favourite test helper library, with some simple test assertion functions clearly has some value. But this post puts forward some useable concrete arguments why they are normally just not worth it.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>What Golang Is and Is Not</title>
-      <link>http://danmux.com/posts/what_golang_isnt/</link>
+      <link>https://danmux.com/posts/what_golang_isnt/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/what_golang_isnt/</guid>
+      <guid>https://danmux.com/posts/what_golang_isnt/</guid>
       <description>&lt;p&gt;We are all products of our own histories, and I suspect many routes to Go have been made less enjoyable by misguided expectations. The journey from when a budding developer first ‘hello worlded’ to now may have made Go’s more subtle strengths less obvious to them.&lt;/p&gt;</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lesson on Dans Stuff</title>
-    <link>http://danmux.com/categories/lesson/</link>
+    <link>https://danmux.com/categories/lesson/</link>
     <description>Recent content in lesson on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/lesson/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/lesson/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Road Not Taken</title>
-      <link>http://danmux.com/posts/ramblings/</link>
+      <link>https://danmux.com/posts/ramblings/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/ramblings/</guid>
+      <guid>https://danmux.com/posts/ramblings/</guid>
       <description>&lt;p&gt;On our honeymoon In the mountains around Kitzbuhel in the summer many years ago, me and my wife were following a Wanderweg when we turned onto a small path that the map showed to be a nice route back to our hotel Schloss Lebenberg.&lt;/p&gt;</description>
     </item>
     

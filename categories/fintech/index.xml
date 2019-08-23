@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fintech on Dans Stuff</title>
-    <link>http://danmux.com/categories/fintech/</link>
+    <link>https://danmux.com/categories/fintech/</link>
     <description>Recent content in fintech on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/fintech/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/fintech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Nice Bank Tale in Three Parts</title>
-      <link>http://danmux.com/posts/monzo_an_act_in_three_parts/</link>
+      <link>https://danmux.com/posts/monzo_an_act_in_three_parts/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/monzo_an_act_in_three_parts/</guid>
+      <guid>https://danmux.com/posts/monzo_an_act_in_three_parts/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 
 &lt;p&gt;The UK challenger bank &lt;a href=&#34;https://twitter.com/monzo&#34;&gt;Monzo&lt;/a&gt;, just did the right thing by my family, but is that kind of thing enough to beat the big banks.&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Shut Up and Take My Money Summary</title>
-      <link>http://danmux.com/posts/shut_up_and_take_my_money/</link>
+      <link>https://danmux.com/posts/shut_up_and_take_my_money/</link>
       <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/shut_up_and_take_my_money/</guid>
+      <guid>https://danmux.com/posts/shut_up_and_take_my_money/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://fahrplan.events.ccc.de/congress/2016/Fahrplan/speakers/5995.html&#34;&gt;Vincent Haupert&lt;/a&gt; Presented at the Chaos Communication Congress A talk about some severe security breaches in the fintech startup &lt;a href=&#34;https://n26.com/&#34;&gt;Number26&lt;/a&gt; app and API. Here is a summary of the key points.&lt;/p&gt;</description>
     </item>
     

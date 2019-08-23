@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tech on Dans Stuff</title>
-    <link>http://danmux.com/categories/tech/</link>
+    <link>https://danmux.com/categories/tech/</link>
     <description>Recent content in tech on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://danmux.com/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://danmux.com/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>What&#39;s the Shrt Stry on Go Var Names</title>
-      <link>http://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</link>
+      <link>https://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</guid>
+      <guid>https://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</guid>
       <description>&lt;p&gt;Is I have mentioned in a previous post we are all products of our own histories, and this will definitely impact your appreciation or frustration of the subtleties of the Go community guidelines on naming.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bazel Fawlty</title>
-      <link>http://danmux.com/posts/bazel_fawlty/</link>
+      <link>https://danmux.com/posts/bazel_fawlty/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/bazel_fawlty/</guid>
+      <guid>https://danmux.com/posts/bazel_fawlty/</guid>
       <description>&lt;p&gt;Like &lt;a href=&#34;https://www.youtube.com/watch?v=mv0onXhyLlE&#34;&gt;Basil Fawlty&lt;/a&gt;, Bazel promises a great deal, but makes a bit of a fuss about something that could have been done so much more easily. This is at least true in any medium to large sized Golang project, it is worse if using OSX. Whilst Bazels goals are desireable they are easily and more simply achieved with the Go tools, especially since go 1.10.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Road Not Taken</title>
-      <link>http://danmux.com/posts/ramblings/</link>
+      <link>https://danmux.com/posts/ramblings/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/ramblings/</guid>
+      <guid>https://danmux.com/posts/ramblings/</guid>
       <description>&lt;p&gt;On our honeymoon In the mountains around Kitzbuhel in the summer many years ago, me and my wife were following a Wanderweg when we turned onto a small path that the map showed to be a nice route back to our hotel Schloss Lebenberg.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Shut Up and Take My Money Summary</title>
-      <link>http://danmux.com/posts/shut_up_and_take_my_money/</link>
+      <link>https://danmux.com/posts/shut_up_and_take_my_money/</link>
       <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/shut_up_and_take_my_money/</guid>
+      <guid>https://danmux.com/posts/shut_up_and_take_my_money/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://fahrplan.events.ccc.de/congress/2016/Fahrplan/speakers/5995.html&#34;&gt;Vincent Haupert&lt;/a&gt; Presented at the Chaos Communication Congress A talk about some severe security breaches in the fintech startup &lt;a href=&#34;https://n26.com/&#34;&gt;Number26&lt;/a&gt; app and API. Here is a summary of the key points.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Cult of Go Test</title>
-      <link>http://danmux.com/posts/the_cult_of_go_test/</link>
+      <link>https://danmux.com/posts/the_cult_of_go_test/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/the_cult_of_go_test/</guid>
+      <guid>https://danmux.com/posts/the_cult_of_go_test/</guid>
       <description>&lt;p&gt;A favourite test helper library, with some simple test assertion functions clearly has some value. But this post puts forward some useable concrete arguments why they are normally just not worth it.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>What Golang Is and Is Not</title>
-      <link>http://danmux.com/posts/what_golang_isnt/</link>
+      <link>https://danmux.com/posts/what_golang_isnt/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/what_golang_isnt/</guid>
+      <guid>https://danmux.com/posts/what_golang_isnt/</guid>
       <description>&lt;p&gt;We are all products of our own histories, and I suspect many routes to Go have been made less enjoyable by misguided expectations. The journey from when a budding developer first ‘hello worlded’ to now may have made Go’s more subtle strengths less obvious to them.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Test Pyramid and Availability Bias</title>
-      <link>http://danmux.com/posts/test_pyramid_availability_bias/</link>
+      <link>https://danmux.com/posts/test_pyramid_availability_bias/</link>
       <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/test_pyramid_availability_bias/</guid>
+      <guid>https://danmux.com/posts/test_pyramid_availability_bias/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&#34;&gt;The test pyramid&lt;/a&gt; has its place - it gets across a simple idea, but it has been taken too literally, and applied innapropriately.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Queues Are Not Always The Answer</title>
-      <link>http://danmux.com/posts/queues-are-not-always-the-answer/</link>
+      <link>https://danmux.com/posts/queues-are-not-always-the-answer/</link>
       <pubDate>Mon, 20 Jul 2015 17:02:07 +0100</pubDate>
       
-      <guid>http://danmux.com/posts/queues-are-not-always-the-answer/</guid>
+      <guid>https://danmux.com/posts/queues-are-not-always-the-answer/</guid>
       <description>&lt;p&gt;I feel developers reach for the queue all too quickly. I’m talking about stand alone message queue services like RabbitMQ, ActiveMQ etc. etc. Not an in memory data structure (which in fact can be all you need sometimes)&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>JSON, Gzip, Snappy and Gob Across the Wire</title>
-      <link>http://danmux.com/posts/across_the_wire_serialisation/</link>
+      <link>https://danmux.com/posts/across_the_wire_serialisation/</link>
       <pubDate>Sun, 21 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/across_the_wire_serialisation/</guid>
+      <guid>https://danmux.com/posts/across_the_wire_serialisation/</guid>
       <description>&lt;p&gt;Coming from a background where memory and clock cycles were sparse, binary encodings have always held an appeal. Since then I’ve been told we have loads of compute power, ample cheap RAM and disk, and when the network is the bottleneck then, well, that is a good problem to have.&lt;/p&gt;
 
 &lt;p&gt;Its one of those ages old occasionally heated debates&amp;hellip;.&lt;/p&gt;
@@ -98,10 +98,10 @@
     
     <item>
       <title>Jmeter is a Poor Choice for REST and Golang</title>
-      <link>http://danmux.com/posts/jmeter_rest_golang/</link>
+      <link>https://danmux.com/posts/jmeter_rest_golang/</link>
       <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/jmeter_rest_golang/</guid>
+      <guid>https://danmux.com/posts/jmeter_rest_golang/</guid>
       <description>&lt;p&gt;Its essential we have good integration tests and performance tests on our restful api, particularly now that many of the moving parts will migrate to microservices written in Go.&lt;/p&gt;
 
 &lt;p&gt;Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.&lt;/p&gt;</description>
@@ -109,10 +109,10 @@
     
     <item>
       <title>Embedded Gists</title>
-      <link>http://danmux.com/posts/embedded_gists/</link>
+      <link>https://danmux.com/posts/embedded_gists/</link>
       <pubDate>Sat, 05 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/embedded_gists/</guid>
+      <guid>https://danmux.com/posts/embedded_gists/</guid>
       <description>&lt;h2 id=&#34;syntax-highlighting-or-embedded-gists&#34;&gt;Syntax Highlighting - or Embedded Gists&lt;/h2&gt;
 
 &lt;p&gt;I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin &lt;a href=&#34;http://pygments.org/&#34;&gt;Pygments&lt;/a&gt;. But also wanted to try embedding gists&lt;/p&gt;</description>
@@ -120,10 +120,10 @@
     
     <item>
       <title>Making Your Own Summary</title>
-      <link>http://danmux.com/posts/hugo_summary/</link>
+      <link>https://danmux.com/posts/hugo_summary/</link>
       <pubDate>Sat, 28 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/hugo_summary/</guid>
+      <guid>https://danmux.com/posts/hugo_summary/</guid>
       <description>&lt;p&gt;Hugo allows you to specify where the summary stops - and allows the full markdown including shortcodes.&lt;/p&gt;
 
 &lt;p&gt;You just need to construct the first bit of your article so that it makes a nice summary and then end it with&amp;hellip;&lt;/p&gt;
@@ -138,10 +138,10 @@
     
     <item>
       <title>Moving to Hugo</title>
-      <link>http://danmux.com/posts/hugo_based_blog/</link>
+      <link>https://danmux.com/posts/hugo_based_blog/</link>
       <pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/hugo_based_blog/</guid>
+      <guid>https://danmux.com/posts/hugo_based_blog/</guid>
       <description>&lt;p&gt;I decided that I should blog under my danmux.com domain - I often use danmux around the internet, sometimes danmull, but normally danmux for tech type things, so it makes sense.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;danmux&lt;/strong&gt; because the &lt;strong&gt;x&lt;/strong&gt; has always been a notable part of my name - and mux reminds me of my electrical engineering days, and I think humans multiplex all the time, there it is.&lt;/p&gt;</description>
@@ -149,10 +149,10 @@
     
     <item>
       <title>Banks Love Hackers</title>
-      <link>http://danmux.com/posts/banks_love_hackers/</link>
+      <link>https://danmux.com/posts/banks_love_hackers/</link>
       <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/banks_love_hackers/</guid>
+      <guid>https://danmux.com/posts/banks_love_hackers/</guid>
       <description>&lt;p&gt;A recent BBC Click article reporting &lt;a href=&#34;http://www.bbc.co.uk/news/technology-16812064&#34;&gt;“Hackers outwit online banking identity security systems”&lt;/a&gt; show how ‘hackers’ can poison online banking web sites to trick customers into transferring money out of their accounts.&lt;/p&gt;
 
 &lt;p&gt;Banks love this kind of article because if keeps their smoke screen smouldering.&lt;/p&gt;</description>
@@ -160,10 +160,10 @@
     
     <item>
       <title>Bank 1.5</title>
-      <link>http://danmux.com/posts/bank_1_5/</link>
+      <link>https://danmux.com/posts/bank_1_5/</link>
       <pubDate>Fri, 23 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://danmux.com/posts/bank_1_5/</guid>
+      <guid>https://danmux.com/posts/bank_1_5/</guid>
       <description>&lt;p&gt;This past week saw two of the biggest banking and financial innovation conferences take place, Sibos and Finovate. On following a few Twitter streams of a few attendees, a new meme started to appear – possibly a bit premature to call it a meme and incorrect to call it new, but none the less the concept is valid if a bit bank-geeky.&lt;/p&gt;
 
 &lt;p&gt;Borrowing from the Web 2.0 catchall or marketing label for anything more interactive than the static Web 1.0 but less linked than the evolving beb of data (Web 3.0?) the banking innovation consultant, speaker and author Brett King has coalesced thoughts and ideas around the next generation of consumer banking and published them in his popular book – Bank 2.0&lt;/p&gt;</description>
