@@ -5,10 +5,19 @@
     <link>https://danmux.com/categories/quality/</link>
     <description>Recent content in Quality on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://danmux.com/categories/quality/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What&#39;s In a Go Name</title>
+      <link>https://danmux.com/posts/whats_in_a_go_name/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://danmux.com/posts/whats_in_a_go_name/</guid>
+      <description>&lt;p&gt;Is I have mentioned in a previous post we are all products of our own histories, and this will definitely impact your appreciation or frustration of the subtleties of the Go community guidelines on naming.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Bazel Fawlty</title>
@@ -35,15 +44,6 @@
       
       <guid>https://danmux.com/posts/what_golang_isnt/</guid>
       <description>&lt;p&gt;We are all products of our own histories, and I suspect many routes to Go have been made less enjoyable by misguided expectations. The journey from when a budding developer first ‘hello worlded’ to now may have made Go’s more subtle strengths less obvious to them.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>What&#39;s In a Go Name</title>
-      <link>https://danmux.com/posts/whats_in_a_go_name/</link>
-      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://danmux.com/posts/whats_in_a_go_name/</guid>
-      <description>&lt;p&gt;Is I have mentioned in a previous post we are all products of our own histories, and this will definitely impact your appreciation or frustration of the subtleties of the Go community guidelines on naming.&lt;/p&gt;</description>
     </item>
     
     <item>

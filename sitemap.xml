@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://danmux.com/posts/whats_in_a_go_name/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danmux.com/posts/monzo_an_act_in_three_parts/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
   </url>
@@ -29,11 +34,6 @@
   
   <url>
     <loc>https://danmux.com/posts/what_golang_isnt/</loc>
-    <lastmod>2016-08-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/posts/whats_in_a_go_name/</loc>
     <lastmod>2016-08-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -126,7 +126,7 @@
   
   <url>
     <loc>https://danmux.com/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -138,13 +138,13 @@
   
   <url>
     <loc>https://danmux.com/categories/development/</loc>
-    <lastmod>2016-10-30T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://danmux.com/categories/engineering/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -174,7 +174,7 @@
   
   <url>
     <loc>https://danmux.com/categories/go/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,7 +186,7 @@
   
   <url>
     <loc>https://danmux.com/categories/golang/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -222,13 +222,13 @@
   
   <url>
     <loc>https://danmux.com/posts/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://danmux.com/categories/quality/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -246,7 +246,7 @@
   
   <url>
     <loc>https://danmux.com/categories/tech/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
