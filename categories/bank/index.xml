@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bank on Dans Stuff</title>
-    <link>https://danmux.com/categories/bank/</link>
-    <description>Recent content in Bank on Dans Stuff</description>
+    <title>bank on Dans Stuff</title>
+    <link>http://danmux.com/categories/bank/</link>
+    <description>Recent content in bank on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Fri, 27 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://danmux.com/categories/bank/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://danmux.com/categories/bank/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Nice Bank Tale in Three Parts</title>
-      <link>https://danmux.com/posts/monzo_an_act_in_three_parts/</link>
+      <link>http://danmux.com/posts/monzo_an_act_in_three_parts/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://danmux.com/posts/monzo_an_act_in_three_parts/</guid>
+      <guid>http://danmux.com/posts/monzo_an_act_in_three_parts/</guid>
       <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 
 &lt;p&gt;The UK challenger bank &lt;a href=&#34;https://twitter.com/monzo&#34;&gt;Monzo&lt;/a&gt;, just did the right thing by my family, but is that kind of thing enough to beat the big banks.&lt;/p&gt;</description>

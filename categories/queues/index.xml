@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Queues on Dans Stuff</title>
-    <link>https://danmux.com/categories/queues/</link>
-    <description>Recent content in Queues on Dans Stuff</description>
+    <title>queues on Dans Stuff</title>
+    <link>http://danmux.com/categories/queues/</link>
+    <description>Recent content in queues on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Mon, 20 Jul 2015 17:02:07 +0100</lastBuildDate>
     
-	<atom:link href="https://danmux.com/categories/queues/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://danmux.com/categories/queues/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Queues Are Not Always The Answer</title>
-      <link>https://danmux.com/posts/queues-are-not-always-the-answer/</link>
+      <link>http://danmux.com/posts/queues-are-not-always-the-answer/</link>
       <pubDate>Mon, 20 Jul 2015 17:02:07 +0100</pubDate>
       
-      <guid>https://danmux.com/posts/queues-are-not-always-the-answer/</guid>
+      <guid>http://danmux.com/posts/queues-are-not-always-the-answer/</guid>
       <description>&lt;p&gt;I feel developers reach for the queue all too quickly. I’m talking about stand alone message queue services like RabbitMQ, ActiveMQ etc. etc. Not an in memory data structure (which in fact can be all you need sometimes)&lt;/p&gt;</description>
     </item>
     

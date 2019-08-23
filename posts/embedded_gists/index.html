@@ -1,104 +1,91 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://danmux.com">
-    <title> Embedded Gists </title>
-    <link rel="canonical" href="https://danmux.com/posts/embedded_gists/">
-    
+	<head>
+		<meta charset="utf-8">
+		<title>Embedded Gists</title>
+		<meta name="viewport" content="width=device-width">
+		
+		<link rel="stylesheet" href="http://danmux.com/css/hybrid.css">
+		<link rel="stylesheet" href="http://danmux.com/css/style.css">
+		<link rel="stylesheet" href="http://danmux.com/css/colors-dark.css">
 
-<link rel="stylesheet" href="/css/poole.css">
+		<link rel="stylesheet" href='http://danmux.com/css/custom.css'>
 
-<link rel="stylesheet" href="/css/lanyon.css">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+	</head>
+	<body>
+		<header id="header">
+			<h1><a href="http://danmux.com/">Dans Stuff</a></h1>
+			<p></p>
+		</header>
 
-</head>
+		<div id="page">
+			<div id="sidebar">
+				<nav>
+	
+		<ul class="nav">
+			
+				<li><a href="/categories"><span>Categories</span></a></li>
+			
+				<li><a href="/"><span>Home</span></a></li>
+			
+		</ul>
+	
+		<ul class="nav">
+			
+				<li><a href="/cv"><span>About</span></a></li>
+			
+				<li><a href="/index.xml"><span>Feed</span></a></li>
+			
+		</ul>
+	
+</nav>
 
+			</div>
 
-<body class="theme-base-0b">
-  
+			<div id="content">
+				
+	<article class="post">
+		<h1><a href="http://danmux.com/posts/embedded_gists/">Embedded Gists</a> </h1>
 
-
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-
-
-<div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/">Home</a>
-
-    <a class="sidebar-nav-item" href="/posts">Blog</a>
-
-  </nav>
-
-  <div class="sidebar-item">
-    <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design reused from <a href="https://github.com/spencerlyon2">Spencer Lyon</a> which was modified from this Jekyl theme <a href="http://lanyon.getpoole.com">Lanyon</a> under this <a href="https://github.com/spencerlyon2/hugo_gh_blog/blob/master/LICENSE">licence</a>.
-    </p>
-  </div>
-</div>
-
-
-
-
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="/posts" title="Blog">Blog Posts</a>
-        </h3>
-      </div>
-    </div>
-
-    
-    <div class="container content">
-      <h1 class="post-title">Embedded Gists</h1>
-        <section id="main">
-          <h5 id="date"> Sat Jul 5, 2014 </h5>
-          <h2 id="syntax-highlighting-or-embedded-gists">Syntax Highlighting - or Embedded Gists</h2>
+		<div class="post-content"><h2 id="syntax-highlighting-or-embedded-gists">Syntax Highlighting - or Embedded Gists</h2>
 
 <p>I was quite excited by the inline syntax highlighting that Hugo provides via the python plugin <a href="http://pygments.org/">Pygments</a>. But also wanted to try embedding gists</p>
 
 <p>So here is an example&hellip;</p>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">&lt;p&gt;<span style="color:#6ab825;font-weight:bold">def</span> <span style="color:#447fcf">digit_sum</span>(n):
-    s = <span style="color:#3677a9">0</span>
-    <span style="color:#6ab825;font-weight:bold">while</span> n:   <span style="color:#999;font-style:italic"># while n is &amp;lsquo;truthy&amp;rsquo; for an integer that means not 0</span>
-        s = s + (n % <span style="color:#3677a9">10</span>)   <span style="color:#999;font-style:italic"># the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7</span>
-        n = n / <span style="color:#3677a9">10</span>         <span style="color:#999;font-style:italic"># n = the integer of n / 10   int(15.7) = 15</span>
-    <span style="color:#6ab825;font-weight:bold">return</span> s&lt;/p&gt;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">def</span> <span style="color:#268bd2">digit_sum</span>(n):
+    s <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>
+    <span style="color:#719e07">while</span> n:   <span style="color:#586e75"># while n is &#39;truthy&#39; for an integer that means not 0</span>
+        s <span style="color:#719e07">=</span> s <span style="color:#719e07">+</span> (n <span style="color:#719e07">%</span> <span style="color:#2aa198">10</span>)   <span style="color:#586e75"># the sum is the sum + the remainder of dividing the incoming number (n) by 10  157 % 10 = 7</span>
+        n <span style="color:#719e07">=</span> n <span style="color:#719e07">/</span> <span style="color:#2aa198">10</span>         <span style="color:#586e75"># n = the integer of n / 10   int(15.7) = 15 </span>
+    <span style="color:#719e07">return</span> s
+   
+<span style="color:#719e07">print</span> digit_sum(<span style="color:#2aa198">157</span>)
 
-&lt;p&gt;<span style="color:#6ab825;font-weight:bold">print</span> digit_sum(<span style="color:#3677a9">157</span>)&lt;/p&gt;
-
-&lt;p&gt;&amp;rdquo;&amp;rsquo;
-calling digit_sum(<span style="color:#3677a9">157</span>)&lt;/p&gt;
-
-&lt;h2 <span style="color:#24909d">id</span>=<span style="color:#ed9d13">&#34;loop-s-n-n-10-n-10&#34;</span>&gt;loop  | s   | n   | n % <span style="color:#3677a9">10</span>  | n / <span style="color:#3677a9">10</span>&lt;/h2&gt;
-
-&lt;p&gt;<span style="color:#3677a9">0</span>     | <span style="color:#3677a9">0</span>   | <span style="color:#3677a9">157</span> |   <span style="color:#3677a9">7</span>     |  <span style="color:#3677a9">15</span>
-<span style="color:#3677a9">1</span>     | <span style="color:#3677a9">7</span>   | <span style="color:#3677a9">15</span>  |   <span style="color:#3677a9">5</span>     |  <span style="color:#3677a9">1</span>
-<span style="color:#3677a9">2</span>     | <span style="color:#3677a9">12</span>  | <span style="color:#3677a9">1</span>   |   <span style="color:#3677a9">1</span>     |  <span style="color:#3677a9">0</span>
-<span style="color:#3677a9">3</span>     | <span style="color:#3677a9">13</span>  | <span style="color:#3677a9">0</span>   |         |&lt;br /&gt;
-&amp;rdquo;&amp;rsquo;&lt;/p&gt;</code></pre></div>
+<span style="color:#2aa198">&#39;&#39;&#39;
+</span><span style="color:#2aa198">calling digit_sum(157)
+</span><span style="color:#2aa198"> 
+</span><span style="color:#2aa198">loop  | s   | n   | n % 10  | n / 10
+</span><span style="color:#2aa198">------------------------------------
+</span><span style="color:#2aa198">0     | 0   | 157 |   7     |  15
+</span><span style="color:#2aa198">1     | 7   | 15  |   5     |  1
+</span><span style="color:#2aa198">2     | 12  | 1   |   1     |  0
+</span><span style="color:#2aa198">3     | 13  | 0   |         |  
+</span><span style="color:#2aa198">&#39;&#39;&#39;</span></code></pre></div>
 
 <p>But then thought perhaps it is better to embed gists than have inline markup in blog posts then folk can fork the code and comment there.</p>
 
 <p>So on embedding a gist as follows (but without syntax highlighting) failed&hellip;</p>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#6ab825;font-weight:bold">script</span> <span style="color:#bbb">src</span>=<span style="color:#ed9d13">&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;</span>&gt;
-&lt;/<span style="color:#6ab825;font-weight:bold">script</span>&gt;</code></pre></div>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">script</span> src<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;</span>&gt;
+&lt;/<span style="color:#268bd2">script</span>&gt;</code></pre></div>
 
 <p>Putting it in another block partially worked</p>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#6ab825;font-weight:bold">p</span>&gt;
-    &lt;<span style="color:#6ab825;font-weight:bold">script</span> <span style="color:#bbb">src</span>=<span style="color:#ed9d13">&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;</span>&gt;
-    &lt;/<span style="color:#6ab825;font-weight:bold">script</span>&gt;
-&lt;/<span style="color:#6ab825;font-weight:bold">p</span>&gt;</code></pre></div>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">p</span>&gt;
+    &lt;<span style="color:#268bd2">script</span> src<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://gist.github.com/danmux/042fa69bed3791afe658.js&#34;</span>&gt;
+    &lt;/<span style="color:#268bd2">script</span>&gt;
+&lt;/<span style="color:#268bd2">p</span>&gt;</code></pre></div>
 
 <p>I was left with an unclosed script tag.</p>
 
@@ -124,80 +111,23 @@ calling digit_sum(<span style="color:#3677a9">157</span>)&lt;/p&gt;
 
 <p>Nice work <a href="https://github.com/jmitchell">jmitchell</a> and <a href="https://github.com/spf13">Steve Francia</a>.</p>
 
-<p>So gists it is for me</p>
-        </section>
-  
-    </div>
-  </div>
+<p>So gists it is for me</p></div>
 
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+		<p class="meta">Posted on <span class="postdate">05. July 2014</span></p>
+	</article>
 
-  
+			</div>
 
-<div class="container">
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://danmux.com/posts/jmeter_rest_golang/">Jmeter is a Poor Choice for REST and Golang</a>
-    </span>
-  
+			<footer id="footer">
+				<p class="copyright">
+					
+						Powered by <a href="https://gohugo.io/">Hugo</a> and the
+						<a href="https://github.com/bake/solar-theme-hugo">Solar</a>-theme.
+					
+				</p>
+			</footer>
+		</div>
 
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://danmux.com/posts/hugo_summary/"> &nbsp; Making Your Own Summary</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
-    
-      <li><a href="/categories/tech">tech</a> </li>
-    
-      <li><a href="/categories/github">github</a> </li>
-    
-      <li><a href="/categories/gists">gists</a> </li>
-    
-      <li><a href="/categories/hugo">hugo</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="/">Home Page</a>
-    <a href="/blog">Blog Index</a>
-    <a href="/cv">CV</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52564864-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-</body>
+		
+	</body>
 </html>
-
-
-
-

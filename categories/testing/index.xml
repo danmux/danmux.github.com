@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Testing on Dans Stuff</title>
-    <link>https://danmux.com/categories/testing/</link>
-    <description>Recent content in Testing on Dans Stuff</description>
+    <title>testing on Dans Stuff</title>
+    <link>http://danmux.com/categories/testing/</link>
+    <description>Recent content in testing on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Sun, 30 Oct 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://danmux.com/categories/testing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://danmux.com/categories/testing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Cult of Go Test</title>
-      <link>https://danmux.com/posts/the_cult_of_go_test/</link>
+      <link>http://danmux.com/posts/the_cult_of_go_test/</link>
       <pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://danmux.com/posts/the_cult_of_go_test/</guid>
+      <guid>http://danmux.com/posts/the_cult_of_go_test/</guid>
       <description>&lt;p&gt;A favourite test helper library, with some simple test assertion functions clearly has some value. But this post puts forward some useable concrete arguments why they are normally just not worth it.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>What Golang Is and Is Not</title>
-      <link>https://danmux.com/posts/what_golang_isnt/</link>
+      <link>http://danmux.com/posts/what_golang_isnt/</link>
       <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://danmux.com/posts/what_golang_isnt/</guid>
+      <guid>http://danmux.com/posts/what_golang_isnt/</guid>
       <description>&lt;p&gt;We are all products of our own histories, and I suspect many routes to Go have been made less enjoyable by misguided expectations. The journey from when a budding developer first ‘hello worlded’ to now may have made Go’s more subtle strengths less obvious to them.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Test Pyramid and Availability Bias</title>
-      <link>https://danmux.com/posts/test_pyramid_availability_bias/</link>
+      <link>http://danmux.com/posts/test_pyramid_availability_bias/</link>
       <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://danmux.com/posts/test_pyramid_availability_bias/</guid>
+      <guid>http://danmux.com/posts/test_pyramid_availability_bias/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid&#34;&gt;The test pyramid&lt;/a&gt; has its place - it gets across a simple idea, but it has been taken too literally, and applied innapropriately.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Jmeter is a Poor Choice for REST and Golang</title>
-      <link>https://danmux.com/posts/jmeter_rest_golang/</link>
+      <link>http://danmux.com/posts/jmeter_rest_golang/</link>
       <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://danmux.com/posts/jmeter_rest_golang/</guid>
+      <guid>http://danmux.com/posts/jmeter_rest_golang/</guid>
       <description>&lt;p&gt;Its essential we have good integration tests and performance tests on our restful api, particularly now that many of the moving parts will migrate to microservices written in Go.&lt;/p&gt;
 
 &lt;p&gt;Trying to use Jmeter both to validate responses and apply reasonable load has been troublesome.&lt;/p&gt;</description>

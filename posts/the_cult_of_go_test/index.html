@@ -1,66 +1,53 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://danmux.com">
-    <title> The Cult of Go Test </title>
-    <link rel="canonical" href="https://danmux.com/posts/the_cult_of_go_test/">
-    
+	<head>
+		<meta charset="utf-8">
+		<title>The Cult of Go Test</title>
+		<meta name="viewport" content="width=device-width">
+		
+		<link rel="stylesheet" href="http://danmux.com/css/hybrid.css">
+		<link rel="stylesheet" href="http://danmux.com/css/style.css">
+		<link rel="stylesheet" href="http://danmux.com/css/colors-dark.css">
 
-<link rel="stylesheet" href="/css/poole.css">
+		<link rel="stylesheet" href='http://danmux.com/css/custom.css'>
 
-<link rel="stylesheet" href="/css/lanyon.css">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+	</head>
+	<body>
+		<header id="header">
+			<h1><a href="http://danmux.com/">Dans Stuff</a></h1>
+			<p></p>
+		</header>
 
-</head>
+		<div id="page">
+			<div id="sidebar">
+				<nav>
+	
+		<ul class="nav">
+			
+				<li><a href="/categories"><span>Categories</span></a></li>
+			
+				<li><a href="/"><span>Home</span></a></li>
+			
+		</ul>
+	
+		<ul class="nav">
+			
+				<li><a href="/cv"><span>About</span></a></li>
+			
+				<li><a href="/index.xml"><span>Feed</span></a></li>
+			
+		</ul>
+	
+</nav>
 
+			</div>
 
-<body class="theme-base-0b">
-  
+			<div id="content">
+				
+	<article class="post">
+		<h1><a href="http://danmux.com/posts/the_cult_of_go_test/">The Cult of Go Test</a> </h1>
 
-
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-
-
-<div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/">Home</a>
-
-    <a class="sidebar-nav-item" href="/posts">Blog</a>
-
-  </nav>
-
-  <div class="sidebar-item">
-    <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design reused from <a href="https://github.com/spencerlyon2">Spencer Lyon</a> which was modified from this Jekyl theme <a href="http://lanyon.getpoole.com">Lanyon</a> under this <a href="https://github.com/spencerlyon2/hugo_gh_blog/blob/master/LICENSE">licence</a>.
-    </p>
-  </div>
-</div>
-
-
-
-
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="/posts" title="Blog">Blog Posts</a>
-        </h3>
-      </div>
-    </div>
-
-    
-    <div class="container content">
-      <h1 class="post-title">The Cult of Go Test</h1>
-        <section id="main">
-          <h5 id="date"> Sun Oct 30, 2016 </h5>
-          <p>A favourite test helper library, with some simple test assertion functions clearly has some value. But this post puts forward some useable concrete arguments why they are normally just not worth it.</p>
+		<div class="post-content"><p>A favourite test helper library, with some simple test assertion functions clearly has some value. But this post puts forward some useable concrete arguments why they are normally just not worth it.</p>
 
 <p>After five years with Go and the last three in a (now) 100% Go team I&rsquo;ve worked with around 30 Go developers - not a huge amount, but not insignificant. The one thing that new people to the team challenge most is the lack of their favorite test helpers. People generally are OK that we don&rsquo;t need a whole framework, but the small simple assertions? Why are they so bad?</p>
 
@@ -185,8 +172,8 @@
 
 <p>You have to know and think about the <code>Equals</code> having type checking entirely removed. The following should never both pass, but they do:</p>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">assert.<span style="color:#447fcf">Equal</span>(t, iban.Bban, <span style="color:#ed9d13">&#34;123&#34;</span>)
-assert.<span style="color:#447fcf">Equal</span>(t, iban.Bban, <span style="color:#3677a9">123</span>)</code></pre></div>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">assert.<span style="color:#268bd2">Equal</span>(t, iban.Bban, <span style="color:#2aa198">&#34;123&#34;</span>)
+assert.<span style="color:#268bd2">Equal</span>(t, iban.Bban, <span style="color:#2aa198">123</span>)</code></pre></div>
 
 <p>You may well know of another equality assertion in your favorite library that does type checking as well - but I expect that is only at runtime. There is considerable value in failing during compilation (more on the DSL later).</p>
 
@@ -219,26 +206,26 @@ pointer addresses.</p>
 
 <p>Equality never looked so complicated. What follows are some public API functions from testify:</p>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#999;font-style:italic">// ObjectsAreEqual determines if two objects are considered equal.
-</span><span style="color:#999;font-style:italic">//
-</span><span style="color:#999;font-style:italic">// This function does no assertion of any kind.
-</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">ObjectsAreEqual</span>(expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {</code></pre></div>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#586e75">// ObjectsAreEqual determines if two objects are considered equal.
+</span><span style="color:#586e75">//
+</span><span style="color:#586e75">// This function does no assertion of any kind.
+</span><span style="color:#586e75"></span><span style="color:#268bd2">func</span> <span style="color:#268bd2">ObjectsAreEqual</span>(expected, actual <span style="color:#268bd2">interface</span>{}) <span style="color:#dc322f">bool</span> {</code></pre></div>
 
 <p>(btw what does the comment &ldquo;This function does no assertion of any kind.&rdquo; mean)</p>
 
 <p>Then there are the following&hellip;</p>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">ObjectsAreEqualValues</span>(expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#268bd2">func</span> <span style="color:#268bd2">ObjectsAreEqualValues</span>(expected, actual <span style="color:#268bd2">interface</span>{}) <span style="color:#dc322f">bool</span> {
 
-<span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">EqualValues</span>(t TestingT, expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}, msgAndArgs ...<span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {
+<span style="color:#268bd2">func</span> <span style="color:#268bd2">EqualValues</span>(t TestingT, expected, actual <span style="color:#268bd2">interface</span>{}, msgAndArgs <span style="color:#719e07">...</span><span style="color:#268bd2">interface</span>{}) <span style="color:#dc322f">bool</span> {
 
-<span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">Exactly</span>(t TestingT, expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}, msgAndArgs ...<span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {
+<span style="color:#268bd2">func</span> <span style="color:#268bd2">Exactly</span>(t TestingT, expected, actual <span style="color:#268bd2">interface</span>{}, msgAndArgs <span style="color:#719e07">...</span><span style="color:#268bd2">interface</span>{}) <span style="color:#dc322f">bool</span> {
 
-<span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">Equal</span>(t TestingT, expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}, msgAndArgs ...<span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {</code></pre></div>
+<span style="color:#268bd2">func</span> <span style="color:#268bd2">Equal</span>(t TestingT, expected, actual <span style="color:#268bd2">interface</span>{}, msgAndArgs <span style="color:#719e07">...</span><span style="color:#268bd2">interface</span>{}) <span style="color:#dc322f">bool</span> {</code></pre></div>
 
 <p>and then why is this &hellip;</p>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">func</span> <span style="color:#447fcf">NotEqual</span>(t TestingT, expected, actual <span style="color:#6ab825;font-weight:bold">interface</span>{}, msgAndArgs ...<span style="color:#6ab825;font-weight:bold">interface</span>{}) <span style="color:#6ab825;font-weight:bold">bool</span> {</code></pre></div>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#268bd2">func</span> <span style="color:#268bd2">NotEqual</span>(t TestingT, expected, actual <span style="color:#268bd2">interface</span>{}, msgAndArgs <span style="color:#719e07">...</span><span style="color:#268bd2">interface</span>{}) <span style="color:#dc322f">bool</span> {</code></pre></div>
 
 <p>different from <code>!Equal(...</code> ?</p>
 
@@ -260,7 +247,7 @@ pointer addresses.</p>
 
 <p>Here are all the other assertions we need to learn to become effective&hellip;</p>
 
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#6ab825;font-weight:bold">var</span> (
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#268bd2">var</span> (
 	ShouldEqual          = assertions.ShouldEqual
 	ShouldNotEqual       = assertions.ShouldNotEqual
 	ShouldAlmostEqual    = assertions.ShouldAlmostEqual
@@ -363,86 +350,23 @@ pointer addresses.</p>
 
 <p>The only value I can see in accepting an assertion library into an established stdlib only unit tests codebase is that like us, you have probably wasted many person-days discussing this. We certainly redo the same discussion for many new team members. If only I was convinced adding one of these libs would end the discussion, then I might agree to it (for the wrong reasons).</p>
 
-<p><strong>DRY</strong> does not only apply to code. Next time I will point them at this, and hope it helps.</p>
-        </section>
-  
-    </div>
-  </div>
+<p><strong>DRY</strong> does not only apply to code. Next time I will point them at this, and hope it helps.</p></div>
 
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+		<p class="meta">Posted on <span class="postdate">30. October 2016</span></p>
+	</article>
 
-  
+			</div>
 
-<div class="container">
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://danmux.com/posts/shut_up_and_take_my_money/">Shut Up and Take My Money Summary</a>
-    </span>
-  
+			<footer id="footer">
+				<p class="copyright">
+					
+						Powered by <a href="https://gohugo.io/">Hugo</a> and the
+						<a href="https://github.com/bake/solar-theme-hugo">Solar</a>-theme.
+					
+				</p>
+			</footer>
+		</div>
 
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://danmux.com/posts/what_golang_isnt/"> &nbsp; What Golang Is and Is Not</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
-    
-      <li><a href="/categories/golang">golang</a> </li>
-    
-      <li><a href="/categories/go">go</a> </li>
-    
-      <li><a href="/categories/tech">tech</a> </li>
-    
-      <li><a href="/categories/testing">testing</a> </li>
-    
-      <li><a href="/categories/development">development</a> </li>
-    
-      <li><a href="/categories/engineering">engineering</a> </li>
-    
-      <li><a href="/categories/quality">quality</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="/">Home Page</a>
-    <a href="/blog">Blog Index</a>
-    <a href="/cv">CV</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52564864-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-</body>
+		
+	</body>
 </html>
-
-
-
-

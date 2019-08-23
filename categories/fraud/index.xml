@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fraud on Dans Stuff</title>
-    <link>https://danmux.com/categories/fraud/</link>
-    <description>Recent content in Fraud on Dans Stuff</description>
+    <title>fraud on Dans Stuff</title>
+    <link>http://danmux.com/categories/fraud/</link>
+    <description>Recent content in fraud on Dans Stuff</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Fri, 03 Feb 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://danmux.com/categories/fraud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://danmux.com/categories/fraud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Banks Love Hackers</title>
-      <link>https://danmux.com/posts/banks_love_hackers/</link>
+      <link>http://danmux.com/posts/banks_love_hackers/</link>
       <pubDate>Fri, 03 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://danmux.com/posts/banks_love_hackers/</guid>
+      <guid>http://danmux.com/posts/banks_love_hackers/</guid>
       <description>&lt;p&gt;A recent BBC Click article reporting &lt;a href=&#34;http://www.bbc.co.uk/news/technology-16812064&#34;&gt;“Hackers outwit online banking identity security systems”&lt;/a&gt; show how ‘hackers’ can poison online banking web sites to trick customers into transferring money out of their accounts.&lt;/p&gt;
 
 &lt;p&gt;Banks love this kind of article because if keeps their smoke screen smouldering.&lt;/p&gt;</description>

@@ -3,263 +3,237 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</loc>
+    <loc>http://danmux.com/categories/</loc>
     <lastmod>2018-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/monzo_an_act_in_three_parts/</loc>
+    <loc>http://danmux.com/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/development/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/engineering/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/go/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/golang/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/quality/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/tech/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/whats_the_shrt_stry_on_go_var_names/</loc>
+    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/monzo_an_act_in_three_parts/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/bazel_fawlty/</loc>
+    <loc>http://danmux.com/categories/bank/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/fintech/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/bazel/</loc>
     <lastmod>2018-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/ramblings/</loc>
+    <loc>http://danmux.com/posts/bazel_fawlty/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/build/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/continuous-integration/</loc>
+    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/lesson/</loc>
     <lastmod>2017-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/shut_up_and_take_my_money/</loc>
+    <loc>http://danmux.com/posts/ramblings/</loc>
+    <lastmod>2017-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/security/</loc>
     <lastmod>2016-12-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/the_cult_of_go_test/</loc>
+    <loc>http://danmux.com/posts/shut_up_and_take_my_money/</loc>
+    <lastmod>2016-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/testing/</loc>
     <lastmod>2016-10-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/what_golang_isnt/</loc>
+    <loc>http://danmux.com/posts/the_cult_of_go_test/</loc>
+    <lastmod>2016-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/what_golang_isnt/</loc>
     <lastmod>2016-08-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/test_pyramid_availability_bias/</loc>
+    <loc>http://danmux.com/posts/test_pyramid_availability_bias/</loc>
     <lastmod>2015-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/queues-are-not-always-the-answer/</loc>
+    <loc>http://danmux.com/categories/desing/</loc>
     <lastmod>2015-07-20T17:02:07+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/across_the_wire_serialisation/</loc>
+    <loc>http://danmux.com/categories/queues/</loc>
+    <lastmod>2015-07-20T17:02:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/queues-are-not-always-the-answer/</loc>
+    <lastmod>2015-07-20T17:02:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/gob/</loc>
     <lastmod>2014-09-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/jmeter_rest_golang/</loc>
+    <loc>http://danmux.com/categories/json/</loc>
+    <lastmod>2014-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/across_the_wire_serialisation/</loc>
+    <lastmod>2014-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/jmeter/</loc>
     <lastmod>2014-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/embedded_gists/</loc>
+    <loc>http://danmux.com/posts/jmeter_rest_golang/</loc>
+    <lastmod>2014-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/performance/</loc>
+    <lastmod>2014-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/embedded_gists/</loc>
     <lastmod>2014-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/hugo_summary/</loc>
+    <loc>http://danmux.com/categories/gists/</loc>
+    <lastmod>2014-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/github/</loc>
+    <lastmod>2014-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/categories/hugo/</loc>
+    <lastmod>2014-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/hugo_summary/</loc>
     <lastmod>2014-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/hugo_based_blog/</loc>
+    <loc>http://danmux.com/categories/template/</loc>
+    <lastmod>2014-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://danmux.com/posts/hugo_based_blog/</loc>
     <lastmod>2014-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/banks_love_hackers/</loc>
+    <loc>http://danmux.com/categories/banks/</loc>
     <lastmod>2012-02-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/posts/bank_1_5/</loc>
-    <lastmod>2011-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/apis/</loc>
-    <lastmod>2011-09-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/bank/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/banks/</loc>
+    <loc>http://danmux.com/posts/banks_love_hackers/</loc>
     <lastmod>2012-02-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://danmux.com/categories/bazel/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/build/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/</loc>
-    <lastmod>2011-09-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/continuous-integration/</loc>
-    <lastmod>2018-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/desing/</loc>
-    <lastmod>2015-07-20T17:02:07+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/development/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/engineering/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/fintech/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/fraud/</loc>
+    <loc>http://danmux.com/categories/fraud/</loc>
     <lastmod>2012-02-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://danmux.com/categories/gists/</loc>
-    <lastmod>2014-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://danmux.com/categories/apis/</loc>
+    <lastmod>2011-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/categories/github/</loc>
-    <lastmod>2014-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://danmux.com/posts/bank_1_5/</loc>
+    <lastmod>2011-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danmux.com/categories/go/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/gob/</loc>
-    <lastmod>2014-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/golang/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/hugo/</loc>
-    <lastmod>2014-07-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/jmeter/</loc>
-    <lastmod>2014-07-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/json/</loc>
-    <lastmod>2014-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/lesson/</loc>
-    <lastmod>2017-07-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/performance/</loc>
-    <lastmod>2014-07-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/posts/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/quality/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/queues/</loc>
-    <lastmod>2015-07-20T17:02:07+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/security/</loc>
-    <lastmod>2016-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/tech/</loc>
-    <lastmod>2018-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/template/</loc>
-    <lastmod>2014-06-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://danmux.com/categories/testing/</loc>
-    <lastmod>2016-10-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://danmux.com/tags/</loc>
   </url>
   
 </urlset>
