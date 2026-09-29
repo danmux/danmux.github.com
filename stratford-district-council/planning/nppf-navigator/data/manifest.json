@@ -1,0 +1,54 @@
+{
+ "version": 1,
+ "builtAt": "2026-09-29T23:11:15.309Z",
+ "graph": {
+  "file": "data/graph-77fca3dbe5.json",
+  "id": "nppf-2026-navigator",
+  "version": "1",
+  "hash": "77fca3dbe5"
+ },
+ "dataset": {
+  "cases": 794,
+  "byDecisionMaker": {
+   "inspector": 722,
+   "lpa-committee": 37,
+   "lpa-delegated": 33,
+   "secretary-of-state": 2
+  },
+  "newestDecisionDate": "2026-09-23",
+  "lastHarvest": "2026-09-27T19:18:24+01:00",
+  "lettersInCorpus": 1090,
+  "awaitingDistillation": 24,
+  "framework2026": 683
+ },
+ "index": {
+  "file": "data/index-53e050f311.json",
+  "bytes": 482099,
+  "cases": 794
+ },
+ "notes": [
+  {
+   "file": "data/notes-0f3035165e.json",
+   "bytes": 898896,
+   "cases": 636
+  },
+  {
+   "file": "data/notes-ad048320df.json",
+   "bytes": 226080,
+   "cases": 158
+  }
+ ],
+ "bodies": [
+  {
+   "file": "data/bodies-e4f74235b6.json",
+   "bytes": 899921,
+   "cases": 403
+  },
+  {
+   "file": "data/bodies-9634d81c69.json",
+   "bytes": 716295,
+   "cases": 391
+  }
+ ],
+ "baseUrl": null
+}
