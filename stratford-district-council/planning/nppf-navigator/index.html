@@ -211,6 +211,16 @@ blockquote.fw { margin: 0; background: var(--quote); border-radius: 4px; padding
 .disclaimer-inline { margin-top: 18px; font-size: 13px; color: var(--muted); max-width: 66ch; }
 
 .notice { background: var(--balanced-soft); color: var(--ink); border-radius: 6px; padding: 9px 12px; font-size: 13.5px; }
+.provisional { margin-top: 14px; border: 1px solid var(--line); border-left: 3px solid var(--balanced); border-radius: 6px; padding: 12px 14px; background: var(--surface-2); }
+.provisional h3 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.provisional-verdict { font: 600 18px/1.25 var(--serif); margin-top: 6px; }
+.provisional-basis { margin: 10px 0 0; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 2px 12px; font-size: 13px; }
+.provisional-basis dt { color: var(--muted); }
+.provisional-basis dd { margin: 0; }
+@media (max-width: 480px) { .provisional-basis { grid-template-columns: 1fr; } .provisional-basis dt { margin-top: 6px; } }
+.notes-box { margin-top: 14px; display: grid; gap: 6px; }
+.notes-box label { font-weight: 600; font-size: 13.5px; }
+.notes-box textarea { width: 100%; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); padding: 8px 10px; font: inherit; font-size: 13.5px; resize: vertical; }
 .panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
 .about h2, .io h2 { font: 600 20px var(--serif); }
 .about, .io { display: grid; gap: 10px; }
