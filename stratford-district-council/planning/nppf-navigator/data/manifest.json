@@ -1,6 +1,6 @@
 {
  "version": 1,
- "builtAt": "2026-09-30T15:08:41.672Z",
+ "builtAt": "2026-09-30T17:20:20.115Z",
  "graph": {
   "file": "data/graph-9375e89303.json",
   "id": "nppf-2026-navigator",
@@ -16,9 +16,9 @@
    "secretary-of-state": 2
   },
   "newestDecisionDate": "2026-09-23",
-  "lastHarvest": "2026-09-27T19:18:24+01:00",
-  "lettersInCorpus": 1090,
-  "awaitingDistillation": 24,
+  "lastHarvest": "2026-09-30T17:57:30+01:00",
+  "lettersInCorpus": 1400,
+  "awaitingDistillation": 206,
   "framework2026": 682
  },
  "index": {
