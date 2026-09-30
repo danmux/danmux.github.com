@@ -25,6 +25,7 @@ h1{font:600 clamp(26px,5vw,38px)/1.15 var(--serif);margin:10px 0 10px;text-wrap:
 .dek{color:var(--muted);max-width:64ch;margin:0}
 h2{font:600 22px/1.25 var(--serif);margin:36px 0 10px;color:var(--accent)}
 h3{font:600 16px/1.3 var(--sans);margin:22px 0 6px}
+h4{font:600 15px/1.3 var(--sans);margin:18px 0 6px;color:var(--accent)}
 p{margin:0 0 12px}
 a{color:var(--accent)}
 ul{margin:0 0 12px;padding-left:20px}li{margin:4px 0}
@@ -63,7 +64,7 @@ code{font-family:var(--mono);font-size:13px}
 <h2>1. How the Navigator was built</h2>
 <p>The Navigator is a <strong>typed decision graph</strong>, authored in TypeScript and compiled to a single <code>graph.json</code>. Each node carries the verbatim policy text, the facts or planning judgements the step needs, and a query into the decisions database. A small <strong>pure evaluation engine</strong> derives the visible route, the next question, the triggers and harms, and an indicative outcome from the answers entered — it makes no judgement silently; where the Framework leaves a question to the decision-maker, the tool asks it and shows how others have answered.</p>
 <ul>
-  <li><strong>Every policy quotation is verified against the published NPPF (August 2026) text at build time.</strong> The build fails if any quote cannot be found. This build: <strong>70 nodes</strong> and <strong>74 quotations verified</strong>.</li>
+  <li><strong>Every policy quotation is verified against the published NPPF (August 2026) text at build time.</strong> The build fails if any quote cannot be found. This build: <strong>75 nodes</strong> and <strong>74 quotations verified</strong>.</li>
   <li><strong>Neutral, inspector-style register.</strong> Contested readings are shown both ways. Nothing application-specific is in the graph — it is the Framework, not a case for any one site.</li>
   <li><strong>Case matching</strong> is by canonicalised policy code against the database below, grouped by finding, with a selection-bias note. Counts show how a test has been applied, never the odds of an outcome.</li>
 </ul>
@@ -72,7 +73,7 @@ code{font-family:var(--mono);font-size:13px}
   <div><b>794</b><span>decisions in the database</span></div>
   <div><b>682</b><span>apply the 2026 Framework</span></div>
   <div><b>1090</b><span>decision letters in the corpus</span></div>
-  <div><b>70 / 74</b><span>graph nodes / verified quotes</span></div>
+  <div><b>75 / 74</b><span>graph nodes / verified quotes</span></div>
 </div>
 
 <div class="tw">
@@ -134,7 +135,22 @@ code{font-family:var(--mono);font-size:13px}
 </tbody>
 </table>
 </div>
-<p class="q">Borderline cases are marked where the required step is missing but the result would plainly be the same (e.g. Lydiard Millicent 6001260 on TR3, issue 5). What "clear justification" means in DP3(3) is itself unsettled &mdash; inspectors read it as either necessity (Polegate 6008314) or a level benefit-harm balance (Didcot 6009340); either reading is stricter than the S4/S5 test.</p>
+<p class="q">Borderline cases are marked where the required step is missing but the result would plainly be the same (e.g. Lydiard Millicent 6001260 on TR3, issue 5).</p>
+
+<h4>Issue 1 — DP3(3), broken down</h4>
+<p>DP3(3) makes a proposal <em>"should be refused"</em> if, without clear justification, it conflicts with any one of three things:</p>
+<ul>
+<li><strong>DP3(1) context</strong> — the history, character and features of the site and its setting, and integration with its surroundings.</li>
+<li><strong>The relevant DP3(2) principles</strong> — (a) liveability, (b) climate, (c) nature and green infrastructure (tree cover), (d) movement, (e) built form, (f) public space, (g) identity and local character.</li>
+<li><strong>An explicit design standard in the development plan</strong> — a Village Design Statement, design guide, code or masterplan; DP3(3) gives <em>substantial weight</em> to compliance (the clearest dataset example is 6010826).</li>
+</ul>
+<p>Of the <strong>157</strong> appeals where design harm arose, <strong>53 (34%)</strong> named and applied DP3(3). Of the <strong>104</strong> that differed, <strong>99 reached the same result another way</strong> and are not errors: 61 weighed the design harm as ordinary harm and 31 dismissed on the local plan (which s38(6) makes the starting point). Only <strong>3 differed in substance, all allowed</strong>, finding a design conflict but never asking whether there was clear justification &mdash; Cople 6011253, Watlington 6007871 and Burnett 6005916 &mdash; with 2 more using 2024 design wording.</p>
+<p>What <strong>"clear justification"</strong> means is unsettled; inspectors read it two ways, and no Secretary of State or court decision has settled which is right:</p>
+<ul>
+<li><strong>Necessity</strong> — the conflict is justified only if it is unavoidable to deliver the development (Polegate 6008314 &para;43).</li>
+<li><strong>Level balance</strong> — the conflict is justified if the benefits outweigh the harm (Didcot 6009340 &para;22).</li>
+</ul>
+<p class="q">Either reading is stricter than the S4/S5 "substantially outweighed" test, which favours approval. The Navigator now takes this in two steps &mdash; a checklist of what the scheme conflicts with, then the clear-justification call &mdash; mirroring this breakdown.</p>
 
 <h3>Stratford-on-Avon District Council's own decisions</h3>
 <p>The Stratford note works through <strong>six issues</strong>, each looked at two ways: whether the Council is consistent <em>with itself</em>, and whether it matches how inspectors decide the same question. The sharpest contrast is on walking routes: <strong>Alcester <span class="ok">&#10003;</span></strong> treated a policy failure as a "should be refused" trigger and refused, while <strong>Snitterfield <span class="no">&#10007;</span></strong> found character harm but granted without asking whether there was clear justification.</p>
