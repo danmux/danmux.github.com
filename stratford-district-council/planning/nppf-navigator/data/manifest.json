@@ -1,11 +1,11 @@
 {
  "version": 1,
- "builtAt": "2026-09-29T23:11:15.309Z",
+ "builtAt": "2026-09-30T00:06:37.109Z",
  "graph": {
-  "file": "data/graph-77fca3dbe5.json",
+  "file": "data/graph-1b87b3d169.json",
   "id": "nppf-2026-navigator",
   "version": "1",
-  "hash": "77fca3dbe5"
+  "hash": "1b87b3d169"
  },
  "dataset": {
   "cases": 794,
@@ -19,11 +19,11 @@
   "lastHarvest": "2026-09-27T19:18:24+01:00",
   "lettersInCorpus": 1090,
   "awaitingDistillation": 24,
-  "framework2026": 683
+  "framework2026": 682
  },
  "index": {
-  "file": "data/index-53e050f311.json",
-  "bytes": 482099,
+  "file": "data/index-6ec7c444b2.json",
+  "bytes": 482102,
   "cases": 794
  },
  "notes": [
@@ -45,8 +45,8 @@
    "cases": 403
   },
   {
-   "file": "data/bodies-9634d81c69.json",
-   "bytes": 716295,
+   "file": "data/bodies-58fe81f5e2.json",
+   "bytes": 716323,
    "cases": 391
   }
  ],
