@@ -7,7 +7,7 @@
 <meta name="description" content="How the NPPF 2026 Navigator was built, the dataset counts, external sources our notes have been checked against, and a summary of the inconsistencies the research has found.">
 <link rel="canonical" href="https://danmux.github.io/stratford-district-council/planning/nppf-navigator/method-and-cross-references/">
 <meta property="og:title" content="NPPF Navigator — Method & cross-references">
-<meta property="og:description" content="How the tool was built, the case counts, external cross-checks, and the inconsistencies found across 794 decisions.">
+<meta property="og:description" content="How the tool was built, the case counts, external cross-checks, and the inconsistencies found across 971 decisions.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -70,9 +70,9 @@ code{font-family:var(--mono);font-size:13px}
 </ul>
 
 <div class="stat">
-  <div><b>794</b><span>decisions in the database</span></div>
-  <div><b>682</b><span>apply the 2026 Framework</span></div>
-  <div><b>1090</b><span>decision letters in the corpus</span></div>
+  <div><b>971</b><span>decisions in the database</span></div>
+  <div><b>858</b><span>apply the 2026 Framework</span></div>
+  <div><b>1400</b><span>decision letters in the corpus</span></div>
   <div><b>75 / 74</b><span>graph nodes / verified quotes</span></div>
 </div>
 
@@ -81,17 +81,17 @@ code{font-family:var(--mono);font-size:13px}
 <caption>The decisions database (source: <code>index/cases.json</code>, <code>harvest-log/state.json</code>, built <code>manifest.json</code>).</caption>
 <thead><tr><th>Measure</th><th>Count</th><th>Source</th></tr></thead>
 <tbody>
-<tr><td>Decisions read and summarised</td><td><span class="n">794</span></td><td>cases.json</td></tr>
-<tr><td>&nbsp;&nbsp;by inspectors</td><td><span class="n">722</span></td><td>cases.json</td></tr>
+<tr><td>Decisions read and summarised</td><td><span class="n">971</span></td><td>cases.json</td></tr>
+<tr><td>&nbsp;&nbsp;by inspectors</td><td><span class="n">899</span></td><td>cases.json</td></tr>
 <tr><td>&nbsp;&nbsp;by the Secretary of State</td><td><span class="n">2</span></td><td>cases.json</td></tr>
 <tr><td>&nbsp;&nbsp;by councils (committee + delegated)</td><td><span class="n">70</span></td><td>cases.json</td></tr>
-<tr><td>Applying the 2026 Framework</td><td><span class="n">682</span></td><td>nppf_applied = 2026-08</td></tr>
-<tr><td>Transitional (2024 Framework)</td><td><span class="n">46</span></td><td>nppf_applied = 2024-12</td></tr>
+<tr><td>Applying the 2026 Framework</td><td><span class="n">858</span></td><td>nppf_applied = 2026-08</td></tr>
+<tr><td>Transitional (2024 Framework)</td><td><span class="n">47</span></td><td>nppf_applied = 2024-12</td></tr>
 <tr><td>No Framework version cited</td><td><span class="n">66</span></td><td>nppf_applied = not-cited</td></tr>
-<tr><td>Decision letters in the corpus</td><td><span class="n">1090</span></td><td>state.json</td></tr>
-<tr><td>Awaiting distillation into the database</td><td><span class="n">24</span></td><td>state.json</td></tr>
-<tr><td>Newest decision</td><td><span class="n">23 September 2026</span></td><td>state.json</td></tr>
-<tr><td>Last harvest of new decisions</td><td><span class="n">27 September 2026</span></td><td>manifest.json</td></tr>
+<tr><td>Decision letters in the corpus</td><td><span class="n">1400</span></td><td>state.json</td></tr>
+<tr><td>Awaiting distillation into the database</td><td><span class="n">0</span></td><td>state.json</td></tr>
+<tr><td>Newest decision</td><td><span class="n">30 September 2026</span></td><td>state.json</td></tr>
+<tr><td>Last harvest of new decisions</td><td><span class="n">30 September 2026</span></td><td>manifest.json</td></tr>
 </tbody>
 </table>
 </div>
@@ -120,18 +120,18 @@ code{font-family:var(--mono);font-size:13px}
 <p>Two strands of work. The first tests <strong>every appeal decision in the database</strong> against the Framework. The second compares <strong>Stratford-on-Avon District Council's own decisions</strong> — both against each other and against appeal decisions.</p>
 
 <h3>Across all appeal decisions</h3>
-<p>Every appeal in the database &mdash; <strong>722 Planning Inspectorate and 2 Secretary of State decisions</strong> &mdash; was tested against six issues drawn from the Stratford note. All 599 quotations in the per-case tables were machine-checked against the letters, and all matched. "Differs" mostly means a different <em>route</em> to the same result; it changes the outcome only where the appeal was allowed. Full detail: <a href="https://danmux.github.io/stratford-district-council/planning/nppf-2026-decisions/" target="_blank" rel="noopener">the Council-decisions review page</a>.</p>
+<p>Every appeal in the database &mdash; <strong>899 Planning Inspectorate and 2 Secretary of State decisions</strong> &mdash; was tested against six issues drawn from the Stratford note. All 879 quotations in the per-case tables were machine-checked against the letters, and all matched. "Differs" mostly means a different <em>route</em> to the same result; it changes the outcome only where the appeal was allowed. Full detail: <a href="https://danmux.github.io/stratford-district-council/planning/nppf-2026-decisions/" target="_blank" rel="noopener">the Council-decisions review page</a>.</p>
 <div class="tw">
 <table>
 <caption>Source: <code>analysis/appeals-consistency-review.md</code> and <code>appeals-review/issue-1..6.tsv</code>.</caption>
 <thead><tr><th>Issue</th><th class="n">Arises</th><th class="n">Applies the test</th><th class="n">Differs (borderline)</th><th class="n">Differs &amp; allowed</th></tr></thead>
 <tbody>
-<tr><td>1. DP3(3) design as a "should be refused" policy</td><td class="n">157</td><td class="n">53 (34%)</td><td class="n">104 <span class="q">(99 reach the same result another way)</span></td><td class="n">5</td></tr>
-<tr><td>2. Heritage harm method (HE6, HE4, HE7)</td><td class="n">135</td><td class="n">107 (79%)</td><td class="n">28 (9 borderline)</td><td class="n">3</td></tr>
-<tr><td>3. Weight given to plan policies (Annex A(2))</td><td class="n">41</td><td class="n">30 (73%)</td><td class="n">11 (2)</td><td class="n">3</td></tr>
-<tr><td>4. Location shortcuts in the Green Belt</td><td class="n">96</td><td class="n">73 (76%)</td><td class="n">23 (11)</td><td class="n">7</td></tr>
-<tr><td>5. Walking routes, stations, access (TR3)</td><td class="n">86</td><td class="n">76 (88%)</td><td class="n">10 (5)</td><td class="n">8</td></tr>
-<tr><td>6. Which Framework is applied (Annex A(1))</td><td class="n">644</td><td class="n">568 (88%) <span class="q">+35 immaterial 2024 wording</span></td><td class="n">41 applied 2024</td><td class="n">13</td></tr>
+<tr><td>1. DP3(3) design as a "should be refused" policy</td><td class="n">232</td><td class="n">96 (41%)</td><td class="n">136 <span class="q">(121 reach the same result another way)</span></td><td class="n">8</td></tr>
+<tr><td>2. Heritage harm method (HE6, HE4, HE7)</td><td class="n">199</td><td class="n">166 (83%)</td><td class="n">33 (13)</td><td class="n">4</td></tr>
+<tr><td>3. Weight given to plan policies (Annex A(2))</td><td class="n">96</td><td class="n">72 (75%)</td><td class="n">24 (10)</td><td class="n">8</td></tr>
+<tr><td>4. Location shortcuts in the Green Belt</td><td class="n">122</td><td class="n">95 (78%)</td><td class="n">27 (14)</td><td class="n">9</td></tr>
+<tr><td>5. Walking routes, stations, access (TR3)</td><td class="n">130</td><td class="n">101 (78%)</td><td class="n">29 (18)</td><td class="n">18</td></tr>
+<tr><td>6. Which Framework is applied (Annex A(1))</td><td class="n">820</td><td class="n">733 (89%) <span class="q">+45 immaterial 2024 wording</span></td><td class="n">42 applied 2024</td><td class="n">14</td></tr>
 </tbody>
 </table>
 </div>
@@ -144,25 +144,25 @@ code{font-family:var(--mono);font-size:13px}
 <li><strong>The relevant DP3(2) principles</strong> — (a) liveability, (b) climate, (c) nature and green infrastructure (tree cover), (d) movement, (e) built form, (f) public space, (g) identity and local character.</li>
 <li><strong>An explicit design standard in the development plan</strong> — a Village Design Statement, design guide, code or masterplan; DP3(3) gives <em>substantial weight</em> to compliance (the clearest dataset example is 6010826).</li>
 </ul>
-<p>Of the <strong>157</strong> appeals where design harm arose, the numbers split by type of inconsistency as follows. Only the last two rows change an outcome; the middle two reach the same result by another route and are not errors.</p>
+<p>Of the <strong>232</strong> appeals where design harm arose, the numbers split by type of inconsistency as follows. Only the last two rows change an outcome; the middle two reach the same result by another route and are not errors.</p>
 <div class="tw">
 <table>
 <caption>Source: <code>analysis/appeals-consistency-review.md</code>, issue 1.</caption>
 <thead><tr><th>How DP3(3) was handled</th><th class="n">Appeals</th><th>Outcome</th></tr></thead>
 <tbody>
-<tr><td>Named DP3(3) and asked the clear-justification question</td><td class="n">53</td><td>the test applied as written</td></tr>
-<tr><td>Differed &mdash; weighed the design harm as ordinary harm</td><td class="n">61</td><td>all dismissed (same result)</td></tr>
-<tr><td>Differed &mdash; dismissed on the local plan (s38(6))</td><td class="n">31</td><td>all dismissed (same result)</td></tr>
+<tr><td>Named DP3(3) and asked the clear-justification question</td><td class="n">96</td><td>the test applied as written</td></tr>
+<tr><td>Differed &mdash; weighed the design harm as ordinary harm</td><td class="n">81</td><td>all dismissed (same result)</td></tr>
+<tr><td>Differed &mdash; dismissed on the local plan (s38(6))</td><td class="n">40</td><td>all dismissed (same result)</td></tr>
 <tr><td>Differed &mdash; used 2024 design wording</td><td class="n">9</td><td>2 allowed</td></tr>
-<tr><td>Differed in substance &mdash; conflict found, clear justification never asked</td><td class="n">3</td><td>all allowed: Cople 6011253, Watlington 6007871, Burnett 6005916</td></tr>
-<tr><td><strong>Total</strong></td><td class="n"><strong>157</strong></td><td><strong>5 allowed where it differed</strong></td></tr>
+<tr><td>Differed in substance &mdash; conflict found, clear justification never asked</td><td class="n">6</td><td>all allowed: Burnett 6005916 <span class="q">(borderline)</span>, Cople 6011253, Watlington 6007871 <span class="q">(borderline)</span>, Highbury 6005904, Buntingford 6008238 <span class="q">(borderline)</span>, West Wickham 6007183 <span class="q">(borderline)</span></td></tr>
+<tr><td><strong>Total</strong></td><td class="n"><strong>232</strong></td><td><strong>8 allowed where it differed</strong></td></tr>
 </tbody>
 </table>
 </div>
 <p>What <strong>"clear justification"</strong> means is unsettled; inspectors read it two ways, and no Secretary of State or court decision has settled which is right:</p>
 <ul>
-<li><strong>Necessity</strong> — the conflict is justified only if it is unavoidable to deliver the development (Polegate 6008314 &para;43).</li>
-<li><strong>Level balance</strong> — the conflict is justified if the benefits outweigh the harm (Didcot 6009340 &para;22).</li>
+<li><strong>Necessity</strong> — the conflict is justified only if it is unavoidable to deliver the development (Polegate 6008314 &para;43; at a hearing, Bilsborrow 6007133 &para;59 refused on this reading).</li>
+<li><strong>Level balance</strong> — the conflict is justified if the benefits outweigh the harm (Didcot 6009340 &para;22; at a hearing, Aston Clinton 6008253 &para;86 allowed on this reading).</li>
 </ul>
 <p class="q">Either reading is stricter than the S4/S5 "substantially outweighed" test, which favours approval. The Navigator now takes this in two steps &mdash; a checklist of what the scheme conflicts with, then the clear-justification call &mdash; mirroring this breakdown.</p>
 
