@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://danmux.github.io/sitemap.xml
-Sitemap: https://danmux.github.io/stratford-district-council/sitemap.xml
